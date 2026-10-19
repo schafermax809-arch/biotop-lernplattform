@@ -61,6 +61,6 @@ Die komplette Mappe wurde visuell geprüft. Die Einordnung findet sich in `QUELL
 
 Dies ist eine technische und inhaltliche Projektprüfung. Offene Schülerantworten bleiben eine Selbstbewertung anhand der angezeigten Kriterien; sie werden nicht durch eine automatisierte Sprachbewertung ersetzt. Der konkrete schulische Notenschlüssel und das tatsächlich benutzte Ecosphere-Gefäß sind nicht bekannt.
 
-## Vorbereitung der GitHub-Veröffentlichung
+## GitHub-Veröffentlichung
 
-Die Webkopie der PDF wurde unter Erhalt aller 29 Seiten und des extrahierbaren Texts komprimiert. Ein eingebettetes Foto auf PDF-Seite 21 wurde bei gleicher Auflösung mit hoher JPEG-Qualität gespeichert. Die übrigen 28 Seiten wurden beim Rendervergleich pixelgleich bestätigt. Die angepasste Seite wurde visuell geprüft. Die Originaldatei auf E: bleibt unverändert.
+Die PDF ist auf Wunsch nicht enthalten. Die direkten PDF-Links wurden entfernt; Quellen- und Seitenangaben bleiben zur Orientierung erhalten.

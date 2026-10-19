@@ -45,7 +45,7 @@ Eine weitere Möglichkeit ist die VS-Code-Erweiterung **Live Server**: `index.ht
 
 ## Quellen und fachliche Entscheidungen
 
-Die 29-seitige Originalmappe liegt unter `assets/bio-mappe.pdf`. Die Angaben „PDF S. …“ zählen ab der ersten PDF-Seite, unabhängig von den gedruckten Arbeitsblattnummern. Die Mappe wurde vollständig einschließlich Abbildungen und Handschrift gesichtet.
+Die 29-seitige Originalmappe wurde als Quelle ausgewertet und wird auf Wunsch nicht mit der Website oder im Repository bereitgestellt. Seitenangaben verweisen auf das eigene Exemplar. Die Angaben „PDF S. …“ zählen ab der ersten PDF-Seite, unabhängig von den gedruckten Arbeitsblattnummern. Die Mappe wurde vollständig einschließlich Abbildungen und Handschrift gesichtet.
 
 Ergänzungen schließen die ursprünglich festgestellten Lücken, entsprechend der ausdrücklichen Erlaubnis, verlässliche externe Quellen zu verwenden. Sie sind in den Kapiteln mit **Ergänzung** gekennzeichnet und verlinkt. Dazu gehören OpenStax/Rice University, NASA/GLOBE, ESA, Umweltbundesamt, Bundeszentrale für politische Bildung, KIT, weitere Hochschulen sowie Originalstudien. Ein Quellenverzeichnis steht in `QUELLEN.md`; die Verknüpfungen zu jedem Kapitel stehen in `src/content.json`.
 
@@ -90,7 +90,7 @@ src/tools-engine.js  Kalender, Planung, Import und qualitative Modelle
 src/operators.json   Operatoren und zwölf Aufgaben mit Quellen
 src/content.json     Alle Lerninhalte, Quellen, Aufgaben und Lösungen
 src/styles.css       Responsive Gestaltung
-assets/              Original-PDF und Logo
+assets/              Logo
 server.mjs           Kleiner lokaler Webserver
 tests/               Fachliche Daten- und Funktionstests
 ```
@@ -105,4 +105,4 @@ Für die optionalen Browsertests: Playwright verfügbar machen, den lokalen Serv
 
 Die Anwendung ist vollständig statisch und benötigt keinen Build-Schritt. Den Inhalt dieses Ordners in ein Repository übernehmen. Unter **Settings → Pages → Deploy from a branch** den gewünschten Branch und **/(root)** auswählen. Relative Ressourcenpfade funktionieren auch unter einer Projekt-Unteradresse. `server.mjs`, Tests und Startskript werden auf GitHub Pages nicht benötigt. `.nojekyll` ist bereits enthalten.
 
-Dieses Projekt wird aus dem Branch `main` und dem Stammverzeichnis über GitHub Pages veröffentlicht. Die lokale Nutzung ist weiterhin möglich. Die Webkopie der PDF ist für den Upload komprimiert; Seitenzahl, Text und Bildauflösung bleiben erhalten. Die Originaldatei auf E: wird nicht verändert.
+Dieses Projekt wird aus dem Branch `main` und dem Stammverzeichnis über GitHub Pages veröffentlicht. Die lokale Nutzung ist weiterhin möglich. Die PDF ist nicht enthalten. Die Originaldatei auf E: bleibt unverändert.
