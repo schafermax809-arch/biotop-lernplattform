@@ -1,0 +1,3332 @@
+[
+  {
+    "id": "levels",
+    "title": "Systemebenen der Ökologie",
+    "subtitle": "Vom einzelnen Lebewesen zum weltweiten Lebensraum",
+    "sources": [
+      {
+        "label": "Bio Mappe · Themenliste",
+        "kind": "mappe",
+        "pages": [29]
+      },
+      {
+        "label": "OpenStax · Systemebenen",
+        "kind": "external",
+        "url": "https://openstax.org/books/biology-2e/pages/1-2-themes-and-concepts-of-biology"
+      },
+      {
+        "label": "OpenStax · Ökologische Forschung",
+        "kind": "external",
+        "url": "https://openstax.org/books/biology-2e/pages/44-1-the-scope-of-ecology"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Schrittweise größer denken",
+        "text": "Ein Organismus ist ein einzelnes Lebewesen. Eine Population umfasst Individuen derselben Art in einem räumlich und zeitlich bestimmten Gebiet. Mehrere zusammenlebende Populationen verschiedener Arten bilden die Biozönose. Ein Ökosystem schließt zusätzlich die unbelebte Umwelt und die Wechselwirkungen ein. Die Biosphäre umfasst alle Lebensbereiche und Ökosysteme der Erde. Ergänzung: OpenStax · Systemebenen."
+      },
+      {
+        "heading": "Dasselbe Gewässer, verschiedene Fragen",
+        "text": "Hypothetisches Bachbeispiel: Die Atmung einer Forelle betrifft den Organismus. Die Zahl aller Bachforellen betrifft eine Population. Beziehungen zwischen Forellen, Insektenlarven und Algen betreffen die Biozönose. Der Zusammenhang zwischen Lebewesen, Wassertemperatur und Sauerstoff betrifft das Ökosystem. Die gewählte Fragestellung entscheidet, welche Ebene untersucht wird. Ergänzung: OpenStax · Ökologische Forschung."
+      },
+      {
+        "heading": "Typische Verwechslung",
+        "text": "Eine Art bezeichnet eine biologische Einheit; eine Population ist deren örtlich und zeitlich abgegrenzte Gruppe. Alle Fische eines Bachs bilden keine einzelne Population, sobald mehrere Arten beteiligt sind. Auch umfasst die Biozönose nicht nur auffällige Tiere, sondern ebenfalls Pflanzen, Pilze und Mikroorganismen. Die Themenliste auf PDF-Seite 29 benennt die Systemebenen, erklärt sie aber nicht."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Organismus",
+        "definition": "Ein einzelnes Lebewesen."
+      },
+      {
+        "term": "Population",
+        "definition": "Individuen derselben Art in einem bestimmten Gebiet zu einer bestimmten Zeit."
+      },
+      {
+        "term": "Biozönose",
+        "definition": "Gemeinschaft der Populationen verschiedener Arten in einem Lebensraum."
+      },
+      {
+        "term": "Ökosystem",
+        "definition": "Lebensgemeinschaft, unbelebte Umwelt und ihre Wechselwirkungen als funktionelle Einheit."
+      },
+      {
+        "term": "Biosphäre",
+        "definition": "Gesamtheit der von Leben besiedelten Bereiche und Ökosysteme der Erde."
+      }
+    ],
+    "mnemonic": "Ich → meine Art am Ort → alle Arten am Ort → Arten plus Umwelt → gesamte belebte Erde.",
+    "questions": [
+      {
+        "id": "levels-01",
+        "type": "single",
+        "prompt": "Welche Ebene beschreibt eine einzelne Bachforelle?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Ein einzelnes Lebewesen ist ein Organismus.",
+        "options": ["Organismus", "Population", "Biozönose", "Ökosystem"],
+        "answer": "Organismus",
+        "topic": "levels"
+      },
+      {
+        "id": "levels-02",
+        "type": "single",
+        "prompt": "Alle Bachforellen eines festgelegten Bachabschnitts zu einem Zeitpunkt bilden …",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Die gleiche Art, ein abgegrenzter Ort und ein Zeitpunkt kennzeichnen die Population.",
+        "options": [
+          "eine Biozönose",
+          "eine Population",
+          "ein Ökosystem",
+          "ein Biotop"
+        ],
+        "answer": "eine Population",
+        "topic": "levels"
+      },
+      {
+        "id": "levels-03",
+        "type": "multi",
+        "prompt": "Welche Angaben sind für die Definition einer örtlich und zeitlich abgegrenzten Population erforderlich?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 3,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Art, Gebiet und Zeit grenzen die Population begrifflich ab. Das Nahrungsangebot kann ihre Entwicklung beeinflussen, gehört aber nicht zu ihrer Definition.",
+        "options": [
+          "Die gemeinsame Artzugehörigkeit",
+          "Das betrachtete Untersuchungsgebiet",
+          "Der betrachtete Zeitraum",
+          "Die verfügbare Nahrungsmenge"
+        ],
+        "answer": [
+          "Die gemeinsame Artzugehörigkeit",
+          "Das betrachtete Untersuchungsgebiet",
+          "Der betrachtete Zeitraum"
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-04",
+        "type": "tf",
+        "prompt": "Aussage: Alle Lebewesen eines Teichs bilden zusammen eine einzige Population.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Mehrere Arten bilden mehrere Populationen und gemeinsam eine Biozönose.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "topic": "levels"
+      },
+      {
+        "id": "levels-05",
+        "type": "cloze",
+        "prompt": "Die Lebensgemeinschaft verschiedener Arten in einem Lebensraum heißt ___.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Biozönose und Lebensgemeinschaft werden hier gleichbedeutend verwendet.",
+        "answer": ["Biozönose", "Lebensgemeinschaft"],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-06",
+        "type": "order",
+        "prompt": "Ordne die Ebenen vom einzelnen Lebewesen bis zur globalen Ebene.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 3,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Jede folgende Ebene umfasst weitere Zusammenhänge.",
+        "options": [
+          "Biosphäre",
+          "Population",
+          "Organismus",
+          "Ökosystem",
+          "Biozönose"
+        ],
+        "answer": [
+          "Organismus",
+          "Population",
+          "Biozönose",
+          "Ökosystem",
+          "Biosphäre"
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-07",
+        "type": "match",
+        "prompt": "Ordne die hypothetischen Untersuchungen den passenden Ebenen zu.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 4,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Die Frage bestimmt den betrachteten Ausschnitt.",
+        "pairs": [
+          ["Atmung einer Forelle", "Organismus"],
+          ["Bestandszahl der Bachforellen", "Population"],
+          ["Fraßbeziehungen mehrerer Arten", "Biozönose"],
+          ["Nährstoffumsatz mit Wasser und Boden", "Ökosystem"]
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-08",
+        "type": "single",
+        "prompt": "Welche Ergänzung erweitert die Betrachtung einer Biozönose zur Betrachtung eines Ökosystems?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Altersstruktur, Artenbeziehungen und Populationszahl beschreiben belebte Komponenten. Erst die Einbeziehung der unbelebten Umwelt und ihrer Wechselwirkungen ergibt die Ökosystembetrachtung.",
+        "options": [
+          "Die Verteilung der Individuen auf verschiedene Altersgruppen",
+          "Die unbelebte Umwelt mit ihren Wechselwirkungen",
+          "Die Beziehungen zwischen den vorhandenen Tierarten",
+          "Die Anzahl der Populationen in der Lebensgemeinschaft"
+        ],
+        "answer": "Die unbelebte Umwelt mit ihren Wechselwirkungen",
+        "topic": "levels"
+      },
+      {
+        "id": "levels-09",
+        "type": "open",
+        "prompt": "Erkläre an einem frei gewählten Waldbeispiel den Unterschied zwischen Population und Biozönose. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Ein geeignetes Beispiel benennt eine Art für die Population und mehrere Arten für die Gemeinschaft.",
+        "model": "Alle Rotbuchen in einem bestimmten Wald zur selben Zeit bilden eine Population. Buchen, andere Pflanzen, Pilze, Tiere und Mikroorganismen bilden dort zusammen die Biozönose.",
+        "rubric": [
+          "Eine benannte Art für die Population.",
+          "Ort und Zeit sinnvoll abgegrenzt.",
+          "Biozönose enthält mehrere Arten einschließlich weiterer Organismengruppen."
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-10",
+        "type": "tf",
+        "prompt": "Aussage: Ein Bakterium kann ein vollständiger Organismus sein.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Ein Organismus muss nicht mehrzellig sein.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "topic": "levels"
+      },
+      {
+        "id": "levels-11",
+        "type": "open",
+        "prompt": "Hypothetische Frage: Warum sinkt der Forellenbestand nach einer Erwärmung des Wassers? Benenne zwei beteiligte Ebenen und erläutere ihren Zusammenhang. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 2,
+        "points": 4,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Bestandsänderung betrifft die Population; das Zusammenwirken mit Wasserbedingungen die Ökosystemebene.",
+        "model": "Die sinkende Zahl der Forellen ist eine Veränderung der Population. Die Erwärmung ist eine abiotische Umweltänderung. Ihre Wirkung auf Lebewesen und Bestandsentwicklung wird im Ökosystem untersucht. Die genaue Ursache müsste durch Daten geprüft werden.",
+        "rubric": [
+          "Population als Ebene des Bestands benannt.",
+          "Erwärmung als Umweltbedingung erkannt.",
+          "Ökosystem als Verknüpfung belebter und unbelebter Teile erklärt.",
+          "Keine unbelegte sichere Todesursache behauptet."
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-12",
+        "type": "multi",
+        "prompt": "Welche Aussagen zur Biosphäre treffen zu?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 2,
+        "source": "OpenStax · Systemebenen",
+        "explanation": "Die Biosphäre umfasst die gesamten Lebensbereiche mit ihren Ökosystemen, einschließlich Pflanzen und Mikroorganismen. Sie ist nicht die unbelebte Erdhülle.",
+        "options": [
+          "Sie umfasst die Ökosysteme der Erde.",
+          "Sie schließt verschiedene Lebensbereiche der Erde ein.",
+          "Sie bezeichnet die Gemeinschaft aller Tierarten.",
+          "Sie bezeichnet die unbelebte Hülle der Erde."
+        ],
+        "answer": [
+          "Sie umfasst die Ökosysteme der Erde.",
+          "Sie schließt verschiedene Lebensbereiche der Erde ein."
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-13",
+        "type": "diagram",
+        "prompt": "Hypothetische Zählung: Die Grafik zeigt Bachforellen desselben abgegrenzten Teichs in drei Jahren. Beschreibe den Verlauf, benenne die Systemebene und erkläre, warum keine Aussage über die gesamte Biozönose möglich ist. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 4,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Die drei Zahlen beschreiben nur die zeitliche Entwicklung einer Art.",
+        "diagram": {
+          "labels": ["Jahr 1", "Jahr 2", "Jahr 3"],
+          "values": [12, 18, 9],
+          "unit": "gezählte Bachforellen"
+        },
+        "model": "Die Zahl steigt zunächst von 12 auf 18 und sinkt dann auf 9. Erfasst wird eine Population. Andere Arten sind nicht gezählt; die Entwicklung der gesamten Biozönose ist damit unbekannt.",
+        "rubric": [
+          "Anstieg und anschließenden Rückgang korrekt beschrieben.",
+          "Population benannt.",
+          "Begrenzung auf eine Art erkannt.",
+          "Keine Ursache aus den drei Zahlen allein abgeleitet."
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-14",
+        "type": "open",
+        "prompt": "Bewerte die Behauptung: Wer jede einzelne Art eines Sees kennt, versteht automatisch das gesamte Ökosystem. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Eine Artenliste erklärt weder Wechselwirkungen noch unbelebte Bedingungen.",
+        "model": "Die Behauptung ist zu weitgehend. Artenkenntnis liefert wichtige Bestandteile. Zusätzlich braucht man Daten zu Umweltbedingungen und Prozessen, etwa Sauerstoff, Licht und Beziehungen zwischen Arten. Eine Artenliste allein erklärt deren Zusammenwirken nicht.",
+        "rubric": [
+          "Behauptung begründet eingeschränkt.",
+          "Artenliste als begrenzte Information erkannt.",
+          "Mindestens eine abiotische Größe genannt.",
+          "Mindestens eine Wechselwirkung oder ein Prozess verlangt."
+        ],
+        "topic": "levels"
+      },
+      {
+        "id": "levels-15",
+        "type": "single",
+        "prompt": "Eine hypothetische Untersuchung erfasst Fressen und Gefressenwerden zwischen Algen, Schnecken und Fischen. Welche Ebene steht dabei vorrangig im Mittelpunkt?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "OpenStax · Ökologische Forschung",
+        "explanation": "Untersucht werden Beziehungen zwischen Populationen verschiedener Arten.",
+        "options": ["Biozönose", "Organismus", "Population", "Biotop"],
+        "answer": "Biozönose",
+        "topic": "levels"
+      }
+    ]
+  },
+  {
+    "id": "ecosystem",
+    "title": "Ökosystem, Biotop und Biozönose",
+    "subtitle": "Lebensraum und Lebensgemeinschaft wirken zusammen",
+    "sources": [
+      {
+        "label": "Bio Mappe · Ökosystem",
+        "kind": "mappe",
+        "pages": [2]
+      },
+      {
+        "label": "bpb · Biotop",
+        "kind": "external",
+        "url": "https://www.bpb.de/themen/umwelt/naturschutzpolitik/glossar/511040/biotop/"
+      },
+      {
+        "label": "OpenStax · Ökosysteme",
+        "kind": "external",
+        "url": "https://openstax.org/books/biology-2e/pages/46-1-ecology-of-ecosystems"
+      },
+      {
+        "label": "UBA · Ökosystemintegrität",
+        "kind": "external",
+        "url": "https://www.umweltbundesamt.de/themen/luft/luftschadstoffe-oekosysteme/wirkungen-auf-oekosysteme/oekosystemintegritaet"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Zwei Komponenten, ein Beziehungsgefüge",
+        "text": "Das Biotop ist der Lebensraum einer Lebensgemeinschaft, beschrieben durch seine unbelebten Bedingungen, etwa Wasser, Boden, Licht und Temperatur. Die Biozönose umfasst die dort zusammenlebenden Organismen verschiedener Arten. Im Ökosystem werden beide mit ihren Wechselwirkungen betrachtet. Ergänzung: bpb · Biotop; OpenStax · Ökosysteme."
+      },
+      {
+        "heading": "Wechselwirkungen erkennen",
+        "text": "Hypothetisches Teichbeispiel: Licht beeinflusst das Wachstum von Wasserpflanzen. Die Pflanzen verändern ihrerseits durch Fotosynthese, Atmung und Beschattung ihre Umwelt. Ein Ökosystem ist daher mehr als eine Liste von Arten und Messwerten: Verknüpfungen gehören zur Erklärung. PDF-Seite 2 veranschaulicht die Verbindung zwischen belebter und unbelebter Umwelt."
+      },
+      {
+        "heading": "Grenzen sind Untersuchungsentscheidungen",
+        "text": "Ein Tümpel und ein großer Wald können als Ökosystem untersucht werden. Natürliche Grenzen sind häufig durchlässig: Wasser, Stoffe und Organismen wechseln zwischen benachbarten Bereichen. Die Wahl einer Grenze muss zur Frage passen. Ein einzelner Messwert beschreibt deshalb nicht den vollständigen Zustand. Die UBA-Ökosystemintegrität berücksichtigt unter anderem Funktionen, Selbstorganisation und Standortbedingungen."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Biotop",
+        "definition": "Lebensraum einer Biozönose mit seinen abiotischen Standortbedingungen."
+      },
+      {
+        "term": "Biozönose",
+        "definition": "Lebensgemeinschaft verschiedener Arten im Biotop."
+      },
+      {
+        "term": "Wechselwirkung",
+        "definition": "Gegenseitige Beeinflussung, etwa zwischen Pflanzen und Wasserbedingungen."
+      },
+      {
+        "term": "Systemgrenze",
+        "definition": "Für eine Untersuchung festgelegte Abgrenzung eines Systems."
+      },
+      {
+        "term": "Ökosystemfunktion",
+        "definition": "Prozess im Ökosystem, beispielsweise Stoffumsatz oder Energieübertragung."
+      }
+    ],
+    "mnemonic": "Biotop = Ort und Bedingungen; Biozönose = Gemeinschaft; Ökosystem = beides samt Beziehungen.",
+    "questions": [
+      {
+        "id": "ecosystem-01",
+        "type": "single",
+        "prompt": "Welche Beschreibung passt zum Biotop eines Teichs?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "bpb · Biotop",
+        "explanation": "Die erste Gruppe beschreibt unbelebte Standortbedingungen. Die anderen Gruppen beschreiben Organismen oder Beziehungen innerhalb der Biozönose.",
+        "options": [
+          "Wassertiefe, Untergrund und Lichtbedingungen",
+          "Algenbestand, Schneckenbestand und Fischbestand",
+          "Fraßbeziehungen, Konkurrenz und Fortpflanzung",
+          "Artenzusammensetzung, Individuenzahl und Biomasse"
+        ],
+        "answer": "Wassertiefe, Untergrund und Lichtbedingungen",
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-02",
+        "type": "single",
+        "prompt": "Welche Gruppe gehört vollständig zur Biozönose?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "bpb · Biotop",
+        "explanation": "Alle drei sind Lebewesen. Sauerstoff, Wasser und Mineralstoffe sind unbelebte Komponenten, auch wenn Organismen sie beeinflussen.",
+        "options": [
+          "Algen, Schnecken und Bakterien",
+          "Algen, Sauerstoff und Bakterien",
+          "Wasser, Schnecken und Bakterien",
+          "Algen, Schnecken und Mineralstoffe"
+        ],
+        "answer": "Algen, Schnecken und Bakterien",
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-03",
+        "type": "multi",
+        "prompt": "Welche Aussagen gehören zum fachlichen Ökosystembegriff?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 3,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Eine Biozönose ist die Lebensgemeinschaft. Zum Ökosystem gehören zusätzlich die unbelebte Umwelt und die Wechselwirkungen.",
+        "options": [
+          "Die Lebensgemeinschaft ist Teil des Systems.",
+          "Die unbelebte Umwelt ist Teil des Systems.",
+          "Die Wechselwirkungen gehören zur Betrachtung.",
+          "Die Biozönose entspricht bereits dem Gesamtsystem."
+        ],
+        "answer": [
+          "Die Lebensgemeinschaft ist Teil des Systems.",
+          "Die unbelebte Umwelt ist Teil des Systems.",
+          "Die Wechselwirkungen gehören zur Betrachtung."
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-04",
+        "type": "tf",
+        "prompt": "Aussage: Ein Ökosystem kann auch klein sein, zum Beispiel ein Gezeitentümpel.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Die Bezeichnung setzt keine bestimmte Mindestgröße voraus.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-05",
+        "type": "cloze",
+        "prompt": "Biotop und ___ bilden mit ihren Wechselwirkungen ein Ökosystem.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "bpb · Biotop",
+        "explanation": "Die gesuchte belebte Komponente heißt Biozönose.",
+        "answer": ["Biozönose", "Lebensgemeinschaft"],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-06",
+        "type": "match",
+        "prompt": "Ordne die Begriffe ihren Beschreibungen zu.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 4,
+        "source": "bpb · Biotop",
+        "explanation": "Die Zuordnung trennt Ort, Organismen, Gesamtzusammenhang und Abgrenzung.",
+        "pairs": [
+          ["Biotop", "Lebensraum mit abiotischen Bedingungen"],
+          ["Biozönose", "Lebensgemeinschaft verschiedener Arten"],
+          ["Ökosystem", "Gemeinschaft und Umwelt in Wechselwirkung"],
+          ["Systemgrenze", "Für die Untersuchung gewählte Abgrenzung"]
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-07",
+        "type": "order",
+        "prompt": "Ordne die Schritte für eine nachvollziehbare Untersuchung vom Festlegen der Frage bis zur Erklärung.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Erst wird festgelegt, was und wo untersucht wird; danach werden Beobachtungen erklärt.",
+        "options": [
+          "Zusammenhänge mit Daten erklären",
+          "Frage und Systemgrenze festlegen",
+          "Lebewesen und Umweltbedingungen erfassen"
+        ],
+        "answer": [
+          "Frage und Systemgrenze festlegen",
+          "Lebewesen und Umweltbedingungen erfassen",
+          "Zusammenhänge mit Daten erklären"
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-08",
+        "type": "open",
+        "prompt": "Erkläre mit einem hypothetischen Beispiel, wie Wasserpflanzen und Lichtbedingungen wechselseitig zusammenhängen können. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Einflussrichtungen können von der Umwelt zu Organismen und umgekehrt verlaufen.",
+        "model": "Licht ermöglicht Fotosynthese und beeinflusst das Pflanzenwachstum. Dichter Pflanzenwuchs kann tiefere Bereiche beschatten. Damit beeinflusst die Lebensgemeinschaft ihrerseits eine abiotische Bedingung.",
+        "rubric": [
+          "Licht als Bedingung für Fotosynthese genannt.",
+          "Pflanzenwirkung auf Lichtverfügbarkeit erklärt.",
+          "Beide Einflussrichtungen erkennbar."
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-09",
+        "type": "tf",
+        "prompt": "Aussage: Die Grenze eines natürlich untersuchten Ökosystems verhindert immer jeden Austausch mit der Umgebung.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Systemgrenzen dienen der Untersuchung; Stoffe und Organismen können sie überqueren.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-10",
+        "type": "multi",
+        "prompt": "Was kann eine bloße Artenliste eines Waldes noch nicht zeigen?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "UBA · Ökosystemintegrität",
+        "explanation": "Eine Artenliste nennt die nachgewiesenen Arten. Sie erfasst für sich keine Intensitäten oder zeitlichen Entwicklungen von Prozessen.",
+        "options": [
+          "Die Stärke der Wechselwirkungen",
+          "Die Veränderung des Wasserhaushalts",
+          "Die zeitliche Entwicklung der Stoffumsätze",
+          "Die Namen der nachgewiesenen Arten"
+        ],
+        "answer": [
+          "Die Stärke der Wechselwirkungen",
+          "Die Veränderung des Wasserhaushalts",
+          "Die zeitliche Entwicklung der Stoffumsätze"
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-11",
+        "type": "open",
+        "prompt": "Hypothetischer Gartenteich: Wasser, Kies, Libellenlarven, Algen, Bakterien und Sonnenlicht sind erfasst. Ordne die Angaben Biotop oder Biozönose zu und ergänze eine untersuchbare Beziehung. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 4,
+        "source": "bpb · Biotop",
+        "explanation": "Lebewesen werden der Biozönose, unbelebte Standortbedingungen dem Biotop zugeordnet.",
+        "model": "Biotop: Wasser, Kies und Lichtbedingungen. Biozönose: Libellenlarven, Algen und Bakterien. Untersuchen ließe sich zum Beispiel, wie veränderte Lichtmenge mit dem Algenwachstum zusammenhängt.",
+        "rubric": [
+          "Wasser, Kies und Licht korrekt zugeordnet.",
+          "Drei Organismengruppen korrekt zugeordnet.",
+          "Beziehung zwischen zwei Komponenten formuliert.",
+          "Beziehung als prüfbare Frage statt unbelegtes Ergebnis beschrieben."
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-12",
+        "type": "single",
+        "prompt": "Welche hypothetische Frage untersucht ausdrücklich eine Verbindung zwischen Biozönose und Biotop?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Licht ist eine abiotische Bedingung, Algen sind Organismen. Die anderen Fragen betreffen Beziehungen zwischen belebten Komponenten.",
+        "options": [
+          "Wie hängt die Lichtmenge mit dem Algenwachstum zusammen?",
+          "Wie hängt die Schneckenzahl mit dem Fraßdruck zusammen?",
+          "Wie hängt die Beutefischzahl mit dem Räuberbestand zusammen?",
+          "Wie hängt die Keimlingszahl mit der Pflanzendichte zusammen?"
+        ],
+        "answer": "Wie hängt die Lichtmenge mit dem Algenwachstum zusammen?",
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-13",
+        "type": "diagram",
+        "prompt": "Hypothetischer Teichvergleich: Die Grafik zeigt nur die Anzahl nachgewiesener Arten. Beschreibe den Unterschied und beurteile, ob Teich C deshalb sicher das am besten funktionierende Ökosystem ist. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "UBA · Ökosystemintegrität",
+        "explanation": "Artenzahlen sind ein Teilaspekt; Funktionen, Vergleichbarkeit und Umweltbedingungen fehlen.",
+        "diagram": {
+          "labels": ["Teich A", "Teich B", "Teich C"],
+          "values": [8, 12, 16],
+          "unit": "nachgewiesene Arten"
+        },
+        "model": "C weist 16, B 12 und A 8 Arten auf. C hat in dieser Erhebung die höchste Artenzahl. Das beweist nicht automatisch bessere Funktionen oder höhere Stabilität; Erfassungsmethode, Teichtyp und weitere Daten fehlen.",
+        "rubric": [
+          "Rangfolge korrekt beschrieben.",
+          "Befund auf die Erhebung begrenzt.",
+          "Mindestens eine fehlende Vergleichsbedingung genannt.",
+          "Automatische Gleichsetzung von Artenzahl und Gesamtfunktion zurückgewiesen."
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-14",
+        "type": "open",
+        "prompt": "Bewerte den Satz: Ein Bachabschnitt kann nur dann als Ökosystem betrachtet werden, wenn kein Wasser hinein- oder hinausfließt. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Offenheit verhindert die Untersuchung als Ökosystem nicht.",
+        "model": "Der Satz ist falsch. Ein abgegrenzter Bachabschnitt enthält Lebewesen, unbelebte Bedingungen und Wechselwirkungen. Wasser- und Stoffaustausch gehören zu den Prozessen und können bei der Bilanzierung berücksichtigt werden.",
+        "rubric": [
+          "Behauptung begründet abgelehnt.",
+          "Komponenten und Wechselwirkungen des Abschnitts benannt.",
+          "Austausch als zu berücksichtigenden Prozess beschrieben."
+        ],
+        "topic": "ecosystem"
+      },
+      {
+        "id": "ecosystem-15",
+        "type": "cloze",
+        "prompt": "Eine im Untersuchungsplan festgelegte räumliche Abgrenzung heißt ___.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Ökosysteme",
+        "explanation": "Die Systemgrenze macht transparent, was in die Betrachtung einbezogen wird.",
+        "answer": ["Systemgrenze", "Systemabgrenzung"],
+        "topic": "ecosystem"
+      }
+    ]
+  },
+  {
+    "id": "factors",
+    "title": "Abiotische und biotische Umweltfaktoren",
+    "subtitle": "Einflüsse unterscheiden und Wirkungsketten erklären",
+    "sources": [
+      {
+        "label": "Bio Mappe · Umweltfaktoren",
+        "kind": "mappe",
+        "pages": [4, 5, 6]
+      },
+      {
+        "label": "NPS · Biotische und abiotische Teile",
+        "kind": "external",
+        "url": "https://www.nps.gov/teachers/classrooms/craters-ecosystem.htm"
+      },
+      {
+        "label": "UBA · Zustandsbewertung von Flüssen",
+        "kind": "external",
+        "url": "https://www.umweltbundesamt.de/themen/wasser/gewaesser/fluesse/ueberwachung-bewertung/biologisch"
+      },
+      {
+        "label": "UBA · Grundwasser als Lebensraum",
+        "kind": "external",
+        "url": "https://www.umweltbundesamt.de/themen/wasser/gewaesser/grundwasser/grundwasser-als-lebensraum"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Die Herkunft des Einflusses",
+        "text": "Abiotische Faktoren sind physikalische oder chemische Bedingungen wie Licht, Temperatur, Strömung, pH-Wert und Sauerstoffkonzentration. Biotische Faktoren gehen von Lebewesen aus, beispielsweise Konkurrenz, Fraß, Krankheitserreger oder gegenseitige Förderung. Entscheidend ist der konkrete Einfluss. Ergänzung: NPS · Biotische und abiotische Teile."
+      },
+      {
+        "heading": "Wirkungsketten am Fließgewässer",
+        "text": "Die Mappe beschreibt auf Seiten 4–6 typische Veränderungen vom Oberlauf zur Mündung: kaltes, turbulentes Wasser begünstigt einen hohen Sauerstoffgehalt; Erwärmung und Trübung können ihn verringern. Beschattung reduziert die verfügbare Lichtmenge und kann die Fotosynthese begrenzen. Das sind vereinfachte Muster: Messort, Tageszeit und weitere Prozesse beeinflussen reale Werte."
+      },
+      {
+        "heading": "Messung und Lebewesen gemeinsam betrachten",
+        "text": "Zur Flussbewertung werden Lebensgemeinschaften sowie physikalische und chemische Größen betrachtet. Ein niedriger Sauerstoffwert ist eine Beobachtung; seine Ursache muss geprüft werden. Ein Schatten spendender Baum ist ein Lebewesen, doch die von ihm veränderte Lichtintensität ist eine abiotische Bedingung. Grundwasser zeigt zudem: Dunkelheit bedeutet nicht, dass ein Lebensraum grundsätzlich unbelebt ist. Ergänzungen: UBA · Zustandsbewertung von Flüssen; UBA · Grundwasser als Lebensraum."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Abiotisch",
+        "definition": "Von unbelebten physikalischen oder chemischen Umweltbedingungen ausgehend."
+      },
+      {
+        "term": "Biotisch",
+        "definition": "Von Lebewesen und ihren Beziehungen ausgehend."
+      },
+      {
+        "term": "Konkurrenz",
+        "definition": "Wechselseitige Beeinträchtigung durch Nutzung einer begrenzten Ressource."
+      },
+      {
+        "term": "Umweltfaktor",
+        "definition": "Ein bestimmter Einfluss der Umgebung auf einen Organismus."
+      },
+      {
+        "term": "Korrelation",
+        "definition": "Gemeinsame Veränderung zweier Größen; allein noch kein Nachweis einer Ursache."
+      }
+    ],
+    "mnemonic": "Temperatur und Licht sind Bedingungen; Konkurrenten und Räuber sind lebende Einflussnehmer.",
+    "questions": [
+      {
+        "id": "factors-01",
+        "type": "single",
+        "prompt": "Welcher Faktor ist abiotisch?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "NPS · Biotische und abiotische Teile",
+        "explanation": "Der Sauerstoffgehalt ist eine chemische Umweltbedingung, auch wenn Lebewesen ihn beeinflussen. Die anderen Einflüsse gehen von Organismen aus.",
+        "options": [
+          "Der Sauerstoffgehalt im Wasser",
+          "Der Fraßdruck durch Larven",
+          "Die Konkurrenz um Nahrung",
+          "Der Befall durch Krankheitserreger"
+        ],
+        "answer": "Der Sauerstoffgehalt im Wasser",
+        "topic": "factors"
+      },
+      {
+        "id": "factors-02",
+        "type": "multi",
+        "prompt": "Welche Einflüsse sind biotisch?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 3,
+        "source": "NPS · Biotische und abiotische Teile",
+        "explanation": "Fraß, Konkurrenz und Parasitenbefall sind Einflüsse von Lebewesen. Eine Sauerstoffkonzentration ist als chemische Bedingung abiotisch, selbst wenn Fotosynthese sie verändert.",
+        "options": [
+          "Der Fraß durch Fische",
+          "Die Konkurrenz zwischen Pflanzen",
+          "Der Befall durch Parasiten",
+          "Die Sauerstoffkonzentration durch Fotosynthese"
+        ],
+        "answer": [
+          "Der Fraß durch Fische",
+          "Die Konkurrenz zwischen Pflanzen",
+          "Der Befall durch Parasiten"
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-03",
+        "type": "tf",
+        "prompt": "Aussage: Eine gemessene Sauerstoffkonzentration ist eine abiotische Größe, auch wenn Lebewesen sie beeinflussen.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "UBA · Zustandsbewertung von Flüssen",
+        "explanation": "Die Herkunft einer Veränderung macht die chemische Messgröße nicht selbst zu einem Lebewesen.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "topic": "factors"
+      },
+      {
+        "id": "factors-04",
+        "type": "cloze",
+        "prompt": "Einflüsse der unbelebten Umwelt heißen ___ Umweltfaktoren.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "NPS · Biotische und abiotische Teile",
+        "explanation": "Abiotisch bezeichnet physikalische und chemische Bedingungen.",
+        "answer": ["abiotische", "abiotisch"],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-05",
+        "type": "match",
+        "prompt": "Ordne die Beispiele ihrer Kategorie zu.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 4,
+        "source": "NPS · Biotische und abiotische Teile",
+        "explanation": "Die Zuordnung richtet sich danach, ob eine Bedingung oder ein Einfluss von Lebewesen gemeint ist.",
+        "pairs": [
+          ["pH-Wert", "Abiotische chemische Bedingung"],
+          ["Temperatur", "Abiotische physikalische Bedingung"],
+          ["Fraß", "Biotische Nahrungsbeziehung"],
+          ["Konkurrenz", "Biotische Ressourcennutzung"]
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-06",
+        "type": "order",
+        "prompt": "Ordne die vereinfachte Wirkungskette bei stärkerer Beschattung eines Bachs.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Umweltfaktoren",
+        "explanation": "Die Mappe verknüpft Beschattung mit Lichtangebot und Fotosynthese.",
+        "options": [
+          "Fotosynthese kann lichtbedingt sinken",
+          "Weniger Licht erreicht das Wasser",
+          "Uferbewuchs beschattet stärker"
+        ],
+        "answer": [
+          "Uferbewuchs beschattet stärker",
+          "Weniger Licht erreicht das Wasser",
+          "Fotosynthese kann lichtbedingt sinken"
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-07",
+        "type": "single",
+        "prompt": "Welche Kombination entspricht dem vereinfachten Oberlauf-Muster der Mappe?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Umweltfaktoren",
+        "explanation": "Die Mappe beschreibt den Oberlauf typischerweise als kalt und turbulent mit hohem Sauerstoffgehalt.",
+        "options": [
+          "Kaltes, turbulentes, oft sauerstoffreiches Wasser",
+          "Kaltes, turbulentes, oft sauerstoffarmes Wasser",
+          "Warmes, langsam fließendes, oft sauerstoffreiches Wasser",
+          "Warmes, langsam fließendes, oft sauerstoffarmes Wasser"
+        ],
+        "answer": "Kaltes, turbulentes, oft sauerstoffreiches Wasser",
+        "topic": "factors"
+      },
+      {
+        "id": "factors-08",
+        "type": "open",
+        "prompt": "Hypothetischer Bach: Ein Baum wächst am Ufer und beschattet Algen. Erkläre, warum die Lichtintensität trotzdem eine abiotische Größe ist. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Umweltfaktoren",
+        "explanation": "Organismus und von ihm veränderte Bedingung sind unterschiedliche Beschreibungsebenen.",
+        "model": "Der Baum ist ein Lebewesen. Seine Beschattung beeinflusst die Menge einfallenden Lichts. Lichtintensität bleibt eine physikalische Umweltbedingung und damit abiotisch; der Baum ist die lebende Ursache der Veränderung.",
+        "rubric": [
+          "Baum als Lebewesen erkannt.",
+          "Licht als physikalische Bedingung bezeichnet.",
+          "Ursache und betroffene Messgröße unterschieden."
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-09",
+        "type": "multi",
+        "prompt": "Welche Informationen beziehen einen auffälligen Sauerstoffwert auf die aktuellen Bedingungen am Messort?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "UBA · Zustandsbewertung von Flüssen",
+        "explanation": "Gleichzeitig erhobene örtliche Daten helfen, den Messwert einzuordnen. Ein Jahresmittel eines anderen Gewässers beschreibt die aktuellen Bedingungen dieses Messortes nicht.",
+        "options": [
+          "Die gleichzeitig gemessene Wassertemperatur",
+          "Der genaue Messort mit dem Messzeitpunkt",
+          "Die dortige Strömung und Lebensgemeinschaft",
+          "Der Jahresmittelwert eines anderen Gewässers"
+        ],
+        "answer": [
+          "Die gleichzeitig gemessene Wassertemperatur",
+          "Der genaue Messort mit dem Messzeitpunkt",
+          "Die dortige Strömung und Lebensgemeinschaft"
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-10",
+        "type": "tf",
+        "prompt": "Aussage: In dauerhaft dunklem Grundwasser können grundsätzlich keine Organismen leben.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "UBA · Grundwasser als Lebensraum",
+        "explanation": "Grundwasser besitzt angepasste Lebensgemeinschaften; Licht ist nicht für jeden Organismus unmittelbar erforderlich.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "topic": "factors"
+      },
+      {
+        "id": "factors-11",
+        "type": "open",
+        "prompt": "Entwirf eine hypothetische Untersuchung zur Frage, ob Beschattung das Algenwachstum beeinflusst. Benenne veränderte Größe, Messgröße und zwei möglichst gleiche Bedingungen. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "Bio Mappe · Umweltfaktoren",
+        "explanation": "Ein Vergleich wird aussagekräftiger, wenn außer dem untersuchten Faktor möglichst wenig variiert.",
+        "model": "Mehrere vergleichbare Algenansätze erhalten unterschiedliche Lichtmengen. Gemessen wird die Veränderung der Algenmenge über denselben Zeitraum. Temperatur und Nährstoffangebot bleiben möglichst gleich. Wiederholungen helfen, Zufallseinflüsse zu erkennen.",
+        "rubric": [
+          "Lichtmenge als veränderte Größe benannt.",
+          "Algenwachstum als messbare Reaktion benannt.",
+          "Zwei kontrollierte Bedingungen genannt.",
+          "Vergleich oder Wiederholungen sinnvoll beschrieben."
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-12",
+        "type": "diagram",
+        "prompt": "Hypothetische Messreihe am selben Bach: Die Grafik zeigt Sauerstoffwerte. Beschreibe den Tagesgang und nenne zwei mögliche zusätzliche Messungen, bevor du eine Ursache behauptest. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 4,
+        "source": "UBA · Zustandsbewertung von Flüssen",
+        "explanation": "Die Daten zeigen einen Verlauf, aber keinen alleinigen Ursachennachweis.",
+        "diagram": {
+          "labels": ["06 Uhr", "14 Uhr", "22 Uhr"],
+          "values": [5, 9, 7],
+          "unit": "mg Sauerstoff pro Liter"
+        },
+        "model": "Der Wert steigt von 5 auf 9 mg/L und sinkt anschließend auf 7 mg/L. Hilfreich wären gleichzeitige Messungen von Temperatur und Licht sowie Angaben zu Strömung und Organismen. Aus drei Sauerstoffwerten allein ist keine eindeutige Ursache ableitbar.",
+        "rubric": [
+          "Anstieg und Abfall korrekt beschrieben.",
+          "Werte und Einheit berücksichtigt.",
+          "Zwei passende Zusatzmessungen genannt.",
+          "Kausale Sicherheit ausdrücklich begrenzt."
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-13",
+        "type": "single",
+        "prompt": "Zwei Pflanzen nutzen dasselbe begrenzte Lichtangebot und beeinträchtigen sich im Wachstum. Wie heißt die biotische Beziehung?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "NPS · Biotische und abiotische Teile",
+        "explanation": "Beide Pflanzen werden bei der Nutzung derselben begrenzten Ressource beeinträchtigt. Das ist Konkurrenz; die anderen Beziehungen beschreiben andere Wirkungen auf die Partner.",
+        "options": [
+          "Konkurrenz",
+          "Mutualismus",
+          "Kommensalismus",
+          "Parasitismus"
+        ],
+        "answer": "Konkurrenz",
+        "topic": "factors"
+      },
+      {
+        "id": "factors-14",
+        "type": "open",
+        "prompt": "Bewerte: Ein wärmerer Flussabschnitt muss allein wegen der Temperatur immer weniger Fische enthalten. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "UBA · Zustandsbewertung von Flüssen",
+        "explanation": "Fischbestände hängen von mehreren Bedingungen ab; eine einzelne Größe entscheidet nicht unabhängig von Art und Situation.",
+        "model": "Die Aussage ist zu pauschal. Temperatur ist ein relevanter Faktor, doch Arten haben unterschiedliche Ansprüche. Auch Sauerstoff, Strömung, Nahrung und weitere Einflüsse sind wichtig. Vergleichbare Messungen müssten prüfen, welche Faktoren zusammenwirken.",
+        "rubric": [
+          "Pauschalaussage eingeschränkt.",
+          "Unterschiedliche Ansprüche von Arten erkannt.",
+          "Mindestens zwei weitere Umweltfaktoren genannt.",
+          "Datenbedarf statt sicherer Monokausalität erläutert."
+        ],
+        "topic": "factors"
+      },
+      {
+        "id": "factors-15",
+        "type": "cloze",
+        "prompt": "Zwei Messgrößen verändern sich gemeinsam. Dieser Zusammenhang ist allein noch kein Beweis für eine ___.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "UBA · Zustandsbewertung von Flüssen",
+        "explanation": "Aus gemeinsamem Auftreten folgt nicht zwingend ein Ursache-Wirkungs-Zusammenhang.",
+        "answer": [
+          "Ursache",
+          "Kausalität",
+          "Ursachenbeziehung",
+          "Ursache-Wirkungs-Beziehung"
+        ],
+        "topic": "factors"
+      }
+    ]
+  },
+  {
+    "id": "ecosphere",
+    "title": "Ecosphere und Ökosystem-Check",
+    "subtitle": "Ein Modell verstehen, Annahmen prüfen und Grenzen benennen",
+    "sources": [
+      {
+        "label": "Bio Mappe · Ecosphere-Thema",
+        "kind": "mappe",
+        "pages": [29]
+      },
+      {
+        "label": "NASA · Systemdenken",
+        "kind": "external",
+        "url": "https://mynasadata.larc.nasa.gov/basic-page/systems-thinking-about-earth-system"
+      },
+      {
+        "label": "NASA/GLOBE · Erde in einer Flasche",
+        "kind": "external",
+        "url": "https://mynasadata.larc.nasa.gov/sites/default/files/2021-09/ElementaryGLOBE_EarthSystemsActivity1-Earth_System_in_a_Bottle.pdf"
+      },
+      {
+        "label": "ESA · Geschlossene Stoffkreisläufe",
+        "kind": "external",
+        "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Melissa/Closed_Loop_Concept"
+      },
+      {
+        "label": "ESA · Funktionen im Kreislauf",
+        "kind": "external",
+        "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Melissa/Closed_Loop_Compartments"
+      },
+      {
+        "label": "OpenStax · Energiefluss",
+        "kind": "external",
+        "url": "https://openstax.org/books/biology-2e/pages/46-2-energy-flow-through-ecosystems"
+      },
+      {
+        "label": "OpenStax · Stoffkreisläufe",
+        "kind": "external",
+        "url": "https://openstax.org/books/biology-2e/pages/46-3-biogeochemical-cycles"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Was hier mit Ecosphere gemeint ist",
+        "text": "Auf PDF-Seite 29 steht das Thema ohne Beschreibung des Unterrichtsgefäßes. Dieses Modul verwendet daher ausdrücklich ein allgemeines Modell: ein transparentes, gegenüber Stoffaustausch idealisiert geschlossenes Gefäß mit Wasser, geeigneten Produzenten und Mikroorganismen. Bestimmte Tierarten oder ein konkreter Versuch werden nicht vorausgesetzt. NASA/GLOBE behandelt verwandte Flaschenmodelle; die ESA erforscht technisch kontrollierte Stoffkreisläufe."
+      },
+      {
+        "heading": "Stoffe kreisen, Energie fließt",
+        "text": "Im Modell können Wasser, Kohlenstoff und Mineralstoffe innerhalb der Systemgrenze umgesetzt werden. Licht liefert Energie für Fotosynthese; Wärme kann nach außen gelangen. Stofflich geschlossen bedeutet also nicht energetisch isoliert. Fotosynthetische Organismen bauen organische Stoffe auf. Zellatmung nutzt organische Stoffe; Zersetzung führt Nährstoffe zurück. Pflanzen betreiben ebenfalls Zellatmung. Ergänzungen: NASA · Systemdenken; OpenStax · Energiefluss; OpenStax · Stoffkreisläufe."
+      },
+      {
+        "heading": "Der Ökosystem-Check",
+        "text": "Prüfe sechs Punkte: Systemgrenze, unbelebte Bedingungen, vorhandene Lebewesen, Produzenten und Stoffabbau, Energiezufuhr sowie beobachtbare Veränderungen über die Zeit. Ein geschlossenes Gefäß bleibt nicht automatisch stabil. Das Verhältnis von Produktion und Verbrauch sowie ausreichende Ressourcen sind entscheidend. Eine einzelne Beobachtung beweist kein dauerhaftes Gleichgewicht. Alle Zahlen in den Übungen dieses Moduls sind ausdrücklich hypothetisch."
+      },
+      {
+        "heading": "Grenzen des Modells",
+        "text": "Ein Glas vereinfacht ein natürliches Ökosystem: geringe Größe, wenige Arten und fehlender Stoffaustausch begrenzen den Vergleich. ESA-MELiSSA nutzt mehrere kontrollierte Prozesskompartimente; das zeigt die Bedeutung verschiedener Funktionen, ist aber kein Beleg dafür, dass jedes Unterrichtsgefäß dauerhaft funktioniert. Die Übertragung auf das unbekannte Klassenbeispiel bleibt eine Modellannahme."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Stofflich geschlossen",
+        "definition": "Über die gewählte Systemgrenze findet im Modell kein Stoffaustausch statt."
+      },
+      {
+        "term": "Energetisch offen",
+        "definition": "Energie kann die Systemgrenze überschreiten, etwa als Licht hinein und Wärme hinaus."
+      },
+      {
+        "term": "Produzent",
+        "definition": "Organismus, der aus anorganischen Stoffen organische Substanz aufbaut, hier mithilfe von Licht."
+      },
+      {
+        "term": "Destruent",
+        "definition": "Organismus, der organische Reste abbaut und am Rückführen von Nährstoffen beteiligt ist."
+      },
+      {
+        "term": "Modellgrenze",
+        "definition": "Aspekt der Wirklichkeit, den eine vereinfachte Darstellung nicht ausreichend abbildet."
+      }
+    ],
+    "mnemonic": "Der Deckel hält Stoffe zurück; das Glas lässt Licht hinein; Stoffkreislauf braucht Energiefluss.",
+    "questions": [
+      {
+        "id": "ecosphere-01",
+        "type": "single",
+        "prompt": "Ein dicht verschlossenes transparentes Modellgefäß erhält Licht. Welche Beschreibung passt?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "NASA · Systemdenken",
+        "explanation": "Licht überträgt Energie, während ein ideal dichtes Gefäß Stoffaustausch verhindert.",
+        "options": [
+          "Stofflich geschlossen und energetisch offen",
+          "Stofflich geschlossen und energetisch geschlossen",
+          "Stofflich offen und energetisch offen",
+          "Stofflich offen und energetisch geschlossen"
+        ],
+        "answer": "Stofflich geschlossen und energetisch offen",
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-02",
+        "type": "multi",
+        "prompt": "Welche Aussagen gehören zu einem fachlich sinnvollen Ökosystem-Check eines hypothetischen Flaschenmodells?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "NASA/GLOBE · Erde in einer Flasche",
+        "explanation": "Ein Check verbindet Organismen, Energie und Stoffumsetzungen. Die Geschlossenheit allein erklärt nicht, ob Produktion und Verbrauch langfristig zusammenpassen.",
+        "options": [
+          "Die vorhandenen Lebewesen werden erfasst.",
+          "Die Energiezufuhr über die Grenze wird geprüft.",
+          "Die Umsetzung von Stoffen wird untersucht.",
+          "Die geschlossene Grenze erklärt bereits die Stabilität."
+        ],
+        "answer": [
+          "Die vorhandenen Lebewesen werden erfasst.",
+          "Die Energiezufuhr über die Grenze wird geprüft.",
+          "Die Umsetzung von Stoffen wird untersucht."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-03",
+        "type": "tf",
+        "prompt": "Aussage: Ein verschlossenes Glas bleibt automatisch unbegrenzt stabil.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "ESA · Geschlossene Stoffkreisläufe",
+        "explanation": "Geschlossenheit garantiert keine passende Bilanz der biologischen Prozesse.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-04",
+        "type": "cloze",
+        "prompt": "In einem beleuchteten Pflanzenmodell liefert ___ die Energie für Fotosynthese.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "ESA · Geschlossene Stoffkreisläufe",
+        "explanation": "Fotosynthetische Systeme nutzen Lichtenergie.",
+        "answer": ["Licht", "Sonnenlicht", "Lichtenergie"],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-05",
+        "type": "match",
+        "prompt": "Ordne die Funktionen im vereinfachten Modell zu.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 4,
+        "source": "ESA · Funktionen im Kreislauf",
+        "explanation": "Verschiedene Funktionen verbinden Aufbau, Verbrauch, Abbau und Energieaustausch.",
+        "pairs": [
+          [
+            "Fotosynthetische Produzenten",
+            "Aufbau organischer Substanz mit Lichtenergie"
+          ],
+          [
+            "Zellatmung",
+            "Nutzung organischer Substanz zur Energiebereitstellung"
+          ],
+          ["Destruenten", "Abbau organischer Reste"],
+          ["Gefäßgrenze", "Abgrenzung von Innenraum und Umgebung"]
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-06",
+        "type": "order",
+        "prompt": "Ordne einen vereinfachten Weg von Mineralnährstoffen im Modell. Der letzte Schritt verbindet sich wieder mit dem ersten.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "OpenStax · Stoffkreisläufe",
+        "explanation": "Die Reihenfolge beschreibt einen Stoffweg, nicht das Kreisen nutzbarer Energie.",
+        "options": [
+          "Abbau und Freisetzung von Mineralstoffen",
+          "Aufnahme von Mineralstoffen durch Produzenten",
+          "Absterben organischer Substanz",
+          "Einbau in organische Substanz"
+        ],
+        "answer": [
+          "Aufnahme von Mineralstoffen durch Produzenten",
+          "Einbau in organische Substanz",
+          "Absterben organischer Substanz",
+          "Abbau und Freisetzung von Mineralstoffen"
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-07",
+        "type": "single",
+        "prompt": "Warum braucht ein dauerhaft fotosynthetisch betriebenes Modell Energie von außen?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Energiefluss",
+        "explanation": "Licht liefert nutzbare Energie. Zellatmung wandelt gespeicherte chemische Energie um; sie erzeugt keine Energie. Mineralstoffe sind Baustoffe, und Wärme ersetzt im fotosynthetischen Modell das Licht nicht.",
+        "options": [
+          "Weil Energie bei Umwandlungen zunehmend als Wärme abgegeben wird",
+          "Weil Fotosynthese Mineralstoffe als hauptsächliche Energiequelle verbraucht",
+          "Weil Zellatmung neue Energie aus zurückgeführten Stoffen erzeugt",
+          "Weil gespeicherte Wärme den Lichtbedarf der Produzenten ersetzt"
+        ],
+        "answer": "Weil Energie bei Umwandlungen zunehmend als Wärme abgegeben wird",
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-08",
+        "type": "open",
+        "prompt": "Erkläre den Unterschied zwischen Stoffkreislauf und Energiefluss im hypothetischen geschlossenen Pflanzengefäß. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 4,
+        "source": "OpenStax · Energiefluss",
+        "explanation": "Stoffe können wiederholt umgesetzt werden; die nutzbare Energie muss nachgeliefert werden.",
+        "model": "Zum Beispiel werden Kohlenstoffverbindungen durch Fotosynthese aufgebaut und durch Atmung wieder umgesetzt. Lichtenergie tritt ein, wird chemisch gebunden und schließlich teilweise als Wärme abgegeben. Stoffe können kreisen; die nutzbare Energie wird nicht vollständig im Kreis zurückgewonnen.",
+        "rubric": [
+          "Ein Stoff oder Element als Beispiel genannt.",
+          "Mindestens zwei Stoffumwandlungen erläutert.",
+          "Licht als Energiezufuhr benannt.",
+          "Wärmeabgabe und fehlenden vollständigen Energiekreislauf erklärt."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-09",
+        "type": "tf",
+        "prompt": "Aussage: Pflanzen betreiben im Modell auch Zellatmung.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "OpenStax · Stoffkreisläufe",
+        "explanation": "Fotosynthese ersetzt die Zellatmung von Pflanzen nicht.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-10",
+        "type": "multi",
+        "prompt": "Welche Aussagen helfen bei der langfristigen Beurteilung eines hypothetischen Modells?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "NASA/GLOBE · Erde in einer Flasche",
+        "explanation": "Wiederholte Beobachtungen mit dokumentierten Bedingungen zeigen Veränderungen. Ein stabiler Wert während einer Woche begründet keine entsprechend lange Vorhersage.",
+        "options": [
+          "Sauerstoffwerte sollten zu mehreren Zeitpunkten erhoben werden.",
+          "Licht und Temperatur sollten bei den Messungen dokumentiert werden.",
+          "Die Pflanzenentwicklung sollte über mehrere Wochen erfasst werden.",
+          "Ein stabiler Wochenwert kann langfristige Beobachtungen ersetzen."
+        ],
+        "answer": [
+          "Sauerstoffwerte sollten zu mehreren Zeitpunkten erhoben werden.",
+          "Licht und Temperatur sollten bei den Messungen dokumentiert werden.",
+          "Die Pflanzenentwicklung sollte über mehrere Wochen erfasst werden."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-11",
+        "type": "open",
+        "prompt": "Hypothetisches Modell ohne Tiere: Wasserpflanzen und Mikroorganismen leben in einem beleuchteten Gefäß. Ist eine Tierart zwingend nötig, damit man Wechselwirkungen eines Ökosystems untersuchen kann? Begründe. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "ESA · Funktionen im Kreislauf",
+        "explanation": "Ökosystemfunktionen sind nicht an eine bestimmte Tierart gebunden.",
+        "model": "Nein. Produzenten, Mikroorganismen und abiotische Bedingungen bilden bereits ein untersuchbares Beziehungsgefüge. Man kann etwa Fotosynthese, Atmung und Stoffabbau betrachten. Ob dieses konkrete Modell langfristig funktioniert, muss dennoch geprüft werden.",
+        "rubric": [
+          "Tiere nicht als zwingende Voraussetzung behandelt.",
+          "Mindestens zwei vorhandene Komponenten verknüpft.",
+          "Keine automatische Langzeitstabilität behauptet."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-12",
+        "type": "diagram",
+        "prompt": "Hypothetisches Gefäß im Licht: Die Grafik zeigt Sauerstoffmessungen über drei Stunden. Beschreibe den Trend und beurteile, ob damit unbegrenzte Stabilität bewiesen ist. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "NASA/GLOBE · Erde in einer Flasche",
+        "explanation": "Ein kurzer Trend ist kein Langzeitbeleg und beschreibt nur eine Messgröße.",
+        "diagram": {
+          "labels": ["Start", "Nach 1 h", "Nach 2 h", "Nach 3 h"],
+          "values": [6, 6.5, 7, 7.2],
+          "unit": "mg Sauerstoff pro Liter"
+        },
+        "model": "Die Konzentration steigt von 6 auf 7,2 mg/L. Das ist mit einer positiven Sauerstoffbilanz während der Beobachtung vereinbar. Andere Prozesse und Bedingungen sind nicht geklärt. Drei Stunden und eine Größe beweisen keine dauerhafte Stabilität.",
+        "rubric": [
+          "Anstieg mit Start- und Endwert beschrieben.",
+          "Bilanz nur auf Beobachtungszeit begrenzt.",
+          "Mindestens eine fehlende Information genannt.",
+          "Unbegrenzte Stabilität nicht als bewiesen bewertet."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-13",
+        "type": "open",
+        "prompt": "Bewerte die Übertragung: Die ESA entwickelt technische Stoffkreisläufe, also funktioniert jedes verschlossene Schulglas ohne weitere Prüfung. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "ESA · Geschlossene Stoffkreisläufe",
+        "explanation": "Ein technisches Forschungssystem ist kein Wirksamkeitsbeleg für jedes andere Modell.",
+        "model": "Die Schlussfolgerung ist unzulässig. Die ESA untersucht kontrollierte Prozesse mit bestimmten Organismen und technischen Bedingungen. Ein Schulglas unterscheidet sich in Größe, Aufbau und Steuerung. Seine Bedingungen und Entwicklung müssen eigenständig geprüft werden.",
+        "rubric": [
+          "Schlussfolgerung begründet abgelehnt.",
+          "Kontrollierte technische Bedingungen erwähnt.",
+          "Mindestens zwei Unterschiede benannt.",
+          "Eigenständige Beobachtung oder Prüfung gefordert."
+        ],
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-14",
+        "type": "single",
+        "prompt": "Hypothetisches Gefäß: Nach dem Abdunkeln sinkt die Sauerstoffkonzentration. Welche Erklärung passt zu den grundlegenden Prozessen?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "NASA/GLOBE · Erde in einer Flasche",
+        "explanation": "Ohne Licht fällt fotosynthetische Sauerstoffproduktion weg. Zellatmung von Pflanzen und anderen Organismen kann weiter Sauerstoff verbrauchen. Ob sie den Messverlauf vollständig erklärt, müsste geprüft werden.",
+        "options": [
+          "Fotosynthese ist begrenzt, während Zellatmung Sauerstoff verbraucht.",
+          "Fotosynthese setzt im Dunkeln mehr Sauerstoff für Zellatmung frei.",
+          "Zellatmung ist begrenzt, während Fotosynthese Sauerstoff verbraucht.",
+          "Zersetzung ersetzt im Dunkeln die Sauerstoffabgabe der Produzenten."
+        ],
+        "answer": "Fotosynthese ist begrenzt, während Zellatmung Sauerstoff verbraucht.",
+        "topic": "ecosphere"
+      },
+      {
+        "id": "ecosphere-15",
+        "type": "open",
+        "prompt": "Plane einen Ökosystem-Check für ein unbekanntes hypothetisches Gefäß: Formuliere vier konkrete Fragen und eine Grenze deiner Untersuchung. Vergleiche anschließend mit Musterlösung und Kriterien und bewerte dich selbst.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 5,
+        "source": "NASA · Systemdenken",
+        "explanation": "Ein sinnvoller Check beginnt mit überprüfbaren Angaben und benennt Unsicherheit.",
+        "model": "Ist das Gefäß stofflich geschlossen? Welche Lebewesen sind erkennbar? Wie viel Licht und welche Temperatur liegen vor? Wie verändern sich Sauerstoff und Pflanzenmenge über die Zeit? Grenze: Nicht sichtbare Mikroorganismen und langfristige Entwicklungen sind mit kurzem Hinsehen nicht ausreichend erfasst.",
+        "rubric": [
+          "Frage zur Systemgrenze.",
+          "Frage zu Lebewesen.",
+          "Frage zu Umweltbedingungen oder Energie.",
+          "Frage zur zeitlichen Entwicklung.",
+          "Konkrete Beobachtungs- oder Modellgrenze genannt."
+        ],
+        "topic": "ecosphere"
+      }
+    ]
+  },
+  {
+    "id": "river",
+    "title": "Fließgewässer",
+    "subtitle": "Von der Quelle bis zur Mündung: Bedingungen erklären Lebensgemeinschaften.",
+    "sources": [
+      {
+        "label": "Bio Mappe · Fließgewässer",
+        "pages": [4, 5, 6],
+        "kind": "mappe"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Ein Fluss verändert sich",
+        "text": "Fließgewässer werden in Oberlauf, Mittellauf und Unterlauf gegliedert. Die Quelle ist ihr Ausgangspunkt; an der Mündung gelangen sie in ein Meer oder einen See. Im dargestellten Modell nehmen Gefälle und Strömungsgeschwindigkeit flussabwärts ab. Grobes Material bleibt früher liegen, feiner Sand und Feinsediment werden weiter transportiert. Im Mittellauf sind Flussschleifen, sogenannte Mäander, typisch."
+      },
+      {
+        "heading": "Licht, Temperatur und Trübung",
+        "text": "Die Konzentration von Trübstoffen und organischen Stoffen nimmt im Material zur Mündung hin zu. Trübung verringert das Licht am Gewässergrund und erschwert dort die Fotosynthese. Das Quellwasser bleibt vergleichsweise kühl und im Jahresverlauf relativ konstant; weiter flussabwärts steigen mögliche Höchsttemperaturen und Temperaturschwankungen. Diese Angaben beschreiben ein Modell, keine Messwerte für jeden Fluss."
+      },
+      {
+        "heading": "Sauerstoff differenziert betrachten",
+        "text": "An der Quelle ist der Sauerstoffgehalt zunächst gering. Im Oberlauf bringen turbulente Wasserbewegungen Luftsauerstoff ein; zudem kann sich in kaltem Wasser mehr Sauerstoff lösen. Im Mittellauf liefern Algen und Wasserpflanzen Sauerstoff durch Fotosynthese. Dort ist der Gehalt im Material hoch, schwankt aber ausgeprägt zwischen Tag und Nacht sowie im Jahresverlauf. Im Unterlauf und an der Mündung sinkt er: wärmeres Wasser kann weniger Sauerstoff lösen, und Trübung begrenzt die Fotosynthese. Die Aussage ‚Sauerstoff nimmt vom Ursprung an stetig ab‘ ist daher falsch."
+      },
+      {
+        "heading": "Nahrung und Tiere entlang des Flusses",
+        "text": "Im beschatteten Oberlauf sind eingetragene Blätter und Totholz eine wichtige Nahrungsbasis. Zerkleinerer wie Bachflohkrebse nutzen dieses Material. Im Mittellauf kommen mehr Aufwuchsalgen und Phytoplankton vor; Weidegänger wie Schnecken schaben Algen ab. Filtrierer wie Flussmuscheln entnehmen Partikel aus dem Wasser, Sedimentfresser nutzen Material am Grund. Im trüben Unterlauf sind Filtrierer und Sedimentfresser wichtig; der Mangel an Licht am Grund begrenzt Aufwuchsalgen und damit Weidegänger. Räuber fressen andere Tiere. Die Verteilung folgt den verfügbaren Ressourcen und Umweltbedingungen."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Mäander",
+        "definition": "Weite Flussschleife, im Material besonders für den Mittellauf beschrieben."
+      },
+      {
+        "term": "Trübstoffe",
+        "definition": "Im Wasser schwebende Partikel, die unter anderem die Lichtverfügbarkeit verändern."
+      },
+      {
+        "term": "Detritus",
+        "definition": "Tote organische Substanz, etwa zersetzte Pflanzen- und Tierreste."
+      },
+      {
+        "term": "Zerkleinerer",
+        "definition": "Tiere, die eingetragenes organisches Material wie Blätter mechanisch zerkleinern und nutzen."
+      },
+      {
+        "term": "Weidegänger",
+        "definition": "Tiere, die Aufwuchsalgen von Oberflächen abweiden."
+      },
+      {
+        "term": "Filtrierer",
+        "definition": "Tiere, die schwebende Nahrungspartikel aus dem Wasser filtern."
+      },
+      {
+        "term": "Leitart",
+        "definition": "Art, deren Vorkommen für bestimmte Bedingungen eines Gewässerabschnitts charakteristisch ist."
+      }
+    ],
+    "mnemonic": "Vom groben zum feinen Grund; O₂: Quelle gering, Ober- und Mittellauf hoch, unten wieder gering. Immer die Ursache mitdenken.",
+    "questions": [
+      {
+        "id": "river-01",
+        "type": "order",
+        "prompt": "Ordne die Stationen von der Entstehung bis zum Ende des Flusses.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": ["Unterlauf", "Quelle", "Mündung", "Mittellauf", "Oberlauf"],
+        "answer": ["Quelle", "Oberlauf", "Mittellauf", "Unterlauf", "Mündung"],
+        "explanation": "Das Längsprofil beginnt an der Quelle und endet an der Mündung; dazwischen liegen Ober-, Mittel- und Unterlauf.",
+        "topic": "river"
+      },
+      {
+        "id": "river-02",
+        "type": "single",
+        "prompt": "Welcher Gewässergrund passt im Modell am besten zum Oberlauf?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": [
+          "Steine und Kies",
+          "Sand und Feinsediment",
+          "Kies und feiner Sand",
+          "Schluff und organische Ablagerungen"
+        ],
+        "answer": "Steine und Kies",
+        "explanation": "Starke Strömung transportiert feines Material weiter. Am Oberlauf bleiben besonders Steine und Kies zurück.",
+        "topic": "river"
+      },
+      {
+        "id": "river-03",
+        "type": "multi",
+        "prompt": "Welche Größen nehmen im dargestellten Flussmodell zur Mündung hin zu?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": [
+          "Wassertrübung",
+          "Gehalt organischer Stoffe",
+          "Gefälle",
+          "Strömungsgeschwindigkeit"
+        ],
+        "answer": ["Wassertrübung", "Gehalt organischer Stoffe"],
+        "explanation": "Trübung und organischer Stoffgehalt steigen im Modell. Gefälle und Strömungsgeschwindigkeit nehmen dagegen ab.",
+        "topic": "river"
+      },
+      {
+        "id": "river-04",
+        "type": "tf",
+        "prompt": "Im Material nimmt der Sauerstoffgehalt von der Quelle bis zur Mündung ohne Unterbrechung ab.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "explanation": "Die Quelle ist zunächst sauerstoffarm. Der Gehalt steigt im Oberlauf an, ist auch im Mittellauf hoch und fällt erst im Unterlauf wieder ab.",
+        "topic": "river"
+      },
+      {
+        "id": "river-05",
+        "type": "cloze",
+        "prompt": "Eine weite Flussschleife bezeichnet man als ___.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Fließgewässer",
+        "answer": ["Mäander", "Maeander"],
+        "explanation": "Mäander sind typische Flussschleifen des Mittellaufs.",
+        "topic": "river"
+      },
+      {
+        "id": "river-06",
+        "type": "match",
+        "prompt": "Ordne die Ernährungsweise dem passenden Beispiel zu.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 3,
+        "source": "Bio Mappe · Fließgewässer",
+        "pairs": [
+          ["Zerkleinerer", "Bachflohkrebs nutzt Blattmaterial"],
+          ["Weidegänger", "Schnecke schabt Aufwuchsalgen ab"],
+          ["Filtrierer", "Flussmuschel filtert Schwebteilchen"]
+        ],
+        "explanation": "Die Gruppen unterscheiden sich durch die Art der Nahrungsaufnahme. Zerkleinerer nutzen grobes organisches Material, Weidegänger Aufwuchs und Filtrierer schwebende Partikel.",
+        "topic": "river"
+      },
+      {
+        "id": "river-07",
+        "type": "open",
+        "prompt": "Erkläre mit zwei Ursachen, weshalb der Oberlauf im Material sauerstoffreich ist.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Fließgewässer",
+        "model": "Turbulente Wasserbewegungen tragen Luftsauerstoff ein. Die niedrige Wassertemperatur ermöglicht zudem eine höhere Sauerstofflöslichkeit.",
+        "rubric": [
+          "Turbulenz oder Durchmischung trägt Luftsauerstoff ein.",
+          "Kaltes Wasser kann mehr Sauerstoff lösen als warmes."
+        ],
+        "explanation": "Strömung allein ist keine vollständige Begründung: Entscheidend sind der Gasaustausch durch Turbulenz und die temperaturabhängige Löslichkeit.",
+        "topic": "river"
+      },
+      {
+        "id": "river-08",
+        "type": "diagram",
+        "prompt": "Deute das schematische Sauerstoffprofil. Die Stufen sind qualitative Kategorien, keine gemessenen Konzentrationen. Beschreibe den Verlauf und erkläre den Anstieg sowie den späteren Rückgang.",
+        "difficulty": "schwer",
+        "afb": 2,
+        "points": 4,
+        "source": "Bio Mappe · Fließgewässer",
+        "diagram": {
+          "labels": [
+            "Quelle",
+            "Oberlauf",
+            "Mittellauf",
+            "Unterlauf",
+            "Mündung"
+          ],
+          "values": [1, 3, 3, 1, 1],
+          "unit": "schematische O₂-Stufe: 1 gering, 3 hoch"
+        },
+        "model": "Der Gehalt ist an der Quelle gering, im Ober- und Mittellauf hoch und im Unterlauf sowie an der Mündung wieder gering. Im Oberlauf fördern Turbulenz und kaltes Wasser den Sauerstoffgehalt; im Mittellauf kommt Fotosynthese hinzu. Höhere Temperaturen und geringere Lichtverfügbarkeit durch Trübung erklären den Rückgang. Der Mittellauf zeigt trotz der hohen Kategorie starke Tag-Nacht- und Jahresschwankungen.",
+        "rubric": [
+          "Nicht monotonen Verlauf korrekt beschrieben.",
+          "Anstieg durch Turbulenz und/oder kaltes Wasser erklärt.",
+          "Rückgang durch Wärme und/oder eingeschränkte Fotosynthese erklärt.",
+          "Qualitative Darstellung und/oder Schwankungen im Mittellauf berücksichtigt."
+        ],
+        "explanation": "Das vereinfachte Profil fasst die Tabelle auf PDF-Seite 5 zusammen. Es darf nicht als reale Konzentrationsmessung gelesen werden.",
+        "topic": "river"
+      },
+      {
+        "id": "river-09",
+        "type": "single",
+        "prompt": "Warum kann starker Aufwuchs am Grund eines sehr trüben Unterlaufs begrenzt sein?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": [
+          "Am Grund steht weniger Licht für Fotosynthese zur Verfügung.",
+          "Die stärkere Strömung reißt den Aufwuchs im Unterlauf ab.",
+          "Das kühlere Wasser verlangsamt dort den Stoffwechsel der Algen.",
+          "Der höhere Sauerstoffgehalt hemmt dort die Fotosynthese."
+        ],
+        "answer": "Am Grund steht weniger Licht für Fotosynthese zur Verfügung.",
+        "explanation": "Schwebstoffe mindern die Lichtdurchdringung. Das begrenzt Fotosynthese und kann dadurch Weidegängern ihre Nahrung entziehen.",
+        "topic": "river"
+      },
+      {
+        "id": "river-10",
+        "type": "open",
+        "prompt": "Ein beschatteter Oberlauf enthält wenig Wasserpflanzen, aber viele blattfressende Bachflohkrebse. Erkläre, wie ihre Nahrungsversorgung dennoch funktioniert.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Fließgewässer",
+        "model": "Blätter und anderes Pflanzenmaterial gelangen aus der Ufervegetation ins Wasser. Bachflohkrebse nutzen dieses außerhalb des Gewässers gebildete organische Material als Zerkleinerer.",
+        "rubric": [
+          "Eintrag von Blattmaterial aus der Ufervegetation benannt.",
+          "Zerkleinerer nutzen die eingetragene organische Substanz als Nahrung."
+        ],
+        "explanation": "Nahrung muss nicht im Wasser produziert werden. Im beschatteten Oberlauf ist der Eintrag vom Ufer besonders wichtig.",
+        "topic": "river"
+      },
+      {
+        "id": "river-11",
+        "type": "multi",
+        "prompt": "Welche Aussagen zum Mittellauf treffen nach dem Material zu?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": [
+          "Mäander können auftreten.",
+          "Der Sauerstoffgehalt kann ausgeprägt im Tages- und Jahresverlauf schwanken.",
+          "Der Sauerstoffgehalt ist im Modell geringer als an der Quelle.",
+          "Die Strömung ist im Modell schneller als im Oberlauf."
+        ],
+        "answer": [
+          "Mäander können auftreten.",
+          "Der Sauerstoffgehalt kann ausgeprägt im Tages- und Jahresverlauf schwanken."
+        ],
+        "explanation": "Im Mittellauf fließt das Wasser langsamer als im Oberlauf. Pflanzenproduktion und wechselnde Bedingungen tragen zu Sauerstoffschwankungen bei.",
+        "topic": "river"
+      },
+      {
+        "id": "river-12",
+        "type": "open",
+        "prompt": "Beurteile die Aussage: ‚An der Mündung findet man immer exakt dieselben Tierarten wie in der Quelle, weil beides Flusswasser ist.‘",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · Fließgewässer",
+        "model": "Die Aussage ist nicht begründet. Entlang des Flusses ändern sich Temperatur, Sauerstoff, Strömung, Untergrund und Nahrungsangebot. Arten haben unterschiedliche Ansprüche; deshalb entstehen verschiedene Lebensgemeinschaften. Das Modell erlaubt aber keine Aussage, dass jede einzelne Art ausschließlich in einem Abschnitt vorkommt.",
+        "rubric": [
+          "Aussage sachlich zurückgewiesen.",
+          "Mindestens zwei sich ändernde Umweltbedingungen genannt.",
+          "Unterschiedliche Ansprüche von Arten mit ihrer Verteilung verknüpft."
+        ],
+        "explanation": "Die bloße Bezeichnung ‚Flusswasser‘ sagt wenig über die tatsächlichen Lebensbedingungen aus.",
+        "topic": "river"
+      },
+      {
+        "id": "river-13",
+        "type": "match",
+        "prompt": "Ordne den Flussabschnitten die im Material hervorgehobenen Nahrungsbedingungen zu.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Fließgewässer",
+        "pairs": [
+          [
+            "Beschatteter Oberlauf",
+            "Eingetragenes Laub ist eine wichtige Grundlage."
+          ],
+          ["Mittellauf", "Aufwuchsalgen bieten Weidegängern Nahrung."],
+          [
+            "Trüber Unterlauf",
+            "Filtrierer und Sedimentfresser sind besonders wichtig."
+          ]
+        ],
+        "explanation": "Licht und Stofftransport verändern die Nahrungsbasis. Die Ernährungsgruppen passen sich diesen Ressourcen an.",
+        "topic": "river"
+      },
+      {
+        "id": "river-14",
+        "type": "tf",
+        "prompt": "Die im Material beschriebenen Veränderungen sind ein vereinfachtes Modell; ein konkreter Fluss kann durch lokale Bedingungen davon abweichen.",
+        "difficulty": "mittel",
+        "afb": 3,
+        "points": 1,
+        "source": "Bio Mappe · Fließgewässer",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "explanation": "Die Tabellen und Schemata stellen typische Zusammenhänge dar. Sie ersetzen keine Messungen oder Beobachtungen an einem konkreten Fluss.",
+        "topic": "river"
+      },
+      {
+        "id": "river-15",
+        "type": "open",
+        "prompt": "In einem bisher klaren Flussabschnitt nimmt die Trübung deutlich zu. Leite eine mögliche Folge für Aufwuchsalgen und Weidegänger ab. Formuliere als begründete Möglichkeit, nicht als sichere Vorhersage.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · Fließgewässer",
+        "model": "Mehr Trübung kann die Lichtmenge am Grund verringern. Dadurch könnte die Fotosynthese und das Wachstum von Aufwuchsalgen abnehmen. Weidegänger könnten anschließend weniger Nahrung finden. Ob dies tatsächlich eintritt, hängt auch von weiteren Bedingungen ab.",
+        "rubric": [
+          "Trübung mit geringerem Licht am Grund verknüpft.",
+          "Mögliche Abnahme des Algenwachstums abgeleitet.",
+          "Möglichen Nahrungsmangel für Weidegänger und Unsicherheit der Vorhersage benannt."
+        ],
+        "explanation": "Die Wirkungskette verbindet einen abiotischen Faktor mit Produzenten und anschließend mit Konsumenten.",
+        "topic": "river"
+      }
+    ]
+  },
+  {
+    "id": "foodweb",
+    "title": "Nahrungsketten und Nahrungsnetze",
+    "subtitle": "Wer frisst wen – und wie gelangen Stoffe und Energie durch ein Ökosystem?",
+    "sources": [
+      {
+        "label": "Bio Mappe · Nahrungsbeziehungen",
+        "pages": [13, 14, 15, 16, 17, 18],
+        "kind": "mappe"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Kette und Netz",
+        "text": "Eine Nahrungskette stellt eine lineare Folge von Nahrungsbeziehungen dar. Im Material gilt: Eichenblatt → Frostspannerraupe → Zilpzalp → Sperber. Die Pfeile zeigen von der Nahrung zum fressenden Organismus und damit die Weitergabe von Stoffen und chemisch gebundener Energie. Weil Arten meist mehrere Nahrungsquellen und Feinde haben, werden mehrere Ketten zu einem Nahrungsnetz verbunden."
+      },
+      {
+        "heading": "Trophiestufen richtig zuordnen",
+        "text": "Produzenten bauen aus anorganischen Ausgangsstoffen organische Stoffe auf. Primärkonsumenten fressen Produzenten; Sekundärkonsumenten fressen Primärkonsumenten; Tertiärkonsumenten fressen Sekundärkonsumenten. In der Beispielkette ist die Eiche Produzent, die Raupe Primärkonsument, der Zilpzalp Sekundärkonsument und der Sperber Tertiärkonsument. Eine Art kann je nach gefressener Nahrung an verschiedenen Stellen eines Nahrungsnetzes stehen."
+      },
+      {
+        "heading": "Destruenten und Stoffkreislauf",
+        "text": "Tote Biomasse und Ausscheidungen bilden Detritus. Detritusfresser zerkleinern und verdauen ihn. Mineralisierer wie bestimmte Bakterien und Pilze setzen organische Bestandteile zu anorganischen Stoffen um. Dabei werden unter anderem Mineralstoffe wieder verfügbar, die Produzenten aufnehmen können. Destruenten erhalten tote organische Substanz aus allen Trophiestufen, nicht nur von der letzten Stufe."
+      },
+      {
+        "heading": "Pyramiden und Energiefluss",
+        "text": "Zahlenpyramiden zeigen Individuenzahlen, Biomassepyramiden die Biomasse je Trophiestufe und Energiepyramiden Energiegrößen. Die Biomassegrafik im Material enthält 809, 37, 11 und 1,5 g Trockenmasse pro m². Nicht die gesamte aufgenommene Energie wird in neue Biomasse eingebaut: Ein Teil wird bei Zellatmung als Wärme abgegeben, ein anderer gelangt in Ausscheidungen oder tote Biomasse. Energie durchfließt das Ökosystem und muss von außen zugeführt werden. Stoffe können dagegen wiederverwendet werden. Die Energiepyramide mit 10.000 → 1.000 → 100 → 10 Joule veranschaulicht einen 10-%-Übergang; dies ist ein Modellwert und kein unveränderliches Naturgesetz."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Nahrungskette",
+        "definition": "Lineare Folge von Organismen, die durch Nahrungsbeziehungen verbunden sind."
+      },
+      {
+        "term": "Nahrungsnetz",
+        "definition": "Verknüpfung mehrerer Nahrungsketten mit den tatsächlichen vielfältigen Nahrungsbeziehungen."
+      },
+      {
+        "term": "Trophiestufe",
+        "definition": "Ernährungsebene innerhalb einer Nahrungskette oder eines Nahrungsnetzes."
+      },
+      {
+        "term": "Biomasse",
+        "definition": "Masse der organischen Körpersubstanz von Lebewesen; für Vergleiche müssen Bezugsfläche, Zeitpunkt und Messweise beachtet werden."
+      },
+      {
+        "term": "Primärkonsument",
+        "definition": "Konsument, der Produzenten als Nahrung nutzt."
+      },
+      {
+        "term": "Destruenten",
+        "definition": "Organismen, die tote organische Substanz abbauen; dazu gehören Zerkleinerer und Mineralisierer."
+      },
+      {
+        "term": "Omnivor",
+        "definition": "Allesfresser, der pflanzliche und tierische Nahrung nutzen kann."
+      }
+    ],
+    "mnemonic": "Pfeil: Nahrung → Fresser. Stoffe kreisen, Energie fließt und endet zunehmend als Wärme.",
+    "questions": [
+      {
+        "id": "foodweb-01",
+        "type": "order",
+        "prompt": "Setze die Nahrungskette aus der Mappe in die richtige Reihenfolge.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": ["Sperber", "Frostspannerraupe", "Eichenblatt", "Zilpzalp"],
+        "answer": ["Eichenblatt", "Frostspannerraupe", "Zilpzalp", "Sperber"],
+        "explanation": "Die Raupe frisst das Blatt; der Zilpzalp frisst die Raupe; der Sperber kann den Zilpzalp fressen.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-02",
+        "type": "single",
+        "prompt": "Welche Trophiestufe nimmt der Zilpzalp in genau dieser Kette ein: Eichenblatt → Frostspannerraupe → Zilpzalp → Sperber?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": [
+          "Sekundärkonsument",
+          "Produzent",
+          "Primärkonsument",
+          "Tertiärkonsument"
+        ],
+        "answer": "Sekundärkonsument",
+        "explanation": "Der Zilpzalp frisst hier einen Primärkonsumenten, die pflanzenfressende Raupe.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-03",
+        "type": "tf",
+        "prompt": "Ein Pfeil von der Raupe zum Zilpzalp bedeutet in der verwendeten Darstellung, dass der Zilpzalp die Raupe frisst.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "explanation": "Die Pfeilrichtung führt von der Nahrung zum Konsumenten und zeigt den Stoff- und Energietransfer.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-04",
+        "type": "match",
+        "prompt": "Ordne der Darstellungsform ihre Messgröße zu.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 3,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "pairs": [
+          ["Zahlenpyramide", "Individuenzahl"],
+          ["Biomassepyramide", "Masse der Körpersubstanz"],
+          ["Energiepyramide", "Energie je Trophiestufe"]
+        ],
+        "explanation": "Die Pyramiden beschreiben unterschiedliche Größen. Zahlen dürfen deshalb nicht ohne Beachtung ihrer Einheiten miteinander verglichen werden.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-05",
+        "type": "cloze",
+        "prompt": "Mehrere miteinander verbundene Nahrungsketten bilden ein ___.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "answer": ["Nahrungsnetz", "Nahrungs-Netz"],
+        "explanation": "Ein Nahrungsnetz zeigt, dass Organismen meist mehrere Nahrungspartner besitzen.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-06",
+        "type": "multi",
+        "prompt": "Welche Aussagen über Destruenten treffen zu?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": [
+          "Sie nutzen tote organische Substanz.",
+          "Mineralisierer machen anorganische Stoffe wieder verfügbar.",
+          "Sie setzen beim Abbau organischer Substanz vor allem Sauerstoff frei.",
+          "Sie gewinnen die Energie für den Abbau aus freigesetzten Mineralstoffen."
+        ],
+        "answer": [
+          "Sie nutzen tote organische Substanz.",
+          "Mineralisierer machen anorganische Stoffe wieder verfügbar."
+        ],
+        "explanation": "Destruenten nutzen tote organische Substanz aus allen Trophiestufen als Stoff- und Energiequelle. Bei aerober Zellatmung wird Sauerstoff verbraucht. Mineralstoffe werden durch den Abbau wieder verfügbar; sie sind bei diesem heterotrophen Abbau nicht die Energiequelle.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-07",
+        "type": "diagram",
+        "prompt": "Beschreibe die Biomassepyramide aus der Mappe und begründe, weshalb die Biomasse höherer Trophiestufen in diesem Beispiel kleiner ist.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "diagram": {
+          "labels": [
+            "Produzenten",
+            "Primärkonsumenten",
+            "Sekundärkonsumenten",
+            "Tertiärkonsumenten"
+          ],
+          "values": [809, 37, 11, 1.5],
+          "unit": "g Trockenmasse pro m²"
+        },
+        "model": "Die Trockenmasse sinkt von 809 über 37 und 11 auf 1,5 g pro m². Nur ein Teil der aufgenommenen organischen Stoffe wird in neue Körpersubstanz eingebaut. Ein Teil wird im Stoffwechsel abgebaut, ein anderer ausgeschieden oder gelangt als tote Biomasse zu Destruenten.",
+        "rubric": [
+          "Abnahme und mindestens zwei Werte mit Einheit korrekt genannt.",
+          "Nur teilweise Umwandlung aufgenommener Nahrung in neue Biomasse erklärt.",
+          "Stoffwechsel/Wärme oder Ausscheidungen/tote Biomasse als weiterer Weg genannt."
+        ],
+        "explanation": "Die Werte beziehen sich auf die Trockenmasse je Fläche in der gezeigten Biomassepyramide (PDF-Seite 14). Sie sind keine Individuenzahlen.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-08",
+        "type": "single",
+        "prompt": "In der modellhaften Energiepyramide stehen den Produzenten 10.000 J und den Primärkonsumenten 1.000 J gegenüber. Welcher Anteil ist das?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": ["10 %", "1 %", "50 %", "90 %"],
+        "answer": "10 %",
+        "explanation": "1.000 / 10.000 × 100 = 10 %. Die grafische Modellzahl ist keine für jede reale Nahrungskette festgelegte Übergangsrate.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-09",
+        "type": "open",
+        "prompt": "Ein Vogel frisst Raupen und Beeren. Erkläre, weshalb man ihm im gesamten Nahrungsnetz nicht einfach eine einzige Konsumentenstufe zuordnen sollte.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "model": "Beim Beerenfressen nimmt der Vogel Produzenten als Nahrung auf und wirkt als Primärkonsument. Beim Fressen pflanzenfressender Raupen wirkt er als Sekundärkonsument. Die Zuordnung hängt vom betrachteten Nahrungsweg ab.",
+        "rubric": [
+          "Pflanzliche Nahrung mit Primärkonsument verknüpft.",
+          "Pflanzenfressende Raupe mit Sekundärkonsument verknüpft und Abhängigkeit vom Nahrungsweg erklärt."
+        ],
+        "explanation": "Omnivore können in unterschiedlichen Nahrungsketten verschiedene Trophiestufen einnehmen.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-10",
+        "type": "tf",
+        "prompt": "Weil Mineralstoffe wieder von Pflanzen aufgenommen werden können, wird auch die gesamte Energie im Ökosystem im Kreis geführt.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "explanation": "Stoffkreislauf und Energiefluss müssen unterschieden werden. Energie wird zunehmend als Wärme abgegeben und braucht eine äußere Zufuhr, meist Sonnenenergie.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-11",
+        "type": "open",
+        "prompt": "Warum bildet ein Nahrungsnetz die Ernährung eines Zilpzalps meist angemessener ab als eine einzige Nahrungskette?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "model": "Eine einzelne Kette zeigt nur einen Nahrungsweg. Der Zilpzalp nutzt unterschiedliche Nahrungsquellen und kann verschiedenen Räubern als Nahrung dienen. Ein Netz verknüpft diese mehreren Wege.",
+        "rubric": [
+          "Kette als einzelner linearer Nahrungsweg beschrieben.",
+          "Mehrere Nahrungsquellen oder Feinde als Verknüpfungen im Netz erklärt."
+        ],
+        "explanation": "Die Kette ist ein nützliches vereinfachtes Modell; das Netz zeigt mehr Beziehungen der Lebensgemeinschaft.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-12",
+        "type": "diagram",
+        "prompt": "Lies die Energiepyramide aus der Mappe ab. Berechne den prozentualen Übergang von Sekundär- zu Tertiärkonsumenten und erläutere, warum die Grafik kein geschlossenes Energiekreislaufmodell ist.",
+        "difficulty": "schwer",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "diagram": {
+          "labels": [
+            "Produzenten",
+            "Primärkonsumenten",
+            "Sekundärkonsumenten",
+            "Tertiärkonsumenten"
+          ],
+          "values": [10000, 1000, 100, 10],
+          "unit": "Joule; vereinfachtes Beispiel aus der Mappe"
+        },
+        "model": "Der Übergang beträgt 10 / 100 × 100 = 10 %. Ein Teil der Energie wird bei jeder Stufe als Wärme abgegeben oder über tote Biomasse und Ausscheidungen an Destruenten weitergegeben. Wärme wird nicht wieder vollständig in die Nahrungskette eingespeist; das System benötigt äußere Energiezufuhr.",
+        "rubric": [
+          "10 % mit passendem Rechenweg ermittelt.",
+          "Wärmeabgabe oder Weg über Detritus genannt.",
+          "Äußere Energiezufuhr statt geschlossenem Energiekreislauf erklärt."
+        ],
+        "explanation": "Die Energiegrößen entstammen der Energiepyramide auf PDF-Seite 15. Der konstante 10-%-Schritt vereinfacht reale Verhältnisse.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-13",
+        "type": "multi",
+        "prompt": "Welche Schlussfolgerungen sind unmittelbar durch die Biomassepyramide mit 809, 37, 11 und 1,5 g Trockenmasse pro m² für Produzenten bis Tertiärkonsumenten belegt?",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 2,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "options": [
+          "Produzenten besitzen im dargestellten Bestand die größte Trockenmasse je Fläche.",
+          "Sekundärkonsumenten besitzen weniger Trockenmasse je Fläche als Primärkonsumenten.",
+          "Primärkonsumenten geben 37 g Biomasse pro m² und Tag an die nächste Stufe weiter.",
+          "Primärkonsumenten bestehen aus weniger Individuen als Sekundärkonsumenten."
+        ],
+        "answer": [
+          "Produzenten besitzen im dargestellten Bestand die größte Trockenmasse je Fläche.",
+          "Sekundärkonsumenten besitzen weniger Trockenmasse je Fläche als Primärkonsumenten."
+        ],
+        "explanation": "809 ist die größte angegebene Trockenmasse, und 11 ist kleiner als 37 g pro m². Die Grafik zeigt Bestandsmassen je Fläche, keine tägliche Weitergabe und keine Individuenzahlen. Wenige große Tiere können mehr Biomasse besitzen als viele kleine.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-14",
+        "type": "open",
+        "prompt": "In einem Nahrungsnetz frisst ein Räuber zwei Beutearten. Eine Beuteart nimmt stark ab. Beurteile die Vorhersage: ‚Der Räuber stirbt deshalb sicher aus.‘",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "model": "Die sichere Vorhersage ist nicht gerechtfertigt. Der Räuber könnte einen Teil seiner Nahrung über die andere Beuteart decken. Ob dies reicht, hängt etwa von deren Verfügbarkeit und der Anpassungsfähigkeit des Räubers ab. Ein Rückgang des Räubers ist möglich, aber aus diesen Angaben nicht zwingend.",
+        "rubric": [
+          "Sichere Vorhersage als nicht begründet beurteilt.",
+          "Alternative Nahrung als möglichen Ausgleich genannt.",
+          "Bedingungen oder verbleibende Unsicherheit erläutert."
+        ],
+        "explanation": "Ein Nahrungsnetz macht alternative Nahrungswege sichtbar. Es liefert ohne weitere Daten keine sichere quantitative Populationsvorhersage.",
+        "topic": "foodweb"
+      },
+      {
+        "id": "foodweb-15",
+        "type": "open",
+        "prompt": "Erkläre, wie ein abgestorbenes Eichenblatt zur Versorgung einer später wachsenden Eiche mit Mineralstoffen beitragen kann.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Nahrungsbeziehungen",
+        "model": "Das Blatt wird zu Detritus. Detritusfresser zerkleinern es; Mineralisierer bauen organische Bestandteile weiter zu anorganischen Stoffen ab. Freigesetzte Mineralstoffe können von den Wurzeln einer Eiche aufgenommen und wieder zum Aufbau organischer Substanz genutzt werden.",
+        "rubric": [
+          "Abgestorbenes Blatt als Detritus und/oder Zerkleinerung benannt.",
+          "Mineralisierung zu anorganischen Stoffen erklärt.",
+          "Wiederaufnahme von Mineralstoffen durch Produzenten beschrieben."
+        ],
+        "explanation": "Das Beispiel verbindet den Abbauweg mit der erneuten Stoffaufnahme. Es bedeutet nicht, dass die ursprünglich gespeicherte Energie vollständig zurückkehrt.",
+        "topic": "foodweb"
+      }
+    ]
+  },
+  {
+    "id": "spiral",
+    "title": "Stoffspiralen",
+    "subtitle": "Stoffumwandlung und Strömung verbinden das Geschehen flussabwärts.",
+    "sources": [
+      {
+        "label": "Bio Mappe · Stoffspirale",
+        "pages": [7, 8, 18],
+        "kind": "mappe"
+      },
+      {
+        "label": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "pages": [13, 15, 16],
+        "kind": "mappe"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Warum eine Spirale?",
+        "text": "Produzenten, Konsumenten und Destruenten nehmen Stoffe auf, geben sie weiter und wandeln sie um. In einem Fließgewässer kommt eine räumliche Bewegung hinzu: Die Strömung transportiert gelöste Stoffe, Partikel und organisches Material flussabwärts. Ein Stoff wird daher häufig erst weiter unten erneut aufgenommen oder umgesetzt. Die Kombination von Wiederverwendung und gerichtetem Transport heißt Stoffspirale. Gemeint ist kein tatsächlich spiralförmiger Wasserstrom."
+      },
+      {
+        "heading": "Die beteiligten Organismen",
+        "text": "Wasserpflanzen, Algen und Uferpflanzen bilden als Produzenten organische Stoffe. Konsumenten erhalten organische Stoffe über ihre Nahrung. Destruenten bauen tote organische Substanz ab; Mineralisierer setzen dabei anorganische Mineralstoffe frei. Diese können Produzenten erneut aufnehmen. Blätter und Totholz aus der Ufervegetation liefern besonders im beschatteten Oberlauf eine wichtige äußere Stoffquelle."
+      },
+      {
+        "heading": "Fotosynthese, Atmung und Mineralisierung",
+        "text": "Bei der Fotosynthese nutzen Pflanzen und Algen Licht, Kohlenstoffdioxid und Wasser, um organische Stoffe aufzubauen; Sauerstoff wird frei. Mineralstoffe werden für den weiteren Aufbau von Biomasse benötigt. Bei der Zellatmung wird organische Substanz unter Verbrauch von Sauerstoff abgebaut; es entstehen Kohlenstoffdioxid und Wasser, und nutzbare Energie wird frei. Auch Pflanzen betreiben Zellatmung. Beim mikrobiellen Abbau und der Mineralisierung werden aus organischer Substanz wieder anorganische Stoffe verfügbar. Die handschriftlichen Tabellen vereinfachen diese Vorgänge; sie bedeuten nicht, dass Pflanzen nur Sauerstoff abgeben."
+      },
+      {
+        "heading": "Stoffe und Energie auseinanderhalten",
+        "text": "Die Spirale beschreibt den Weg von Stoffen. Chemische Energie kann mit organischem Material transportiert werden, aber sie kehrt nicht in einem geschlossenen Energiekreislauf zurück. Bei den Lebensvorgängen wird zunehmend Wärme abgegeben. Neue Energie gelangt vor allem über Sonnenlicht und Fotosynthese in das System; organisches Material vom Ufer bringt ebenfalls chemisch gebundene Energie mit. Transport und Umwandlung sind verschiedene Prozesse: Eine Strömung kann ein Blatt verlagern, ohne es bereits zu mineralisieren."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Stoffspirale",
+        "definition": "Stoffumwandlung und erneute Nutzung, verbunden mit einem gerichteten Transport flussabwärts."
+      },
+      {
+        "term": "Mineralisierung",
+        "definition": "Abbau organischer Stoffe zu anorganischen Stoffen durch Mineralisierer; Mineralstoffe werden wieder verfügbar."
+      },
+      {
+        "term": "Fotosynthese",
+        "definition": "Lichtabhängiger Aufbau organischer Stoffe aus Kohlenstoffdioxid und Wasser; bei Pflanzen und Algen wird dabei Sauerstoff frei."
+      },
+      {
+        "term": "Zellatmung",
+        "definition": "Abbau organischer Stoffe zur Energiebereitstellung, bei der aeroben Form mit Sauerstoffverbrauch und Bildung von Kohlenstoffdioxid und Wasser."
+      },
+      {
+        "term": "Organische Substanz",
+        "definition": "Kohlenstoffhaltige Stoffe der Biomasse und ihrer Reste, etwa Zucker, Fette und Proteine."
+      },
+      {
+        "term": "Stofftransport",
+        "definition": "Räumliche Verlagerung von Stoffen; im Fließgewässer überwiegend flussabwärts durch die Strömung."
+      }
+    ],
+    "mnemonic": "Kreislauf plus Strömung ergibt Stoffspirale: umwandeln, weitertragen, wieder nutzen.",
+    "questions": [
+      {
+        "id": "spiral-01",
+        "type": "single",
+        "prompt": "Welcher zusätzliche Vorgang macht aus der wiederholten Stoffnutzung im Fließgewässer eine Stoffspirale?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Stoffspirale",
+        "options": [
+          "Gerichteter Stofftransport flussabwärts",
+          "Mineralstoffaufnahme durch Wasserpflanzen",
+          "Abbau toter Biomasse durch Destruenten",
+          "Weitergabe von Biomasse an Konsumenten"
+        ],
+        "answer": "Gerichteter Stofftransport flussabwärts",
+        "explanation": "Stoffe werden wiederholt biologisch umgesetzt, dabei aber durch die Strömung an andere Orte verlagert.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-02",
+        "type": "tf",
+        "prompt": "Der Ausdruck Stoffspirale bedeutet, dass sich das Flusswasser geometrisch wie eine Schraube bewegen muss.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Stoffspirale",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch",
+        "explanation": "Die Spirale ist ein Modell für wiederholte Stoffumwandlung bei gleichzeitiger räumlicher Verlagerung flussabwärts.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-03",
+        "type": "match",
+        "prompt": "Ordne den Organismengruppen ihre Funktion in der Stoffspirale zu.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 3,
+        "source": "Bio Mappe · Stoffspirale",
+        "pairs": [
+          ["Produzenten", "Bauen organische Stoffe auf"],
+          ["Konsumenten", "Nehmen organische Stoffe mit Nahrung auf"],
+          [
+            "Mineralisierer",
+            "Setzen organische Bestandteile zu anorganischen Stoffen um"
+          ]
+        ],
+        "explanation": "Die Gruppen stehen über Stoffflüsse in Verbindung. Mineralisierer machen dabei Stoffe für die erneute Aufnahme durch Produzenten verfügbar.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-04",
+        "type": "cloze",
+        "prompt": "Der Abbau organischer Substanz zu anorganischen Stoffen durch entsprechende Destruenten heißt ___.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "answer": ["Mineralisierung"],
+        "explanation": "Mineralisierung ist eine stoffliche Umwandlung. Sie ist von der bloßen Verlagerung eines Blatts durch die Strömung zu unterscheiden.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-05",
+        "type": "multi",
+        "prompt": "Welche Vorgänge gehören zum Aufbau organischer Stoffe durch Fotosynthese bei Wasserpflanzen?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "options": [
+          "Nutzung von Lichtenergie",
+          "Aufnahme von Kohlenstoffdioxid als Kohlenstoffquelle",
+          "Aufnahme von Sauerstoff für den Aufbau von Zucker",
+          "Abbau gespeicherter Zucker zur Gewinnung von Energie"
+        ],
+        "answer": [
+          "Nutzung von Lichtenergie",
+          "Aufnahme von Kohlenstoffdioxid als Kohlenstoffquelle"
+        ],
+        "explanation": "Bei der Fotosynthese nutzen Pflanzen Lichtenergie und CO₂ zum Aufbau organischer Stoffe; Sauerstoff wird frei. Sauerstoffverbrauch und Zuckerabbau zur Energiebereitstellung beschreiben dagegen die aerobe Zellatmung.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-06",
+        "type": "order",
+        "prompt": "Ordne den vereinfachten Weg eines Nährstoffs. Dies ist ein möglicher Weg, nicht der einzig mögliche.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Stoffspirale",
+        "options": [
+          "Aufnahme des Mineralstoffs durch eine Alge",
+          "Abbau und Freisetzung von Mineralstoffen",
+          "Eintrag eines Blattes ins Wasser",
+          "Transport des organischen Materials flussabwärts"
+        ],
+        "answer": [
+          "Eintrag eines Blattes ins Wasser",
+          "Transport des organischen Materials flussabwärts",
+          "Abbau und Freisetzung von Mineralstoffen",
+          "Aufnahme des Mineralstoffs durch eine Alge"
+        ],
+        "explanation": "Das Blatt liefert organisches Material. Nach Transport und Mineralisierung kann ein freigesetzter Mineralstoff weiter flussabwärts wieder aufgenommen werden.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-07",
+        "type": "open",
+        "prompt": "Erkläre an einem eingetragenen Blatt, weshalb Stoffspiralen räumlich offene Vorgänge darstellen.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Stoffspirale",
+        "model": "Das Blatt gelangt von der Ufervegetation in den Fluss. Die Strömung transportiert es oder seine Bestandteile flussabwärts. Beim Abbau freigesetzte Stoffe können erst an einem anderen Ort von Produzenten wieder aufgenommen werden. Ein- und Austrag verbinden den betrachteten Flussabschnitt mit seiner Umgebung.",
+        "rubric": [
+          "Eintrag von außen benannt.",
+          "Gerichteten Transport flussabwärts beschrieben.",
+          "Erneute Nutzung an einem anderen Ort oder Austausch über Abschnittsgrenzen erklärt."
+        ],
+        "explanation": "Ein einzelner Flussabschnitt enthält nicht alle Stoffe dauerhaft. Die Umsetzungen sind mit Transport und Austausch verbunden.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-08",
+        "type": "tf",
+        "prompt": "Auch grüne Pflanzen betreiben Zellatmung und können dabei Sauerstoff verbrauchen.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig",
+        "explanation": "Pflanzen sind Produzenten, benötigen aber zugleich Energie für ihre Lebensvorgänge. Fotosynthese und Zellatmung sind unterschiedliche Prozesse.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-09",
+        "type": "single",
+        "prompt": "Ein Blatt treibt unverändert zehn Meter flussabwärts. Welcher Vorgang ist damit unmittelbar nachgewiesen?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Bio Mappe · Stoffspirale",
+        "options": [
+          "Stofftransport",
+          "Mechanische Zerkleinerung",
+          "Mikrobielle Mineralisierung",
+          "Biologische Aufnahme"
+        ],
+        "answer": "Stofftransport",
+        "explanation": "Die Beobachtung zeigt zunächst nur eine Ortsveränderung. Eine bestimmte chemische Umwandlung folgt daraus nicht.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-10",
+        "type": "open",
+        "prompt": "Erkläre den Unterschied zwischen Fotosynthese und Zellatmung mit Blick auf organische Stoffe und Sauerstoff.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "model": "Bei der Fotosynthese bauen Pflanzen und Algen mit Lichtenergie organische Stoffe auf; Sauerstoff wird frei. Bei der aeroben Zellatmung werden organische Stoffe unter Sauerstoffverbrauch abgebaut, um nutzbare Energie bereitzustellen. Dabei entstehen Kohlenstoffdioxid und Wasser.",
+        "rubric": [
+          "Fotosynthese als lichtabhängigen Aufbau organischer Stoffe mit Sauerstoffabgabe beschrieben.",
+          "Zellatmung als Abbau organischer Stoffe mit Sauerstoffverbrauch beschrieben.",
+          "Energiebereitstellung und/oder Bildung von CO₂ und Wasser genannt."
+        ],
+        "explanation": "Die Gegenüberstellung erklärt zwei Stoffwechselprozesse und ersetzt nicht die Betrachtung ihrer gleichzeitigen Wirkung im Organismus.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-11",
+        "type": "multi",
+        "prompt": "Welche Aussagen zur Form der transportierten Stoffe in einer Stoffspirale treffen zu?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · Stoffspirale",
+        "options": [
+          "In Blattresten liegt ein Teil der Stoffe in organischen Verbindungen vor.",
+          "Nach der Mineralisierung können Nährstoffe als anorganische Mineralstoffe vorliegen.",
+          "Das Lösen eines Mineralstoffs im Wasser macht ihn zu einer organischen Verbindung.",
+          "Durch das Zerkleinern eines Blattes werden dessen Nährstoffe bereits mineralisiert."
+        ],
+        "answer": [
+          "In Blattresten liegt ein Teil der Stoffe in organischen Verbindungen vor.",
+          "Nach der Mineralisierung können Nährstoffe als anorganische Mineralstoffe vorliegen."
+        ],
+        "explanation": "Blattreste enthalten organische Substanz. Mineralisierung setzt organische Bestandteile zu anorganischen Stoffen um. Das bloße Lösen verändert diese Einordnung nicht, und mechanische Zerkleinerung ist noch keine Mineralisierung.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-12",
+        "type": "open",
+        "prompt": "Beurteile die Aussage: ‚Wenn Mineralstoffe wieder in Pflanzen eingebaut werden, kehrt auch die gesamte ursprünglich gespeicherte Energie zurück.‘",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · Stoffkreislauf und Energiefluss",
+        "model": "Die Aussage verwechselt Stoffe und Energie. Mineralstoffe können erneut aufgenommen werden. Bei Abbau und Zellatmung wird jedoch Energie zunehmend als Wärme abgegeben. Für den erneuten Aufbau energiereicher organischer Stoffe benötigen Produzenten wieder Energie, meist aus Sonnenlicht.",
+        "rubric": [
+          "Wiederverwendung von Stoffen anerkannt.",
+          "Energieabgabe als Wärme erklärt.",
+          "Erneute äußere Energiezufuhr für Fotosynthese genannt."
+        ],
+        "explanation": "Eine Stoffspirale beschreibt keinen geschlossenen Energiekreislauf. Derselbe Mineralstoff kann mit neu zugeführter Energie erneut in Biomasse gelangen.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-13",
+        "type": "open",
+        "prompt": "Ein Bach wird von seiner Ufervegetation weitgehend getrennt. Leite eine mögliche Folge für die Nahrungsgrundlage der Zerkleinerer im beschatteten Oberlauf ab.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · Stoffspirale",
+        "model": "Wenn dadurch weniger Blätter und Totholz eingetragen werden, sinkt möglicherweise das Angebot an organischem Material für Zerkleinerer. Ihre Nahrungsgrundlage kann sich verschlechtern und nachfolgende Nahrungsbeziehungen können betroffen sein. Die Stärke des Effekts hängt von anderen Stoffquellen und lokalen Bedingungen ab.",
+        "rubric": [
+          "Möglichen Rückgang des Blatt-/Totholzeintrags benannt.",
+          "Weniger Nahrung für Zerkleinerer abgeleitet.",
+          "Weitere Folgen oder Abhängigkeit von lokalen Bedingungen erläutert."
+        ],
+        "explanation": "Im Oberlauf verbindet der Eintrag vom Ufer das terrestrische System mit dem Gewässer. Die Aufgabe verlangt eine begründete Möglichkeit statt einer sicheren Bestandsprognose.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-14",
+        "type": "match",
+        "prompt": "Ordne den Beobachtungen die zutreffenden Prozesse zu.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · Stoffspirale",
+        "pairs": [
+          ["Ein Blatt wird vom Wasser weitergetragen.", "Transport"],
+          [
+            "Organische Reste werden zu anorganischen Stoffen abgebaut.",
+            "Mineralisierung"
+          ],
+          [
+            "Eine Alge bildet bei Licht organische Substanz aus CO₂.",
+            "Fotosynthese"
+          ]
+        ],
+        "explanation": "Transport verändert den Ort, Mineralisierung die stoffliche Form, Fotosynthese baut organische Substanz unter Nutzung von Lichtenergie auf.",
+        "topic": "spiral"
+      },
+      {
+        "id": "spiral-15",
+        "type": "open",
+        "prompt": "Plane eine einfache Untersuchung, mit der sich Stofftransport und biologische Wiederaufnahme im Bach unterscheiden ließen. Nenne die zu vergleichenden Beobachtungen und eine Grenze deiner Aussage.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 4,
+        "source": "Bio Mappe · Stoffspirale",
+        "model": "Man könnte an mehreren Stellen flussabwärts zu verschiedenen Zeiten die Konzentration eines vorhandenen Nährstoffs im Wasser messen und zusätzlich dessen Gehalt in Algenbiomasse vergleichen. Zeitversetztes Auftreten im Wasser spricht für Transport; eine Zunahme in Biomasse wäre mit Aufnahme vereinbar. Abnehmende Wasserkonzentration allein beweist keine Aufnahme, weil Verdünnung, Ablagerung oder weitere Zu- und Abflüsse mitwirken können. Ein solcher Plan benötigt geeignete Kontrollen und fachgerecht ausgewählte Messverfahren.",
+        "rubric": [
+          "Mehrere Orte flussabwärts und/oder mehrere Zeitpunkte vorgesehen.",
+          "Messung des Stoffs im Wasser als Hinweis auf Transport genannt.",
+          "Zusätzliche Beobachtung von Stoff in Biomasse für Aufnahme vorgeschlagen.",
+          "Alternative Erklärung oder methodische Grenze benannt."
+        ],
+        "explanation": "Eine Konzentrationsabnahme ist kein eindeutiger Beleg für biologische Aufnahme. Die Aufgabe prüft, ob ein Untersuchungsplan zwischen räumlicher Verlagerung und Stoffnutzung unterscheidet.",
+        "topic": "spiral"
+      }
+    ]
+  },
+  {
+    "id": "rules",
+    "title": "Bergmann- & Allen-Regel",
+    "subtitle": "Körperbau, Wärmehaushalt und die Grenzen biologischer Regeln",
+    "sources": [
+      {
+        "label": "Bio Mappe · S. 10–12, 20",
+        "pages": [10, 11, 12, 20],
+        "kind": "mappe"
+      },
+      {
+        "label": "Externe Ergänzung · Baldwin et al. 2023 (Originalstudie)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37454097/",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · Shelomi & Zeuss 2017 (Originalstudie)",
+        "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2017.00025/full",
+        "kind": "external"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Bergmann: die Körpergröße",
+        "text": "Die Mappe erklärt den physiologischen Zusammenhang: Bei ähnlicher Körperform wächst mit zunehmender Größe das Volumen stärker als die Oberfläche. Dadurch steht pro Volumen weniger Oberfläche für den Wärmeaustausch zur Verfügung. Stoffwechselwärme entsteht im Körper; Wärme wird über die Oberfläche abgegeben. Ein großer Körper verliert unter vergleichbaren Bedingungen relativ zu seiner Masse langsamer Wärme."
+      },
+      {
+        "heading": "Allen: die Körperanhänge",
+        "text": "Ohren, Beine oder Schwänze tragen zur wärmeaustauschenden Oberfläche bei. Die Mappe nennt kleine Ohren beim Polarhasen und große Ohren beim kalifornischen Eselhasen: Kleine Anhänge begrenzen die Wärmeabgabe, große erleichtern sie. Entscheidend sind relative Proportionen, nicht nur absolute Zentimeterwerte."
+      },
+      {
+        "heading": "Externe Ergänzung: Geltungsbereich",
+        "text": "Die klassische Schulform bezieht sich auf gleichwarme beziehungsweise endotherme Tiere, insbesondere Vögel und Säugetiere: In kälteren Gebieten sind verwandte Formen tendenziell größer (Bergmann) und ihre Körperanhänge relativ kürzer (Allen). Solche Muster werden innerhalb von Arten und zwischen nah verwandten Arten untersucht. Die Regeln sind statistische Tendenzen. Forschung zu wechselwarmen Tieren zeigt ein uneinheitliches Bild; eine pauschale Übertragung ist nicht gerechtfertigt."
+      },
+      {
+        "heading": "Grenzen und Klausurargumentation",
+        "text": "Die Mappe nennt Elefanten in warmen Regionen als Warnung vor einer pauschalen Anwendung. Das ist kein sauberer Vergleich verwandter Formen entlang eines Klimagradienten. Nahrungsangebot, Fortpflanzungserfolg, Körperform und weitere Einflüsse wirken mit. Formuliere daher eine begründete Erwartung und prüfe Vergleichbarkeit sowie Alternativerklärungen, statt aus einem Tier ein Naturgesetz abzuleiten."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Bergmann-Regel",
+        "definition": "Bei verwandten gleichwarmen Formen besteht häufig eine Tendenz zu größerem Körperbau in kälteren Gebieten."
+      },
+      {
+        "term": "Allen-Regel",
+        "definition": "Verwandte gleichwarme Formen haben in kälteren Gebieten häufig relativ kürzere Körperanhänge."
+      },
+      {
+        "term": "Oberfläche-Volumen-Verhältnis",
+        "definition": "Oberfläche geteilt durch Volumen; bei geometrisch ähnlicher Vergrößerung wird dieses Verhältnis kleiner."
+      },
+      {
+        "term": "Endothermie",
+        "definition": "Die Körperwärme stammt überwiegend aus dem eigenen Stoffwechsel (externe Begriffsergänzung)."
+      }
+    ],
+    "mnemonic": "Bergmann blickt auf den Körper, Allen auf die Anhänge. Kälte begünstigt häufig groß und kompakt.",
+    "questions": [
+      {
+        "id": "rules-01",
+        "type": "single",
+        "prompt": "Welches Körpermerkmal steht im Zentrum der geographischen Größenvergleiche nach Bergmann?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": "Körpergröße",
+        "explanation": "Die Bergmann-Regel verknüpft Körpergröße und Klima.",
+        "options": [
+          "Körpergröße",
+          "Relative Länge der Körperanhänge",
+          "Dicke der isolierenden Körperbedeckung",
+          "Anteil unbedeckter Hautflächen"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-02",
+        "type": "single",
+        "prompt": "Alle Körperlängen eines geometrisch ähnlichen Modells werden verdoppelt. Wie verändert sich Oberfläche / Volumen?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 2,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": "Es halbiert sich.",
+        "explanation": "Die Oberfläche wächst auf das Vierfache, das Volumen auf das Achtfache. Ihr Verhältnis halbiert sich: 4 / 8 = 1 / 2.",
+        "options": [
+          "Es verdoppelt sich.",
+          "Es halbiert sich.",
+          "Es bleibt gleich.",
+          "Es sinkt auf ein Viertel."
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-03",
+        "type": "tf",
+        "prompt": "Große Tiere haben grundsätzlich eine kleinere absolute Oberfläche als kleine Tiere.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": "Falsch",
+        "explanation": "Gemeint ist eine relativ zum Volumen kleinere Oberfläche. Absolut kann die Oberfläche größer sein.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-04",
+        "type": "cloze",
+        "prompt": "Die Regel zu relativ kurzen Körperanhängen in kaltem Klima heißt ___-Regel.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": ["Allen", "Allensche", "Allensche Regel", "Allen-Regel"],
+        "explanation": "Allen beschreibt Körperproportionen, etwa Ohrgrößen.",
+        "topic": "rules"
+      },
+      {
+        "id": "rules-05",
+        "type": "multi",
+        "prompt": "Welche Aussagen passen zu den Hasenbeispielen aus der Mappe?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": [
+          "Kleine Ohren des Polarhasen begrenzen Wärmeabgabe.",
+          "Große Ohren des Eselhasen erleichtern Wärmeabgabe."
+        ],
+        "explanation": "Die Ohren verändern die wärmeaustauschende Oberfläche und illustrieren Allen. Eine kleinere Ohrfläche begrenzt Wärmeabgabe, statt selbst mehr Stoffwechselwärme zu erzeugen.",
+        "options": [
+          "Kleine Ohren des Polarhasen begrenzen Wärmeabgabe.",
+          "Große Ohren des Eselhasen erleichtern Wärmeabgabe.",
+          "Kleine Ohren des Polarhasen erhöhen seine Wärmeproduktion.",
+          "Große Ohren des Eselhasen veranschaulichen die Bergmann-Regel."
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-06",
+        "type": "match",
+        "prompt": "Ordne die Erklärungen zu.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 3,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "explanation": "Volumen und Oberfläche erfüllen im vereinfachten Wärmehaushaltsmodell unterschiedliche Rollen.",
+        "pairs": [
+          ["Volumen", "Raum für stoffwechselaktive Zellen"],
+          ["Oberfläche", "Fläche für Wärmeaustausch"],
+          ["Körperanhänge", "Können Wärmeabgabe vergrößern"]
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-07",
+        "type": "order",
+        "prompt": "Bringe die Argumentation zur relativen Wärmeabgabe in eine sinnvolle Reihenfolge.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": [
+          "Ähnliche Form wird größer.",
+          "Volumen wächst stärker als Oberfläche.",
+          "Oberfläche pro Volumen nimmt ab.",
+          "Relative Wärmeabgabe wird geringer."
+        ],
+        "explanation": "Die geometrische Veränderung erklärt die physiologische Folge.",
+        "options": [
+          "Ähnliche Form wird größer.",
+          "Volumen wächst stärker als Oberfläche.",
+          "Oberfläche pro Volumen nimmt ab.",
+          "Relative Wärmeabgabe wird geringer."
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-08",
+        "type": "open",
+        "prompt": "Erkläre mit zwei Sätzen, warum kleine Körperanhänge bei Kälte vorteilhaft sein können.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "explanation": "Nenne den Zusammenhang zwischen Oberfläche und Wärmeabgabe.",
+        "model": "Relativ kleine Anhänge verringern die wärmeaustauschende Oberfläche. Bei kalter Umgebung geht dadurch unter sonst gleichen Bedingungen weniger Wärme verloren.",
+        "rubric": [
+          "Relativ kleinere Oberfläche genannt",
+          "Geringere Wärmeabgabe bei Kälte erklärt"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-09",
+        "type": "open",
+        "prompt": "Ein Elefant lebt in einer warmen Region. Beurteile, ob damit die Bergmann-Regel widerlegt ist.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "explanation": "Ein einzelnes, taxonomisch beliebiges Beispiel prüft eine statistische Regel nicht ausreichend.",
+        "model": "Die Mappe nutzt den Elefanten als Grenze pauschaler Aussagen. Die Regel beschreibt eine Tendenz bei vergleichbaren verwandten Formen. Ein geeigneter Test vergleicht viele solche Formen entlang eines Klimagradienten und berücksichtigt weitere Einflüsse.",
+        "rubric": [
+          "Tendenz statt ausnahmsloses Gesetz",
+          "Vergleich verwandter Formen gefordert",
+          "Weitere Faktoren berücksichtigt"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-10",
+        "type": "single",
+        "prompt": "Welche Vergleichsgruppe eignet sich am besten für eine Prüfung der klassischen Regeln?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Externe Ergänzung · Baldwin et al. 2023 (Originalstudie)",
+        "answer": "Verwandte Vogelpopulationen aus verschieden kalten Gebieten",
+        "explanation": "Vergleichbare verwandte Formen reduzieren Unterschiede außerhalb des Klimas.",
+        "options": [
+          "Unverwandte Vogelarten entlang desselben Temperaturgradienten",
+          "Verwandte Vogelpopulationen aus verschieden kalten Gebieten",
+          "Verwandte Vogelpopulationen aus gleich warmen Gebieten",
+          "Junge und alte Vögel innerhalb derselben Population"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-11",
+        "type": "multi",
+        "prompt": "Welche weiteren Einflüsse auf Körpergröße nennt der Abschnitt «Grenzen tiergeografischer Regeln» neben der Temperatur?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "answer": ["Nahrungsangebot", "Konkurrenz um Sexualpartner"],
+        "explanation": "Der Abschnitt nennt Nahrungsangebot und Konkurrenz um Sexualpartner. Ionenkonzentration und Silikat behandelt die Mappe dagegen bei Osmoregulation beziehungsweise Kieselalgen.",
+        "options": [
+          "Nahrungsangebot",
+          "Konkurrenz um Sexualpartner",
+          "Ionenkonzentration des Umgebungswassers",
+          "Verfügbarkeit von Silikat im Wasser"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-12",
+        "type": "diagram",
+        "prompt": "Modellwürfel: Die Balken zeigen Oberfläche / Volumen. Beschreibe den Trend und übertrage ihn vorsichtig auf ähnliche Tierkörper.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "explanation": "Die Daten sind selbst berechnete Modellwerte; sie messen keine echten Tiere.",
+        "diagram": {
+          "labels": ["Kante 1 cm", "Kante 2 cm", "Kante 4 cm"],
+          "values": [6, 3, 1.5],
+          "unit": "cm⁻¹"
+        },
+        "model": "Mit zunehmender Kantenlänge sinkt Oberfläche / Volumen von 6 auf 1,5 cm⁻¹. Bei ähnlichen Körperformen steht pro Volumen weniger Fläche zum Wärmeaustausch bereit; echte Tiere unterscheiden sich zusätzlich in Isolation und Stoffwechsel.",
+        "rubric": [
+          "Abnehmenden Trend mit Werten beschrieben",
+          "Oberfläche-Volumen-Zusammenhang erklärt",
+          "Modellgrenze genannt"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-13",
+        "type": "tf",
+        "prompt": "Man kann Bergmann und Allen ohne weitere Prüfung auf alle wechselwarmen Tiere übertragen.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Externe Ergänzung · Shelomi & Zeuss 2017 (Originalstudie)",
+        "answer": "Falsch",
+        "explanation": "Die klassische Form betrifft endotherme Tiere; Ergebnisse bei wechselwarmen Gruppen sind uneinheitlich.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-14",
+        "type": "open",
+        "prompt": "Plane einen Vergleich zur Allen-Regel bei einer Säugetierart.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Externe Ergänzung · Baldwin et al. 2023 (Originalstudie)",
+        "explanation": "Ein guter Vergleich berücksichtigt relative Maße und mögliche Störgrößen.",
+        "model": "Ich vergleiche mehrere Populationen entlang eines Temperaturgradienten. Ich messe Ohrlänge relativ zur Körpergröße und berücksichtige Alter, Geschlecht und Verwandtschaft. Erwartet werden im Mittel relativ kürzere Ohren bei Kälte.",
+        "rubric": [
+          "Temperaturgradient und mehrere Individuen",
+          "Relative Anhangsgröße",
+          "Störgrößen und begründete Erwartung"
+        ],
+        "topic": "rules"
+      },
+      {
+        "id": "rules-15",
+        "type": "open",
+        "prompt": "Zwei verwandte Arten: Die kälter lebende Art ist größer, besitzt aber relativ längere Ohren. Welche Regel wird jeweils gestützt?",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · S. 10–12, 20",
+        "explanation": "Beide Regeln sind getrennte Aussagen und können verschieden gut zutreffen.",
+        "model": "Die größere Körpergröße passt zur Bergmann-Regel. Relativ längere Ohren bei Kälte passen nicht zur Erwartung der Allen-Regel. Weitere Eigenschaften und Faktoren müssen für eine Erklärung geprüft werden.",
+        "rubric": [
+          "Bergmann korrekt angewendet",
+          "Allen-Abweichung erkannt",
+          "Keine pauschale Gesetzesaussage"
+        ],
+        "topic": "rules"
+      }
+    ]
+  },
+  {
+    "id": "terms",
+    "title": "Ökologische Fachbegriffe",
+    "subtitle": "Nische, Konkurrenz und Potenz präzise unterscheiden",
+    "sources": [
+      {
+        "label": "Bio Mappe · S. 12, 23–26",
+        "pages": [12, 23, 24, 25, 26],
+        "kind": "mappe"
+      },
+      {
+        "label": "Externe Ergänzung · KIT, Botanisches Institut: Glossar",
+        "url": "https://www.jkip.kit.edu/botzell/2205.php",
+        "kind": "external"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Die ökologische Nische ist mehr als ein Ort",
+        "text": "Zur Nische einer Art gehören ihre Ansprüche an abiotische und biotische Bedingungen, die genutzten Ressourcen und ihre Beziehungen zur Umwelt. Zwei Arten können am selben Ort leben und trotzdem unterschiedliche Nischen besitzen. Die Mappe zeigt das Nischenraum-Modell: Temperatur, Salzgehalt und Feuchte bilden drei beispielhafte Dimensionen. Tatsächlich spielen meist viel mehr Faktoren zusammen."
+      },
+      {
+        "heading": "Fundamentale und realisierte Nische",
+        "text": "Die fundamentale Nische beschreibt die grundsätzlich nutzbaren Bedingungen und Ressourcen ohne einschränkende Konkurrenz. Die realisierte oder reale Nische ist die tatsächlich genutzte Nische unter biotischen Wechselwirkungen. Im Konkurrenzmodell der Mappe ist sie kleiner. Bei Chthamalus begrenzt Semibalanus die Besiedlung tieferer Bereiche der Gezeitenzone; wird der Konkurrent entfernt, kann Chthamalus auch dort siedeln. Semibalanus wird nach oben durch Austrocknung begrenzt."
+      },
+      {
+        "heading": "Konkurrenz entsteht um begrenzte Ressourcen",
+        "text": "Intraspezifische Konkurrenz findet zwischen Individuen derselben Art statt; interspezifische zwischen verschiedenen Arten. Nahrung, Silikat, Wasser, Licht oder Raum können begrenzen. In der Mappe verdrängt Paramecium aurelia bei gemeinsamer Kultur P. caudatum. P. aurelia und P. bursaria können dagegen durch unterschiedliche Nahrungssuche koexistieren. Vollständige dauerhafte Nischenüberlappung bei begrenzenden Ressourcen fördert Konkurrenzausschluss; Ressourcenteilung mindert Konkurrenz."
+      },
+      {
+        "heading": "Externe Präzisierung: physiologische und ökologische Potenz",
+        "text": "Die handschriftliche Erklärung auf S. 12 ist uneindeutig. Hier wird physiologische Potenz als physiologisch mögliche Bandbreite gegenüber einem bestimmten Umweltfaktor ohne einschränkende interspezifische Konkurrenz verwendet. Ökologische Potenz bezeichnet die unter natürlichen Konkurrenzbedingungen nutzbare Bandbreite. Gemeint ist langfristiges Bestehen einschließlich Fortpflanzung. Umweltfaktoren wirken auch ohne Konkurrenz weiter; physiologische Potenz bedeutet niemals ein Leben ohne Umwelt. Potenz bezieht sich meist auf einen Faktor, die Nische auf viele Dimensionen."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Ökologische Nische",
+        "definition": "Gesamtheit der Umweltansprüche, Ressourcennutzung und Wechselbeziehungen einer Art."
+      },
+      {
+        "term": "Fundamentale Nische",
+        "definition": "Grundsätzlich nutzbare Bedingungen und Ressourcen ohne Einschränkung durch Konkurrenz."
+      },
+      {
+        "term": "Realisierte Nische",
+        "definition": "Unter den tatsächlichen biotischen Wechselwirkungen genutzte Nische; auch reale Nische."
+      },
+      {
+        "term": "Intraspezifische Konkurrenz",
+        "definition": "Konkurrenz zwischen Individuen derselben Art um begrenzte Ressourcen."
+      },
+      {
+        "term": "Interspezifische Konkurrenz",
+        "definition": "Konkurrenz zwischen Individuen verschiedener Arten um begrenzte Ressourcen."
+      },
+      {
+        "term": "Physiologische Potenz",
+        "definition": "Physiologisch mögliche Bandbreite eines Umweltfaktors ohne einschränkende Konkurrenz (extern präzisiert)."
+      },
+      {
+        "term": "Ökologische Potenz",
+        "definition": "Unter Konkurrenz nutzbare Bandbreite eines Umweltfaktors (extern präzisiert)."
+      }
+    ],
+    "mnemonic": "Intra = innerhalb, inter = zwischen. Fundamental = möglich, realisiert = tatsächlich genutzt.",
+    "questions": [
+      {
+        "id": "terms-01",
+        "type": "single",
+        "prompt": "Welche Beschreibung trifft die ökologische Nische?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": "Ansprüche, Ressourcennutzung und Beziehungen einer Art",
+        "explanation": "Die Nische umfasst die Beziehung einer Art zur Umwelt.",
+        "options": [
+          "Räumlicher Ausschnitt, in dem eine Art regelmäßig vorkommt",
+          "Ansprüche, Ressourcennutzung und Beziehungen einer Art",
+          "Lebensgemeinschaft der Arten eines gemeinsamen Lebensraums",
+          "Wertebereich eines einzelnen Faktors, den eine Art erträgt"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-02",
+        "type": "cloze",
+        "prompt": "Konkurrenz zwischen zwei Individuen derselben Art heißt ___ Konkurrenz.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": [
+          "intraspezifische",
+          "intraspezifisch",
+          "intraspezifische Konkurrenz"
+        ],
+        "explanation": "Intra bedeutet innerhalb einer Art.",
+        "topic": "terms"
+      },
+      {
+        "id": "terms-03",
+        "type": "tf",
+        "prompt": "Verschiedene Arten können denselben Lebensraum nutzen und unterschiedliche ökologische Nischen haben.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": "Wahr",
+        "explanation": "Unterschiede etwa in Nahrung und Nutzungszeit ermöglichen verschiedene Nischen am selben Ort.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-04",
+        "type": "match",
+        "prompt": "Ordne die Beispiele den Begriffen zu.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "explanation": "Entscheidend sind Artzugehörigkeit und Begrenztheit der Ressource.",
+        "pairs": [
+          [
+            "Hirschböcke einer Art kämpfen um Paarung",
+            "Intraspezifische Konkurrenz"
+          ],
+          [
+            "Zwei Pantoffeltierchenarten nutzen begrenzte Nahrung",
+            "Interspezifische Konkurrenz"
+          ],
+          [
+            "Arten nutzen Nahrung in verschiedenen Wasserzonen",
+            "Konkurrenzverminderung"
+          ]
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-05",
+        "type": "multi",
+        "prompt": "Welche Größen stehen im dreidimensionalen Nischenraum-Modell der Mappe als Umweltfaktoren auf den Achsen? Unterscheide sie von einer gemessenen Reaktion der Organismen.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": ["Temperatur", "Salzgehalt", "Feuchtigkeit"],
+        "explanation": "Die drei Achsen zeigen Temperatur, Salzgehalt und Feuchtigkeit als Umweltbedingungen. Eine Fortpflanzungsrate wäre dagegen eine gemessene Reaktion der Organismen auf solche Bedingungen.",
+        "options": [
+          "Temperatur",
+          "Salzgehalt",
+          "Feuchtigkeit",
+          "Fortpflanzungsrate"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-06",
+        "type": "single",
+        "prompt": "Welche Beschreibung kennzeichnet die fundamentale Nische im Konkurrenzmodell?",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": "Grundsätzlich nutzbare Bedingungen ohne einschränkende Konkurrenz",
+        "explanation": "Die fundamentale Nische umfasst die grundsätzlich möglichen Bedingungen. Realisierte Nische, bevorzugter Bereich und Nischenüberlappung sind andere Konzepte.",
+        "options": [
+          "Tatsächlich genutzte Bedingungen unter dem Einfluss von Konkurrenz",
+          "Grundsätzlich nutzbare Bedingungen ohne einschränkende Konkurrenz",
+          "Bevorzugter Bereich mit besonders hohem Fortpflanzungserfolg",
+          "Von zwei Arten gemeinsam beanspruchter Teil ihres Nischenraums"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-07",
+        "type": "open",
+        "prompt": "Erkläre die Verteilung von Chthamalus und Semibalanus in der Gezeitenzone.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "explanation": "Die Mappe unterscheidet Konkurrenz im unteren und Austrocknungsstress im oberen Bereich.",
+        "model": "Chthamalus lebt vor allem weiter oben, weil Semibalanus es in tieferen Bereichen verdrängt. Ohne Semibalanus könnte Chthamalus auch tiefer siedeln. Semibalanus verträgt längeres Trockenfallen schlechter und erreicht daher die oberen Bereiche nicht.",
+        "rubric": [
+          "Konkurrenz schränkt Chthamalus ein",
+          "Entfernungsversuch erklärt fundamentale Nische",
+          "Austrocknung begrenzt Semibalanus"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-08",
+        "type": "tf",
+        "prompt": "Physiologische Potenz bedeutet, dass keine Umweltfaktoren wirken.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "Externe Ergänzung · KIT, Botanisches Institut: Glossar",
+        "answer": "Falsch",
+        "explanation": "Untersucht wird ein Umweltfaktor ohne einschränkende Konkurrenz; abiotische Faktoren wirken weiterhin.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-09",
+        "type": "open",
+        "prompt": "Unterscheide physiologische und ökologische Potenz an einem selbst gewählten Umweltfaktor.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Externe Ergänzung · KIT, Botanisches Institut: Glossar",
+        "explanation": "Der zentrale Unterschied sind die Konkurrenzbedingungen.",
+        "model": "Eine Pflanzenart kann ohne Konkurrenz in einem breiten Bodenfeuchtebereich bestehen. Mit konkurrenzstärkeren Arten nutzt sie davon nur einen Teil: Die physiologische Potenz ist die mögliche, die ökologische die unter Konkurrenz nutzbare Bandbreite.",
+        "rubric": [
+          "Konkreter Umweltfaktor",
+          "Ohne gegenüber mit Konkurrenz unterschieden"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-10",
+        "type": "order",
+        "prompt": "Ordne die Schritte eines Experiments zur Konkurrenzwirkung auf Chthamalus.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": [
+          "Verteilung beider Arten erfassen.",
+          "Semibalanus in einer Versuchsfläche entfernen.",
+          "Chthamalus-Besiedlung über längere Zeit beobachten.",
+          "Mit unveränderter Kontrollfläche vergleichen."
+        ],
+        "explanation": "Eine Kontrolle hilft, die beobachtete Veränderung dem Eingriff zuzuordnen.",
+        "options": [
+          "Verteilung beider Arten erfassen.",
+          "Semibalanus in einer Versuchsfläche entfernen.",
+          "Chthamalus-Besiedlung über längere Zeit beobachten.",
+          "Mit unveränderter Kontrollfläche vergleichen."
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-11",
+        "type": "open",
+        "prompt": "Warum widerlegt die Koexistenz von P. aurelia und P. bursaria das Konkurrenzausschlussprinzip nicht?",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "explanation": "Die Bedingungen eines vollständigen Nischenüberlapps sind hier nicht erfüllt.",
+        "model": "Die Arten nutzen Nahrung in unterschiedlichen Bereichen: P. aurelia eher an der Oberfläche und P. bursaria eher absinkende Bakterien. Die Ressourcen werden aufgeteilt. Die Konkurrenz ist damit geringer als bei identischer Nutzung derselben begrenzenden Ressourcen.",
+        "rubric": [
+          "Unterschiedliche Nahrungssuche genannt",
+          "Verminderte Nischenüberlappung erklärt",
+          "Voraussetzungen des Prinzips berücksichtigt"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-12",
+        "type": "diagram",
+        "prompt": "Schematische Übungsdaten: P. caudatum in gemeinsamer Kultur mit P. aurelia. Beschreibe den Verlauf und formuliere eine prüfbare Erklärung.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "explanation": "Die Zahlen sind eigens erzeugte Übungsdaten, keine aus der Mappe abgelesenen Messwerte.",
+        "diagram": {
+          "labels": ["Tag 0", "Tag 4", "Tag 8", "Tag 12", "Tag 16"],
+          "values": [2, 20, 14, 5, 0],
+          "unit": "Individuen / ml"
+        },
+        "model": "Die Dichte steigt zunächst auf 20 Individuen/ml und fällt dann auf null. Konkurrenz um begrenzte Nahrung ist eine plausible Erklärung. Einzelkulturen und Ressourcenkontrollen helfen, die Erklärung zu prüfen.",
+        "rubric": [
+          "Anstieg und anschließenden Rückgang mit Werten",
+          "Konkurrenz als begründete Hypothese",
+          "Geeignete Kontrolle"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-13",
+        "type": "multi",
+        "prompt": "Welche Situationen können Konkurrenz vermindern?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": [
+          "Nahrungssuche in verschiedenen Bereichen",
+          "Nutzung unterschiedlicher Nahrung"
+        ],
+        "explanation": "Weniger Überlappung in der Nutzung begrenzter Ressourcen reduziert Konkurrenz.",
+        "options": [
+          "Nahrungssuche in verschiedenen Bereichen",
+          "Nutzung unterschiedlicher Nahrung",
+          "Gleichzeitige Nutzung desselben begrenzten Nahrungsangebots",
+          "Gemeinsame Nahrungssuche bei sinkender Ressourcenmenge"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-14",
+        "type": "open",
+        "prompt": "Ein dreidimensionales Nischenmodell enthält Temperatur, Feuchte und Salzgehalt. Beurteile, ob es die vollständige Nische zeigt.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "explanation": "Jede Achse steht für eine Dimension, aber weitere relevante Faktoren fehlen.",
+        "model": "Das Modell vereinfacht. Zusätzlich können etwa Nahrung, Licht, Feinde und Konkurrenten bedeutsam sein. Die Nische ist daher meist ein n-dimensionales Beziehungsgefüge; ein dreidimensionales Bild zeigt nur einen Ausschnitt.",
+        "rubric": [
+          "Modell als Vereinfachung erkannt",
+          "Mindestens zwei weitere Faktoren",
+          "n-dimensionale Nische erklärt"
+        ],
+        "topic": "terms"
+      },
+      {
+        "id": "terms-15",
+        "type": "single",
+        "prompt": "Zwei Pflanzen nutzen dasselbe Licht, das jedoch ausreichend verfügbar ist. Was folgt daraus?",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 2,
+        "source": "Bio Mappe · S. 12, 23–26",
+        "answer": "Gleiche Nutzung allein beweist noch keine wirksame Konkurrenz.",
+        "explanation": "Konkurrenz setzt eine Begrenzung der gemeinsam genutzten Ressource voraus.",
+        "options": [
+          "Gleiche Ressourcennutzung zeigt bereits interspezifische Konkurrenz.",
+          "Gleiche Nutzung allein beweist noch keine wirksame Konkurrenz.",
+          "Reichliches Licht zeigt, dass sich ihre Nischen nicht überlappen.",
+          "Gemeinsame Lichtnutzung entspricht einer gegenseitigen Förderung."
+        ],
+        "topic": "terms"
+      }
+    ]
+  },
+  {
+    "id": "relations",
+    "title": "Beziehungen zwischen Lebewesen",
+    "subtitle": "Nutzen, Schaden und Abhängigkeit unterscheiden",
+    "sources": [
+      {
+        "label": "Bio Mappe · S. 19, 23–24",
+        "pages": [19, 23, 24],
+        "kind": "mappe"
+      },
+      {
+        "label": "Externe Ergänzung · OpenStax Biology 2e: Community Ecology",
+        "url": "https://openstax.org/books/biology-2e/pages/45-6-community-ecology",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · OpenStax Microbiology: Beziehungen",
+        "url": "https://openstax.org/books/microbiology/pages/4-1-prokaryote-habitats-relationships-and-microbiomes",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · Arizona State University: Ecological relationships",
+        "url": "https://askabiologist.asu.edu/ecological-relationships",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · University of Utah: Examples of Symbiosis",
+        "url": "https://learn.genetics.utah.edu/content/symbiosis/examples/",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · Universität Hamburg: Symbiose",
+        "url": "https://www.sign-lang.uni-hamburg.de/galex/konzepte/l543.html",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · Carleton College: Marine Symbiosis",
+        "url": "https://serc.carleton.edu/microbelife/topics/marinesymbiosis/index.html",
+        "kind": "external"
+      },
+      {
+        "label": "Externe Ergänzung · KIT: Pflanzen und Mykorrhizapilze",
+        "url": "https://www.kit.edu/kit/english/20474.php",
+        "kind": "external"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Externe Ergänzung: Vorzeichen lesen",
+        "text": "S. 19 nennt die Beziehungsformen, erklärt sie jedoch nicht vollständig. Die folgenden Definitionen ergänzen das Material aus Hochschulquellen und OpenStax. Ein Plus bedeutet einen Vorteil, ein Minus einen Nachteil und eine Null keinen nachweisbaren Einfluss auf den betrachteten Partner. Die Bewertung bezieht sich beispielsweise auf Wachstum, Überleben oder Fortpflanzung gegenüber einer Situation ohne den anderen Partner."
+      },
+      {
+        "heading": "Neutralismus, Kommensalismus, Parasitismus",
+        "text": "Neutralismus (0/0): Beide Partner beeinflussen einander im betrachteten Zusammenhang nicht messbar. Kommensalismus (+/0): Einer profitiert, der andere wird weder erkennbar gefördert noch geschädigt. Parasitismus (+/−): Der Parasit nutzt den Wirt und beeinträchtigt ihn, etwa durch Ressourcenentzug. Beispielhafte Zuordnungen gelten nur, solange die beschriebenen Auswirkungen zutreffen. Fehlende Beobachtung eines Effekts beweist nicht seine vollständige Abwesenheit."
+      },
+      {
+        "heading": "Mutualismus und Symbiose: Begriffskonventionen",
+        "text": "Mutualismus (+/+): Beide Arten profitieren. Symbiose im engeren deutschsprachigen Sinn bezeichnet ein enges Zusammenleben zum beiderseitigen Vorteil; manche Unterrichtsdarstellungen unterscheiden fakultativen Mutualismus von enger oder lebensnotwendiger Symbiose. Internationale Quellen verwenden symbiosis häufig weiter: dauerhaftes enges Zusammenleben, das auch Kommensalismus oder Parasitismus einschließt. Diese Konventionen sind nicht vollständig deckungsgleich. Eine begründete Antwort wird deshalb anhand der beschriebenen Effekte und ihrer ausdrücklich genannten Definition beurteilt."
+      },
+      {
+        "heading": "Beispiel: Mykorrhiza und Konkurrenz",
+        "text": "Externe Ergänzung nach KIT: Bei arbuskulärer Mykorrhiza unterstützen Pilze die Nährstoff- und Wasseraufnahme der Pflanze; die Pflanze liefert Kohlenhydrate. Das ist eine mutualistische Symbiose. Aus der Mappe: Konkurrenz (−/−) entsteht bei gemeinsamer Nutzung begrenzter Ressourcen. Auch die stärkere Art kann gegenüber einer konkurrenzfreien Situation einen Nachteil haben. Intraspezifisch heißt innerhalb einer Art; interspezifisch zwischen Arten."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Neutralismus",
+        "definition": "0/0: Im betrachteten Zusammenhang kein nachweisbarer gegenseitiger Einfluss."
+      },
+      {
+        "term": "Kommensalismus",
+        "definition": "+/0: Ein Partner profitiert, der andere bleibt ohne erkennbaren Vor- oder Nachteil."
+      },
+      {
+        "term": "Parasitismus",
+        "definition": "+/−: Parasit profitiert auf Kosten seines Wirtes."
+      },
+      {
+        "term": "Mutualismus",
+        "definition": "+/+: Beide Arten profitieren von der Beziehung."
+      },
+      {
+        "term": "Symbiose",
+        "definition": "Je nach Konvention enges Zusammenleben zum gegenseitigen Vorteil oder weiter gefasst enges Zusammenleben verschiedener Arten."
+      },
+      {
+        "term": "Konkurrenz",
+        "definition": "−/−: Gemeinsame Nutzung einer begrenzten Ressource beeinträchtigt beide Partner gegenüber konkurrenzfreien Bedingungen."
+      },
+      {
+        "term": "Obligat / fakultativ",
+        "definition": "Obligat: lebensnotwendig; fakultativ: möglich und vorteilhaft, aber nicht zwingend notwendig."
+      }
+    ],
+    "mnemonic": "Erst die Wirkung auf beide Partner prüfen, dann benennen: +/+, +/0, +/−, −/− oder 0/0.",
+    "questions": [
+      {
+        "id": "relations-01",
+        "type": "single",
+        "prompt": "Welches Vorzeichenpaar steht für Kommensalismus?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Externe Ergänzung · Carleton College: Marine Symbiosis",
+        "answer": "+/0",
+        "explanation": "Ein Partner profitiert, der andere bleibt unbeeinflusst.",
+        "options": ["+/+", "+/0", "+/−", "0/0"],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-02",
+        "type": "cloze",
+        "prompt": "Bei einer +/+-Beziehung profitieren ___ Partner.",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Externe Ergänzung · OpenStax Microbiology: Beziehungen",
+        "answer": ["beide", "beide Partner", "zwei", "alle beiden"],
+        "explanation": "Die positive Wirkung betrifft beide Beteiligten.",
+        "topic": "relations"
+      },
+      {
+        "id": "relations-03",
+        "type": "match",
+        "prompt": "Ordne die Vorzeichen den Beziehungsformen zu.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 4,
+        "source": "Externe Ergänzung · OpenStax Microbiology: Beziehungen",
+        "explanation": "Die Reihenfolge der beiden Partner kann vertauscht werden.",
+        "pairs": [
+          ["0/0", "Neutralismus"],
+          ["+/−", "Parasitismus"],
+          ["+/+", "Mutualismus"],
+          ["+/0", "Kommensalismus"]
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-04",
+        "type": "tf",
+        "prompt": "Konkurrenz hat nur für den unterlegenen Partner Nachteile.",
+        "difficulty": "mittel",
+        "afb": 1,
+        "points": 1,
+        "source": "Bio Mappe · S. 19, 23–24",
+        "answer": "Falsch",
+        "explanation": "Auch der stärkere Konkurrent hat gegenüber der Situation ohne Konkurrenten geringeren Ressourcenzugang.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-05",
+        "type": "single",
+        "prompt": "Übungsszenario: Eine Zecke entnimmt einem Wirt Blut und schädigt ihn. Welche Beziehung liegt vor?",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Externe Ergänzung · Arizona State University: Ecological relationships",
+        "answer": "Parasitismus",
+        "explanation": "Der beschriebene Nutzen der Zecke geht mit einem Nachteil des Wirtes einher.",
+        "options": [
+          "Kommensalismus",
+          "Parasitismus",
+          "Konkurrenz",
+          "Mutualismus"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-06",
+        "type": "multi",
+        "prompt": "Welche Befunde zeigen einen wechselseitigen Nutzen und stützen damit Mutualismus? Verglichen wird jeweils mit einer Kontrolle ohne den anderen Partner.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Externe Ergänzung · University of Utah: Examples of Symbiosis",
+        "answer": [
+          "A erzielt mehr Nachkommen; B überlebt häufiger.",
+          "A wächst schneller; B erzielt mehr Nachkommen."
+        ],
+        "explanation": "Mutualismus erfordert einen Vorteil für beide Partner. Ein Vorteil bei unverändertem zweitem Partner passt zu Kommensalismus; ein Vorteil mit Nachteil des anderen zu einer +/−-Beziehung.",
+        "options": [
+          "A erzielt mehr Nachkommen; B überlebt häufiger.",
+          "A wächst schneller; B erzielt mehr Nachkommen.",
+          "A erzielt mehr Nachkommen; B bleibt unverändert.",
+          "A überlebt häufiger; B erzielt weniger Nachkommen."
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-07",
+        "type": "open",
+        "prompt": "Erkläre die Mykorrhiza als mutualistische Beziehung.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Externe Ergänzung · KIT: Pflanzen und Mykorrhizapilze",
+        "explanation": "Die Partner tauschen unterschiedliche Ressourcen aus.",
+        "model": "Der Pilz unterstützt die Versorgung der Pflanze mit Mineralstoffen und Wasser. Die Pflanze versorgt ihn mit Kohlenhydraten aus der Photosynthese. Beide haben einen Vorteil; damit ist die Beziehung mutualistisch.",
+        "rubric": [
+          "Vorteil für die Pflanze",
+          "Vorteil für den Pilz",
+          "Beide Vorteile zur Einordnung genutzt"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-08",
+        "type": "open",
+        "prompt": "Eine Quelle zählt Parasitismus zur Symbiose, dein Unterricht verwendet Symbiose nur für +/+. Erkläre den scheinbaren Widerspruch.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Externe Ergänzung · Universität Hamburg: Symbiose; Externe Ergänzung · Arizona State University: Ecological relationships",
+        "explanation": "Die Begriffe werden in unterschiedlichen Konventionen benutzt; begründete Definitionen zählen.",
+        "model": "Im weiteren Sinn ist Symbiose enges längerfristiges Zusammenleben verschiedener Arten, auch mit einseitigem Schaden. Im engeren deutschsprachigen Sinn wird der Begriff auf beiderseitigen Nutzen bezogen. Die unterschiedlichen Zuordnungen folgen den Definitionen; die Wirkungen auf die Partner müssen trotzdem übereinstimmend beschrieben werden.",
+        "rubric": [
+          "Weite Konvention erklärt",
+          "Enge Konvention erklärt",
+          "Vorzeichen von der Benennung getrennt"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-09",
+        "type": "tf",
+        "prompt": "Wenn beide Arten profitieren, muss ihre Beziehung für beide lebensnotwendig sein.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 1,
+        "source": "Externe Ergänzung · University of Utah: Examples of Symbiosis",
+        "answer": "Falsch",
+        "explanation": "Gegenseitiger Vorteil allein belegt keine obligate Abhängigkeit.",
+        "options": ["Wahr", "Falsch"],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-10",
+        "type": "open",
+        "prompt": "Übungsszenario: Ein Vogel erhält durch ein Nest im Baum Schutz. Für den Baum wird kein messbarer Effekt gefunden. Ordne ein und nenne eine Grenze der Aussage.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 2,
+        "source": "Externe Ergänzung · OpenStax Biology 2e: Community Ecology",
+        "explanation": "Die Einordnung folgt den gemessenen Wirkungen im konkreten Zusammenhang.",
+        "model": "Die beschriebenen Effekte entsprechen Kommensalismus (+/0). Die Null ist vorläufig: Ein kleiner oder erst langfristig auftretender Effekt könnte mit der Untersuchung übersehen worden sein.",
+        "rubric": [
+          "Kommensalismus mit +/0",
+          "Aussage auf Messbedingungen beschränkt"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-11",
+        "type": "order",
+        "prompt": "Ordne ein Vorgehen zur Untersuchung einer Beziehung.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 3,
+        "source": "Externe Ergänzung · OpenStax Microbiology: Beziehungen",
+        "answer": [
+          "Vergleich ohne den anderen Partner festlegen.",
+          "Überleben, Wachstum oder Fortpflanzung beider Partner messen.",
+          "Effekte als Plus, Minus oder Null einordnen.",
+          "Passenden Begriff mit Definition begründen."
+        ],
+        "explanation": "Die Begriffszuordnung folgt aus den Wirkungen.",
+        "options": [
+          "Vergleich ohne den anderen Partner festlegen.",
+          "Überleben, Wachstum oder Fortpflanzung beider Partner messen.",
+          "Effekte als Plus, Minus oder Null einordnen.",
+          "Passenden Begriff mit Definition begründen."
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-12",
+        "type": "diagram",
+        "prompt": "Schematische Übungsdaten: Wachstum mit Partner relativ zur Kontrolle ohne Partner (100 %). Ordne die Beziehung ein und erläutere die Unsicherheit.",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Externe Ergänzung · Carleton College: Marine Symbiosis",
+        "explanation": "Die Daten sind ein erfundenes Modell, keine Messergebnisse aus den Quellen.",
+        "diagram": {
+          "labels": ["Art A", "Art B"],
+          "values": [130, 100],
+          "unit": "% der Kontrolle"
+        },
+        "model": "Art A wächst stärker, für Art B zeigt der Mittelwert keine Änderung. Das passt zunächst zu +/0 und damit Kommensalismus. Ohne Streuung, Wiederholungen und weitere Fitnessmaße lässt sich die Einordnung nicht sicher verallgemeinern.",
+        "rubric": [
+          "Kontrollwert 100 % berücksichtigt",
+          "Vorläufig +/0 korrekt zugeordnet",
+          "Grenze der Daten genannt"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-13",
+        "type": "single",
+        "prompt": "Übungsszenario: Zwei Arten leben zusammen; für beide wird kein Einfluss erfasst. Welcher Begriff beschreibt zunächst dieses Ergebnis?",
+        "difficulty": "leicht",
+        "afb": 1,
+        "points": 1,
+        "source": "Externe Ergänzung · OpenStax Microbiology: Beziehungen",
+        "answer": "Neutralismus",
+        "explanation": "0/0 bezeichnet keinen nachweisbaren Einfluss im betrachteten Zusammenhang.",
+        "options": [
+          "Neutralismus",
+          "Kommensalismus",
+          "Mutualismus",
+          "Interspezifische Konkurrenz"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-14",
+        "type": "open",
+        "prompt": "Vergleiche Parasitismus und Konkurrenz anhand von Nutzen und Schaden.",
+        "difficulty": "mittel",
+        "afb": 2,
+        "points": 2,
+        "source": "Bio Mappe · S. 19, 23–24; Externe Ergänzung · Carleton College: Marine Symbiosis",
+        "explanation": "Beide Beziehungen können schaden, die Verteilung der Wirkungen unterscheidet sich.",
+        "model": "Bei Parasitismus profitiert der Parasit und der Wirt wird geschädigt (+/−). Bei Konkurrenz nutzen beide eine begrenzte Ressource und werden dadurch gegenüber einer Situation ohne Konkurrenz beeinträchtigt (−/−).",
+        "rubric": [
+          "Parasitismus +/− erklärt",
+          "Konkurrenz −/− mit begrenzter Ressource erklärt"
+        ],
+        "topic": "relations"
+      },
+      {
+        "id": "relations-15",
+        "type": "open",
+        "prompt": "Beurteile die Aussage: «Mutualismus und Symbiose sind überall exakt gleich definiert.»",
+        "difficulty": "schwer",
+        "afb": 3,
+        "points": 3,
+        "source": "Externe Ergänzung · Universität Hamburg: Symbiose; Externe Ergänzung · Arizona State University: Ecological relationships",
+        "explanation": "Die Mappe listet beide Wörter; die externe Ergänzung macht die Konventionen transparent.",
+        "model": "Die Aussage ist zu pauschal. Mutualismus meint beiderseitigen Nutzen. Symbiose wird je nach Quelle eng für vorteilhaftes Zusammenleben oder weiter für enges längerfristiges Zusammenleben gebraucht. Bei einer Aufgabe muss die verwendete Konvention angegeben werden; sachlich begründete alternative Benennungen sind vertretbar.",
+        "rubric": [
+          "Pauschalaussage zurückgewiesen",
+          "Beiderseitigen Nutzen korrekt beschrieben",
+          "Definitionskonvention angegeben"
+        ],
+        "topic": "relations"
+      }
+    ]
+  }
+]

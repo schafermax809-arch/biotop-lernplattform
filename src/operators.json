@@ -1,0 +1,263 @@
+{
+  "sources": [
+    {
+      "label": "IQB · Grundstock von Operatoren Naturwissenschaften (31.03.2022)",
+      "url": "https://www.iqb.hu-berlin.de/media/documents/N_Grundstock_von_Operatoren.pdf",
+      "kind": "external"
+    },
+    {
+      "label": "Niedersachsen · Kerncurriculum Biologie Oberstufe (2022), S. 10 und 30–31",
+      "url": "https://cuvo.nibis.de/index.php?p=download&upload=359",
+      "kind": "external"
+    }
+  ],
+  "note": "Die Definitionen sind verständliche Paraphrasen der offiziellen Listen. Die Arbeitsschritte sind Lernhilfen. Ein Operator legt den Anforderungsbereich nicht allein fest: Material, Vorwissen und konkrete Aufgabe entscheiden. Die Kriterien dienen deiner Selbstbewertung und ersetzen keine Korrektur durch eine Lehrkraft.",
+  "operators": [
+    {
+      "id": "nennen",
+      "label": "Nennen",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Gefragte Begriffe oder Angaben knapp wiedergeben; eine Erklärung ist dabei nicht verlangt.",
+      "steps": [
+        "Gefragte Anzahl prüfen.",
+        "Passende Fachbegriffe auswählen.",
+        "Kurz aufzählen."
+      ],
+      "pitfall": "Eine lange Begründung ersetzt keinen fehlenden Begriff.",
+      "source": "IQB · Grundstock von Operatoren Naturwissenschaften (31.03.2022)"
+    },
+    {
+      "id": "beschreiben",
+      "label": "Beschreiben",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Merkmale oder Abläufe geordnet und fachsprachlich darstellen.",
+      "steps": [
+        "Gegenstand und Reihenfolge klären.",
+        "Wesentliches genau darstellen.",
+        "Daten mit Einheit nennen, falls vorhanden."
+      ],
+      "pitfall": "Beobachtungen und vermutete Ursachen auseinanderhalten.",
+      "source": "IQB · Grundstock von Operatoren Naturwissenschaften (31.03.2022)"
+    },
+    {
+      "id": "erklaeren",
+      "label": "Erklären",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Einen Sachverhalt durch passende Regeln und Gesetzmäßigkeiten verständlich machen.",
+      "steps": [
+        "Zu erklärenden Befund nennen.",
+        "Passendes Fachwissen anwenden.",
+        "Ursache und Folge verbinden."
+      ],
+      "pitfall": "Ein anderes Wort für den Befund liefert noch keine Ursache.",
+      "source": "IQB · Grundstock von Operatoren Naturwissenschaften (31.03.2022)"
+    },
+    {
+      "id": "vergleichen",
+      "label": "Vergleichen",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Gemeinsamkeiten und Unterschiede anhand derselben Kriterien herausarbeiten.",
+      "steps": [
+        "Vergleichskriterien festlegen.",
+        "Beide Gegenstände je Kriterium gegenüberstellen.",
+        "Gemeinsamkeiten und Unterschiede bündeln."
+      ],
+      "pitfall": "Zwei getrennte Beschreibungen ohne gemeinsame Kriterien bleiben unvollständig.",
+      "source": "Niedersachsen · Kerncurriculum Biologie Oberstufe (2022), S. 10 und 30–31"
+    },
+    {
+      "id": "analysieren",
+      "label": "Analysieren",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Für eine bestimmte Frage wesentliche Bestandteile und Zusammenhänge gezielt herausarbeiten.",
+      "steps": [
+        "Fragestellung eingrenzen.",
+        "Relevante Materialbelege auswählen.",
+        "Zusammenhänge untersuchen und Grenzen benennen."
+      ],
+      "pitfall": "Material nur nachzuerzählen beantwortet die Untersuchungsfrage häufig nicht.",
+      "source": "Niedersachsen · Kerncurriculum Biologie Oberstufe (2022), S. 10 und 30–31"
+    },
+    {
+      "id": "beurteilen",
+      "label": "Beurteilen",
+      "afb": "I–III · aufgabenabhängig",
+      "definition": "Zu einem fachlich begründeten Sachurteil anhand geeigneter Kriterien gelangen.",
+      "steps": [
+        "Aussage und fachliche Kriterien klären.",
+        "Belege und Einschränkungen prüfen.",
+        "Ein begründetes Urteil formulieren."
+      ],
+      "pitfall": "Eine persönliche Vorliebe allein begründet kein fachliches Sachurteil.",
+      "source": "Niedersachsen · Kerncurriculum Biologie Oberstufe (2022), S. 10 und 30–31"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "op-nennen-01",
+      "operator": "nennen",
+      "prompt": "Nenne drei abiotische Umweltfaktoren eines Fließgewässers.",
+      "context": "Rufe passende Fachbegriffe aus dem Kapitel Umweltfaktoren ab.",
+      "model": "Wassertemperatur, Lichtintensität und Sauerstoffkonzentration. Ebenso geeignet sind beispielsweise Strömungsgeschwindigkeit oder pH-Wert.",
+      "rubric": [
+        "Drei unterschiedliche Faktoren genannt.",
+        "Alle genannten Faktoren sind abiotisch.",
+        "Faktoren fachlich eindeutig bezeichnet."
+      ],
+      "source": "Bio Mappe · Umweltfaktoren (S. 4–6); NPS · Biotische und abiotische Teile"
+    },
+    {
+      "id": "op-nennen-02",
+      "operator": "nennen",
+      "prompt": "Nenne die vier Trophiestufen der angegebenen Nahrungskette in der Reihenfolge der Pfeile.",
+      "context": "Material aus der Mappe: Eichenblatt → Frostspannerraupe → Zilpzalp → Sperber. Die Eiche bildet das Blatt.",
+      "model": "Produzent → Primärkonsument → Sekundärkonsument → Tertiärkonsument.",
+      "rubric": [
+        "Produzent an erster Stelle genannt.",
+        "Primär-, Sekundär- und Tertiärkonsument vollständig genannt.",
+        "Alle vier Stufen in richtiger Reihenfolge."
+      ],
+      "source": "Bio Mappe · Nahrungsbeziehungen (S. 13–18)"
+    },
+    {
+      "id": "op-beschreiben-01",
+      "operator": "beschreiben",
+      "prompt": "Beschreibe den Verlauf der gezählten Forellenbestände. Verwende alle drei Zahlen und den Zeitraum; eine Ursachenerklärung ist nicht verlangt.",
+      "context": "Hypothetische Übungsdaten desselben abgegrenzten Bachabschnitts: Jahr 1: 12 Bachforellen; Jahr 2: 18; Jahr 3: 9. Die Erfassungsmethode ist jeweils gleich.",
+      "model": "Im ersten Jahr werden 12 Bachforellen gezählt. Im zweiten Jahr steigt die Zahl auf 18, im dritten fällt sie auf 9. Der letzte Wert liegt damit unter dem Ausgangswert.",
+      "rubric": [
+        "Anstieg von Jahr 1 auf Jahr 2 beschrieben.",
+        "Rückgang von Jahr 2 auf Jahr 3 beschrieben.",
+        "Alle drei Zahlen mit zeitlicher Zuordnung genannt.",
+        "Keine unbelegte Ursache als Beobachtung dargestellt."
+      ],
+      "source": "OpenStax · Ökologische Forschung; Übungsdaten erfunden"
+    },
+    {
+      "id": "op-beschreiben-02",
+      "operator": "beschreiben",
+      "prompt": "Beschreibe die Reihenfolge der Stoffübergänge in diesem vereinfachten Kreislauf. Verwende die Begriffe Produzenten, Konsumenten und Mineralisierung.",
+      "context": "Schematisches Übungsmodell: gelöste Mineralstoffe → Algenbiomasse → tierische Biomasse → tote organische Substanz → gelöste Mineralstoffe. Zusätzlich kann tote Biomasse direkt von jeder lebenden Stufe stammen.",
+      "model": "Algen nehmen als Produzenten Mineralstoffe auf und bauen Biomasse auf. Konsumenten erhalten organische Stoffe, indem sie Algen fressen. Abgestorbene Biomasse gelangt aus allen lebenden Stufen zur toten organischen Substanz. Bei deren Abbau werden durch Mineralisierung wieder Mineralstoffe verfügbar.",
+      "rubric": [
+        "Algen als Produzenten eingeordnet.",
+        "Übergang organischer Stoffe zu Konsumenten beschrieben.",
+        "Tote Biomasse aus mehreren Stufen berücksichtigt.",
+        "Mineralisierung als Rückführung zu verfügbaren anorganischen Stoffen beschrieben."
+      ],
+      "source": "Bio Mappe · Stoffspirale (S. 7–8, 18); Bio Mappe · Nahrungsbeziehungen (S. 13–18)"
+    },
+    {
+      "id": "op-erklaeren-01",
+      "operator": "erklaeren",
+      "prompt": "Erkläre, warum stärkere Trübung die Fotosynthese von Aufwuchsalgen am Gewässergrund begrenzen kann.",
+      "context": "Hypothetisches Szenario: Die Menge an Schwebstoffen nimmt zu. Betrachtet wird der Lichtweg durch das Wasser zu den Algen am Grund; andere Bedingungen bleiben im Modell gleich.",
+      "model": "Stärkere Trübung verringert das Licht, das den Gewässergrund erreicht. Licht ist eine Voraussetzung für Fotosynthese. Wenn Licht dadurch zum begrenzenden Faktor wird, können die Aufwuchsalgen weniger Fotosynthese betreiben.",
+      "rubric": [
+        "Trübung mit geringerer Lichtverfügbarkeit am Grund verknüpft.",
+        "Licht als Voraussetzung der Fotosynthese benannt.",
+        "Folge als mögliche Begrenzung fachlich hergeleitet.",
+        "Keine sichere Aussage über alle Organismen oder jedes reale Gewässer behauptet."
+      ],
+      "source": "Bio Mappe · Fließgewässer (S. 4–6)"
+    },
+    {
+      "id": "op-erklaeren-02",
+      "operator": "erklaeren",
+      "prompt": "Erkläre, warum sich bei Chthamalus der besiedelbare Bereich nach Entfernung von Semibalanus erweitern kann.",
+      "context": "Versuchsbeispiel der Mappe: Chthamalus besiedelt ohne Semibalanus auch tiefere Bereiche der Gezeitenzone. Mit Semibalanus ist dieser Bereich eingeschränkt.",
+      "model": "Semibalanus konkurriert mit Chthamalus um begrenzten Siedlungsraum und schränkt dessen Nutzung tieferer Bereiche ein. Wird dieser Konkurrent entfernt, entfällt dort die Einschränkung. Chthamalus kann weitere grundsätzlich geeignete Bereiche nutzen; die realisierte Nische ist unter Konkurrenz gegenüber der fundamentalen eingeschränkt.",
+      "rubric": [
+        "Konkurrenz um begrenzten Siedlungsraum als Ursache genannt.",
+        "Entfernung des Konkurrenten mit wegfallender Einschränkung verbunden.",
+        "Fundamentale und realisierte Nische passend verknüpft.",
+        "Keine Veränderung der grundlegenden physiologischen Ansprüche durch das Entfernen behauptet."
+      ],
+      "source": "Bio Mappe · S. 12, 23–26"
+    },
+    {
+      "id": "op-vergleichen-01",
+      "operator": "vergleichen",
+      "prompt": "Vergleiche Parasitismus und Konkurrenz anhand der Kriterien Wirkung auf beide Partner und Art der Ressourcennutzung.",
+      "context": "Verwende als Bezug eine Situation ohne den jeweils anderen Partner. Plus und Minus stehen für Vor- und Nachteile im betrachteten Zusammenhang.",
+      "model": "Bei Parasitismus profitiert der Parasit durch Nutzung des Wirtes, während der Wirt geschädigt wird (+/−). Bei Konkurrenz nutzen beide dieselbe begrenzte Ressource und sind gegenüber einer Situation ohne den Konkurrenten beeinträchtigt (−/−). Gemeinsam ist, dass mindestens ein Partner einen Nachteil hat; unterschiedlich sind die Verteilung der Wirkungen und die Beziehung zur Ressource.",
+      "rubric": [
+        "Parasitismus für beide Partner korrekt als +/− dargestellt.",
+        "Konkurrenz für beide Partner korrekt als −/− dargestellt.",
+        "Begrenzte gemeinsame Ressource von Nutzung des Wirtes unterschieden.",
+        "Mindestens eine Gemeinsamkeit und einen Unterschied ausdrücklich gegenübergestellt."
+      ],
+      "source": "Bio Mappe · S. 19, 23–24; Externe Ergänzung · Carleton College: Marine Symbiosis"
+    },
+    {
+      "id": "op-vergleichen-02",
+      "operator": "vergleichen",
+      "prompt": "Vergleiche Bergmann- und Allen-Regel nach betrachteter Körperstruktur, erwarteter Tendenz in kalten Gebieten und physiologischem Zusammenhang.",
+      "context": "Betrachte die klassische Schulform für vergleichbare verwandte gleichwarme Tiere. Beide Regeln beschreiben Tendenzen und besitzen Ausnahmen.",
+      "model": "Bergmann betrachtet die Körpergröße: In kalten Gebieten sind verwandte Formen tendenziell größer. Bei ähnlicher Gestalt ist ihre Oberfläche relativ zum Volumen kleiner, was die relative Wärmeabgabe verringern kann. Allen betrachtet Körperanhänge: Diese sind in kalten Gebieten tendenziell relativ kürzer und begrenzen damit die wärmeaustauschende Oberfläche. Beide Regeln beziehen Körpergestalt auf Wärmeaustausch, unterscheiden sich aber im betrachteten Merkmal.",
+      "rubric": [
+        "Körpergröße und Körperanhänge korrekt gegenübergestellt.",
+        "Tendenzen für kalte Gebiete korrekt genannt.",
+        "Oberfläche und Wärmeaustausch als gemeinsamer Zusammenhang erklärt.",
+        "Geltung als Tendenz bei vergleichbaren gleichwarmen Formen kenntlich gemacht."
+      ],
+      "source": "Bio Mappe · S. 10–12, 20; Externe Ergänzung · Baldwin et al. 2023 (Originalstudie)"
+    },
+    {
+      "id": "op-analysieren-01",
+      "operator": "analysieren",
+      "prompt": "Analysiere, welche Aussagen die Daten zur Entwicklung der Bachforellenpopulation erlauben und welche Aussagen zur Biozönose offenbleiben.",
+      "context": "Hypothetische Übungsdaten: Im selben Bachabschnitt werden mit derselben Methode nacheinander 12, 18 und 9 Bachforellen gezählt. Weitere Arten und Umweltfaktoren wurden nicht erfasst.",
+      "model": "Die Zählung zeigt für eine Art im abgegrenzten Abschnitt zunächst einen Anstieg von 12 auf 18, anschließend einen Rückgang auf 9. Damit liegen Daten zu einer Population vor. Andere Populationen und Beziehungen wurden nicht erhoben; eine Zu- oder Abnahme der gesamten Biozönose lässt sich daraus nicht bestimmen. Auch die Ursache des Rückgangs bleibt ohne weitere Daten offen.",
+      "rubric": [
+        "Daten gezielt auf Bestandsverlauf einer Art bezogen.",
+        "Population mit Art und abgegrenztem Raum begründet.",
+        "Fehlende Daten zu anderen Arten und Beziehungen herausgearbeitet.",
+        "Aussagegrenzen für Biozönose und Ursache des Verlaufs benannt."
+      ],
+      "source": "OpenStax · Systemebenen; OpenStax · Ökologische Forschung; Übungsdaten erfunden"
+    },
+    {
+      "id": "op-analysieren-02",
+      "operator": "analysieren",
+      "prompt": "Analysiere das Nahrungsnetz im Hinblick auf mögliche direkte und indirekte Folgen eines starken Rückgangs des Zilpzalps. Trenne begründete Möglichkeiten von sicheren Aussagen.",
+      "context": "Hypothetisches vereinfachtes Netz: Eichenblatt → Raupe → Zilpzalp → Sperber und Raupe → weitere Vogelart → Sperber. Pfeile zeigen von Nahrung zum Fresser. Andere Wechselwirkungen und Populationsdaten sind unbekannt.",
+      "model": "Direkt verliert der Sperber einen Teil einer Nahrungsquelle. Für die Raupe kann der Fraßdruck durch Zilpzalpe sinken. Indirekt könnte stärkerer Raupenfraß die Eichenblätter stärker belasten. Der alternative Weg über die weitere Vogelart kann Auswirkungen auf den Sperber abschwächen. Wie stark sich Bestände ändern, folgt aus den Pfeilen allein nicht: Nahrungsausweichmöglichkeiten und weitere Einflüsse fehlen.",
+      "rubric": [
+        "Direkte Nahrungsbeziehung zum Sperber erkannt.",
+        "Mögliche Entlastung der Raupe vom Fraßdruck erkannt.",
+        "Mindestens eine indirekte Wirkung nachvollziehbar hergeleitet.",
+        "Alternativen im Netz und Unsicherheit der Bestandsfolgen berücksichtigt."
+      ],
+      "source": "Bio Mappe · Nahrungsbeziehungen (S. 13–18); Übungsnetz vereinfacht und ergänzt"
+    },
+    {
+      "id": "op-beurteilen-01",
+      "operator": "beurteilen",
+      "prompt": "Beurteile die Aussage: Ein stofflich geschlossenes, durchsichtiges Gefäß mit Algen und Mikroorganismen bleibt automatisch dauerhaft stabil.",
+      "context": "Hypothetisches Ecosphere-Modell: Das Gefäß kann Licht aufnehmen und Wärme abgeben; Stoffaustausch ist idealisiert ausgeschlossen. Langzeitdaten sind nicht vorhanden.",
+      "model": "Die Aussage ist fachlich nicht ausreichend begründet. Stoffliche Geschlossenheit ermöglicht die interne Wiederverwendung von Stoffen, garantiert aber weder geeignete Ressourcenverhältnisse noch ausgeglichene Produktion und Verbrauch. Lichtzufuhr und Wärmeabgabe gehören zur Energiebilanz. Ohne wiederholte Beobachtung über längere Zeit ist dauerhafte Stabilität nicht belegt.",
+      "rubric": [
+        "Begründetes Sachurteil zur pauschalen Aussage formuliert.",
+        "Stoffliche Geschlossenheit von Energieaustausch unterschieden.",
+        "Ressourcen beziehungsweise Produktion und Verbrauch als fachliche Kriterien verwendet.",
+        "Fehlende Langzeitbeobachtung als Beleggrenze berücksichtigt."
+      ],
+      "source": "NASA · Systemdenken; OpenStax · Energiefluss; OpenStax · Stoffkreisläufe"
+    },
+    {
+      "id": "op-beurteilen-02",
+      "operator": "beurteilen",
+      "prompt": "Beurteile die Behauptung: Ein großes Säugetier in einer warmen Region widerlegt bereits allein die Bergmann-Regel.",
+      "context": "Die klassische Schulform der Regel bezieht sich auf Größentendenzen vergleichbarer verwandter gleichwarmer Tiere entlang unterschiedlicher Klimabedingungen. Eine Vergleichsgruppe ist hier nicht angegeben.",
+      "model": "Ein einzelnes großes Säugetier aus einer warmen Region reicht für dieses Urteil nicht aus. Es fehlt ein geeigneter Vergleich verwandter Formen in unterschiedlichen Klimabedingungen. Außerdem beschreibt die Regel eine statistische Tendenz; Körpergestalt und weitere Einflüsse wie Nahrungsangebot müssen berücksichtigt werden. Die Beobachtung kann Anlass für eine Untersuchung sein, belegt allein aber keine allgemeine Widerlegung.",
+      "rubric": [
+        "Behauptung mit begründetem Sachurteil eingeschränkt.",
+        "Geeignete verwandte Vergleichsgruppe als Kriterium verlangt.",
+        "Tendenz und Einzelbeobachtung unterschieden.",
+        "Mindestens einen zusätzlichen Einfluss oder eine Grenze des Vergleichs genannt."
+      ],
+      "source": "Bio Mappe · S. 10–12, 20; Externe Ergänzung · Baldwin et al. 2023 (Originalstudie)"
+    }
+  ]
+}
