@@ -28,6 +28,7 @@ import {
   reviewStatus,
   restorePractice,
 } from "./study-engine.js";
+import { levelIllustration } from "./nature-ui.js";
 const labList = [...baseLabList, ...advancedLabList];
 let operatorData;
 function toolContext() {
@@ -177,7 +178,7 @@ function shell(body, active) {
   document.body.classList.remove("menu-open");
   const navLink = ([id, ic, label]) =>
     `<a class="nav-btn ${active === id ? "active" : ""}" href="#${id}" ${active === id ? 'aria-current="page"' : ""}>${icon(ic)}${label}</a>`;
-  app.innerHTML = `<a class="skip-link" href="#main-content">Zum Inhalt springen</a><div class="layout ${focus ? "focus" : ""}"><aside class="sidebar" id="sidebar" aria-label="Seitennavigation"><button class="icon-btn mobile-close" id="menu-close" aria-label="Navigation schließen">×</button><a href="#dashboard" class="brand"><img src="assets/mark.svg" alt=""><div>biotop<small>DEIN LERNRAUM</small></div></a><nav aria-label="Hauptnavigation">${nav.slice(0, 6).map(navLink).join("")}<details class="nav-tools" ${nav.slice(6).some((x) => x[0] === active) ? "open" : ""}><summary>Werkzeuge & Fortschritt</summary>${nav.slice(6).map(navLink).join("")}</details></nav><div class="sidebar-foot"><span class="status-dot"></span>Ökologie · Oberstufe<br><span class="small">Dein Fortschritt bleibt bei dir.</span></div></aside><button id="menu-backdrop" class="menu-backdrop" aria-label="Navigation schließen" tabindex="-1" hidden></button><main class="main" id="main-content" tabindex="-1"><header class="topbar"><button class="icon-btn mobile-menu" id="menu" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="sidebar">${icon("menu")}</button><div class="breadcrumb">Biologie <span>/ ${e(nav.find((x) => x[0] === active)?.[2] || "Lernraum")}</span></div><div class="top-actions"><button class="search-trigger" id="search-global" aria-label="Lerninhalte durchsuchen">${icon("search")}<span class="search-label">Lerninhalte suchen</span><span class="key">/</span></button><button class="icon-btn" id="focus" aria-label="${focus ? "Fokusmodus beenden" : "Fokusmodus aktivieren"}" title="Fokusmodus · F" aria-pressed="${focus}">${icon("focus")}</button></div></header><div class="content" id="content">${!storageOK ? '<div class="callout">Lokales Speichern ist derzeit nicht möglich. Sichere deinen Fortschritt regelmäßig über Einstellungen → Export.</div>' : ""}${body}<div class="footer-note">Biotop · Ökologie verstehen und anwenden. <a href="#settings">Quellen & Datensicherung</a></div></div></main></div>`;
+  app.innerHTML = `<a class="skip-link" href="#main-content">Zum Inhalt springen</a><div class="layout ${focus ? "focus" : ""}"><aside class="sidebar" id="sidebar" aria-label="Seitennavigation"><button class="icon-btn mobile-close" id="menu-close" aria-label="Navigation schließen">×</button><a href="#dashboard" class="brand"><img src="assets/mark.svg" alt=""><div>biotop<small>DEIN LERNRAUM</small></div></a><nav aria-label="Hauptnavigation">${nav.slice(0, 6).map(navLink).join("")}<details class="nav-tools" ${nav.slice(6).some((x) => x[0] === active) ? "open" : ""}><summary>Werkzeuge & Fortschritt</summary>${nav.slice(6).map(navLink).join("")}</details></nav><div class="sidebar-foot"><span class="status-dot"></span>Ökologie · Oberstufe<br><span class="small">Dein Fortschritt bleibt bei dir.</span></div></aside><button id="menu-backdrop" class="menu-backdrop" aria-label="Navigation schließen" tabindex="-1" hidden></button><main class="main" id="main-content" tabindex="-1"><header class="topbar"><button class="icon-btn mobile-menu" id="menu" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="sidebar">${icon("menu")}</button><div class="breadcrumb">Biologie <span>/ ${e(nav.find((x) => x[0] === active)?.[2] || "Lernraum")}</span></div><div class="top-actions"><button class="search-trigger" id="search-global" aria-label="Lerninhalte durchsuchen">${icon("search")}<span class="search-label">Lerninhalte suchen</span><span class="key">/</span></button><button class="icon-btn" id="focus" aria-label="${focus ? "Fokusmodus beenden" : "Fokusmodus aktivieren"}" title="Fokusmodus · F" aria-pressed="${focus}">${icon("focus")}</button></div></header><div class="content" id="content">${!storageOK ? '<div class="callout">Lokales Speichern ist derzeit nicht möglich. Sichere deinen Fortschritt regelmäßig über Einstellungen → Export.</div>' : ""}${body}<div class="river-footer" aria-hidden="true"></div><div class="footer-note">Biotop · Ökologie verstehen und anwenden. <a href="#settings">Quellen & Datensicherung</a></div></div></main></div>`;
   document.querySelector("#menu").onclick = () => setMenu(true);
   document.querySelector("#menu-close").onclick = document.querySelector(
     "#menu-backdrop",
@@ -204,6 +205,17 @@ function shell(body, active) {
     ev.preventDefault();
     document.querySelector("#main-content").focus();
   };
+}
+function learningPath(topicId, active, labId) {
+  const selectedLab =
+    labId || labList.find((l) => l.topic === topicId)?.id || "ecosystem";
+  const steps = [
+    ["Verstehen", `learn/${topicId}`],
+    ["Ausprobieren", `labs/${selectedLab}`],
+    ["Üben", `train/${topicId}`],
+    ["Wiederholen", `cards/${topicId}`],
+  ];
+  return `<nav class="learning-path" aria-label="Lernschritte im Kapitel">${steps.map(([label, route], i) => `<a href="#${route}" class="${i === active ? "active" : ""}" ${i === active ? 'aria-current="step"' : ""}><span>${i + 1}</span><strong>${label}</strong></a>`).join("")}</nav>`;
 }
 function sourceLinks(topic) {
   return `<ul class="source-list">${topic.sources.map((s) => `<li><span class="badge ${s.kind === "external" ? "external" : "neutral"}">${s.kind === "external" ? "Ergänzung" : "Deine Mappe"}</span><br>${s.kind === "mappe" ? `<span>${e(s.label)}</span><div>${(s.pages || []).map((p) => `<span style="display:inline-block;margin-right:9px">Mappe · PDF S. ${p}</span>`).join("")}</div>` : `<a href="${e(s.url)}" target="_blank" rel="noopener">${e(s.label)} ↗</a>`}</li>`).join("")}</ul>`;
@@ -295,7 +307,7 @@ function learn(id) {
   save();
   const lab = labList.find((x) => x.topic === id);
   shell(
-    `${head("KAPITEL " + String(topics.indexOf(t) + 1).padStart(2, "0"), e(t.title), e(t.subtitle), `<button class="button" id="train-topic">Thema trainieren ${icon("arrow")}</button>`)}<div class="reading-grid"><article class="reading-text">${id === "levels" ? `<section class="panel"><h2>Vom Lebewesen zur Biosphäre</h2><p class="small subtle">Öffne eine Ebene für ihre Definition. Jede größere Ebene erweitert den Blick.</p><ol class="levels-map">${t.terms.map((x) => `<li><details><summary>${e(x.term)}</summary><p>${e(x.definition)}</p></details></li>`).join("")}</ol></section>` : ""}${t.sections
+    `${head("KAPITEL " + String(topics.indexOf(t) + 1).padStart(2, "0"), e(t.title), e(t.subtitle), `<button class="button" id="train-topic">Thema trainieren ${icon("arrow")}</button>`)}${learningPath(id, 0)}<div class="reading-grid ${id === "levels" ? "levels-reading" : ""}"><article class="reading-text">${id === "levels" ? `<section class="panel"><h2>Vom Lebewesen zur Biosphäre</h2><p class="small subtle">Öffne eine Ebene für ihre Definition. Jede größere Ebene erweitert den Blick.</p><ol class="levels-map">${t.terms.map((x, i) => `<li><details><summary>${levelIllustration(i)}<span>${e(x.term)}</span></summary><p>${e(x.definition)}</p></details></li>`).join("")}</ol></section>` : ""}${t.sections
       .map(
         (s) =>
           `<section class="panel"><h2>${e(s.heading)}</h2><p data-note-section="${t.sections.indexOf(s)}">${markedText(
@@ -351,7 +363,7 @@ function labs(id) {
       .filter((s, i, a) => a.findIndex((x) => x.label === s.label) === i),
   };
   shell(
-    `${head("INTERAKTIV LERNEN", l.title, l.desc, `<a class="button secondary" href="#learn/${l.topic}">Zum Kapitel ${icon("arrow")}</a>`)}<div class="panel" id="lab"></div><details><summary>Quellen dieses Moduls</summary>${sourceLinks(t)}</details>`,
+    `${head("INTERAKTIV LERNEN", id === "sandbox" ? "Dein Fluss. Deine Hypothese." : l.title, l.desc, `<a class="button secondary" href="#learn/${l.topic}">Zum Kapitel ${icon("arrow")}</a>`)}<div class="panel ${id === "sandbox" ? "nature-lab" : ""}" id="lab"></div><details><summary>Quellen dieses Moduls</summary>${sourceLinks(t)}</details>`,
     "labs",
   );
   labCleanup = advancedLabList.some((x) => x.id === id)
@@ -1251,7 +1263,10 @@ function render() {
   else if (page === "train") {
     const t = tMap.get(id);
     if (t)
-      startPractice(shuffle(t.questions).slice(0, 5), "Tagesplan · " + t.title);
+      startPractice(
+        shuffle(t.questions).slice(0, 5),
+        "Kapiteltraining · " + t.title,
+      );
     else navigate("practice");
   } else if (page === "labs") labs(id);
   else if (page === "practice") id === "run" ? practiceRun() : practice();

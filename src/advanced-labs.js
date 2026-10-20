@@ -1,3 +1,4 @@
+import { riverScene } from "./nature-ui.js";
 import {
   sandboxEffects,
   webNodes,
@@ -60,24 +61,45 @@ function remember(state, save, lab, key, right) {
 }
 export function renderAdvancedLab(id, host, { state, save, toast, e }) {
   if (id === "sandbox") {
-    host.innerHTML = `<div class="callout">Qualitatives Vergleichsmodell: Wir verändern Bedingungen gegenüber einem Ausgangszustand. Gezeigt werden fachlich begründete Tendenzen, keine berechneten Messwerte oder sicheren Bestandsprognosen.</div><div class="sandbox-layout"><section><div class="lab-stage" id="sandbox-scene"></div><div id="sandbox-effects" class="effect-grid" aria-live="polite"></div></section><section class="sandbox-controls"><h3>Dein Flussabschnitt</h3>${[
+    host.innerHTML = `<div class="lab-toolbar"><div class="view-switch" role="group" aria-label="Ansicht des Flussmodells"><button type="button" data-river-view="explore" aria-pressed="false">Erkunden</button><button type="button" data-river-view="compare" class="selected" aria-pressed="true">Vergleichen</button></div><details class="model-note"><summary>Qualitatives Modell ⓘ</summary><p>Wir vergleichen Bedingungen mit dem Ausgangszustand. Die Illustrationen zeigen schematische Veränderungen, keine Messwerte oder sicheren Bestandsprognosen. Die Wassertemperatur wird in der Auswertung berücksichtigt.</p></details></div>
+    <div class="sandbox-layout nature-sandbox"><section class="scene-workspace"><div class="river-comparison" data-mode="compare"><figure class="river-figure" id="sandbox-baseline-panel"><figcaption><strong>Ausgangszustand</strong><span>Alle Faktoren auf mittlerer Stufe</span></figcaption><div id="sandbox-baseline"></div></figure><figure class="river-figure"><figcaption><strong>Deine Veränderung</strong><span id="scene-description">Verändere eine Bedingung und vergleiche.</span></figcaption><div id="sandbox-scene"></div></figure></div><div id="sandbox-effects" class="effect-grid" aria-live="polite"></div></section><section class="sandbox-controls"><div class="control-heading"><span class="eyebrow">DEIN EXPERIMENT</span><h3>Umweltbedingungen</h3><p class="small subtle">Verändere die Bedingungen und beobachte den Vergleich.</p></div>${[
       ["light", "Lichtangebot"],
       ["turbidity", "Trübung"],
       ["vegetation", "Uferbewuchs"],
     ]
       .map(
         ([key, label]) =>
-          `<label class="field">${label} <output id="${key}-label">Mittel</output><input type="range" min="1" max="3" value="2" step="1" data-sandbox="${key}" aria-label="${label}"></label>`,
+          `<label class="field"><span class="slider-heading">${label}<output id="${key}-label">Mittel</output></span><input type="range" min="1" max="3" value="2" step="1" data-sandbox="${key}" aria-label="${label}"><span class="slider-ends"><span>Wenig</span><span>Viel</span></span></label>`,
       )
       .join(
         "",
-      )}<label class="field">Wassertemperatur <output id="temp-label">15 °C</output><input type="range" min="5" max="25" value="15" step="5" data-sandbox="temp" aria-label="Wassertemperatur"></label><button class="button secondary compact" id="sandbox-reset">Ausgangszustand herstellen</button></section></div><div class="divider"></div><h3>Sage eine Wirkung voraus</h3><div class="filters"><label class="field">Betrachte<select id="sandbox-target"><option value="light">Licht am Gewässergrund</option><option value="solubility">Sauerstofflöslichkeit durch Temperatur</option><option value="leaves">Möglicher Blatt- und Totholzeintrag</option></select></label><label class="field">Deine Erwartung<select id="sandbox-prediction"><option value="">Bitte auswählen</option>${Object.entries(
+      )}<label class="field"><span class="slider-heading">Wassertemperatur<output id="temp-label">15 °C</output></span><input type="range" min="5" max="25" value="15" step="5" data-sandbox="temp" aria-label="Wassertemperatur"><span class="slider-ends"><span>5 °C</span><span>25 °C</span></span></label><button class="button secondary compact" id="sandbox-reset">Zurücksetzen</button></section></div>
+    <section class="prediction-panel"><div class="prediction-heading"><span class="eyebrow">ZUSAMMENHÄNGE BEGRÜNDEN</span><h3>Was erwartest du?</h3><p class="small subtle">Wähle die Wirkung, die du aus deinen Änderungen herleitest.</p></div><div class="filters"><label class="field">Betrachte<select id="sandbox-target"><option value="light">Licht am Gewässergrund</option><option value="solubility">Sauerstofflöslichkeit durch Temperatur</option><option value="leaves">Möglicher Blatt- und Totholzeintrag</option></select></label><label class="field">Deine Erwartung<select id="sandbox-prediction"><option value="">Bitte auswählen</option>${Object.entries(
       directions,
     )
       .map(([v, label]) => `<option value="${v}">${label}</option>`)
       .join(
         "",
-      )}</select></label></div><button id="sandbox-check" class="button">Wirkung prüfen</button><div class="lab-feedback" role="status"></div>`;
+      )}</select></label></div><button id="sandbox-check" class="button">Vorhersage prüfen →</button><div class="lab-feedback" role="status"></div></section>`;
+    host.querySelector("#sandbox-baseline").innerHTML = riverScene(
+      {},
+      "baseline",
+    );
+    host.querySelectorAll("[data-river-view]").forEach(
+      (button) =>
+        (button.onclick = () => {
+          const compare = button.dataset.riverView === "compare";
+          host.querySelector(".river-comparison").dataset.mode = compare
+            ? "compare"
+            : "explore";
+          host.querySelector("#sandbox-baseline-panel").hidden = !compare;
+          host.querySelectorAll("[data-river-view]").forEach((b) => {
+            const selected = b === button;
+            b.classList.toggle("selected", selected);
+            b.setAttribute("aria-pressed", String(selected));
+          });
+        }),
+    );
     let config, effects;
     const values = {
       light: [20, 50, 80],
@@ -105,8 +127,24 @@ export function renderAdvancedLab(id, host, { state, save, toast, e }) {
           "Viel",
         ][raw[key] - 1];
       host.querySelector("#temp-label").textContent = raw.temp + " °C";
-      host.querySelector("#sandbox-scene").innerHTML =
-        `<svg viewBox="0 0 650 240" role="img" aria-label="Schematischer Flussabschnitt mit Licht, Wassertrübung, Uferpflanzen und Aufwuchsalgen"><rect width="650" height="240" rx="10" fill="#263b35"/><circle cx="540" cy="45" r="24" fill="#d9d09e" opacity="${0.3 + raw.light * 0.2}"/><path d="M0 80Q120 65 250 82T650 78V225H0Z" fill="#6eaaa1" opacity=".65"/><path d="M0 225Q180 198 320 221T650 214V240H0Z" fill="#8c8861"/>${[100, 220, 400, 530].map((x, i) => `<path d="m${x} 75-12 140m35-140-12 140" stroke="#e1dca8" stroke-width="${raw.light * 2}" opacity="${0.5 / raw.turbidity}"/>`).join("")}${Array.from({ length: raw.turbidity * 12 }, (_, i) => `<circle cx="${25 + ((i * 83) % 600)}" cy="${95 + ((i * 31) % 110)}" r="2" fill="#bba67a" opacity=".65"/>`).join("")}${[70, 180, 350, 480, 580].map((x) => `<path d="M${x} 224q-14-20 0-38m0 25q18-14 14-26" fill="none" stroke="#bbd4a0" stroke-width="5"/>`).join("")}${Array.from({ length: raw.vegetation * 2 }, (_, i) => `<path d="M${35 + i * 50} 80V25m-16 42 16-38 16 38" fill="#405b3d" stroke="#96ad7b" stroke-width="3"/>`).join("")}<text x="340" y="30" fill="#dae4d0" font-size="12">Qualitatives Flussmodell</text></svg>`;
+      host.querySelector("#sandbox-scene").innerHTML = riverScene(
+        raw,
+        "changed",
+      );
+      const changes = [
+        raw.light !== 2
+          ? `${raw.light > 2 ? "Mehr" : "Weniger"} Lichtangebot`
+          : "",
+        raw.turbidity !== 2
+          ? `${raw.turbidity > 2 ? "Mehr" : "Weniger"} Trübung`
+          : "",
+        raw.vegetation !== 2
+          ? `${raw.vegetation > 2 ? "Mehr" : "Weniger"} Uferbewuchs`
+          : "",
+        raw.temp !== 15 ? `${raw.temp} °C Wassertemperatur` : "",
+      ].filter(Boolean);
+      host.querySelector("#scene-description").textContent =
+        changes.join(" · ") || "Identisch mit dem Ausgangszustand";
       const statements = [
         [
           "Licht am Grund",

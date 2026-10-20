@@ -17,6 +17,14 @@ Voraussetzung: Node.js ab Version 20. Auf diesem Rechner ist der gebündelte Cod
 
 Eine weitere Möglichkeit ist die VS-Code-Erweiterung **Live Server**: `index.html` per „Open with Live Server“ öffnen. Der direkte Doppelklick auf `index.html` reicht wegen der JavaScript-Module und JSON-Lerninhalte nicht aus.
 
+## Botanische Gestaltung (Version 1.3)
+
+Die bestätigte Gestaltungsrichtung ist umgesetzt: dunkle Waldtöne, helle Salbeigrün-Akzente, Serifentitel, Blattzweige am Rahmen und ein illustrierter Flussabschluss. Alle neuen Motive sind skalierbare SVGs und CSS; es werden keine Fotos, externen Schriftarten oder zusätzlichen Dienste geladen.
+
+Die Ökosystem-Sandbox heißt in der Ansicht „Dein Fluss. Deine Hypothese.“. Die Vergleichsansicht zeigt einen unveränderten Ausgangszustand neben der veränderbaren Illustration. „Erkunden“ blendet die Ausgangsansicht aus, „Vergleichen“ wieder ein. Licht, Trübung und Uferbewuchs verändern die Illustration; der Temperatureinfluss auf die Löslichkeit bleibt fachlich in der Auswertung erklärt. Die Darstellung ist schematisch und liefert keine Messwerte oder Bestandsprognosen.
+
+Lernkapitel haben einen direkten Weg über Verstehen, Ausprobieren, Üben und Wiederholen. Die Systemebenen besitzen aufklappbare, stilisierte Illustrationen statt realistischer Bilder. Alle bisherigen Lernfunktionen und Speicherformate bleiben erhalten.
+
 ## Gezielte Lernverbesserungen (Version 1.2)
 
 - Kompakte Startseite mit Tagestraining: acht Aufgaben, bevorzugt frühere Fehler und nach mindestens sieben Tagen wieder fällige Aufgaben, über Themen verteilt und mit einer Transferaufgabe. Höchstens drei frühere Fehler werden bevorzugt eingeplant; bei einem ausschließlich aus Fehlern bestehenden Restpool werden weitere Fehler ergänzt. Kein geschätzter Pflicht-Timer.
@@ -108,7 +116,7 @@ tests/               Fachliche Daten- und Funktionstests
 
 `npm test` oder `node --test tests/engine.test.mjs tests/tools.test.mjs tests/study.test.mjs` prüft den gesamten Fragenkatalog, Musterantworten, Fehlerzähler, Wiederholungsintervalle, ausgeglichene Klausurzusammenstellung und JSON-Rundreise sowie die neuen Lernwerkzeuge und qualitativen Modelle. 23 Tests, keine Zusatzpakete erforderlich.
 
-Für die optionalen Browsertests: Playwright verfügbar machen, den lokalen Server starten und `node tests/browser.cjs` , `node tests/features-browser.cjs` und `node tests/study-browser.cjs` ausführen. Unter Windows mit installiertem Edge in PowerShell zuerst `$env:BROWSER_CHANNEL='msedge'` setzen. Falls Playwright außerhalb des Projekts installiert ist, kann `PLAYWRIGHT_MODULE` auf den Modulordner zeigen. `QA_DIR` aktiviert Screenshots. Details der durchgeführten Prüfung stehen in `TESTBERICHT.md`.
+Für die optionalen Browsertests: Playwright verfügbar machen, den lokalen Server starten und `node tests/browser.cjs` , `node tests/features-browser.cjs` und `node tests/study-browser.cjs` sowie `node tests/nature-browser.cjs` ausführen. Unter Windows mit installiertem Edge in PowerShell zuerst `$env:BROWSER_CHANNEL='msedge'` setzen. Falls Playwright außerhalb des Projekts installiert ist, kann `PLAYWRIGHT_MODULE` auf den Modulordner zeigen. `QA_DIR` aktiviert Screenshots. Details der durchgeführten Prüfung stehen in `TESTBERICHT.md`.
 
 ## Veröffentlichung auf GitHub Pages
 

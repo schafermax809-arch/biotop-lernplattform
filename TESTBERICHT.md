@@ -75,3 +75,12 @@ Die PDF ist auf Wunsch nicht enthalten. Die direkten PDF-Links wurden entfernt; 
 - Übersicht, Übungen, Systemebenen, Suche, Operatoren, Fehlerjagd, Nischen-Arena und Einstellungen ohne horizontalen Überlauf bei diesen Breiten. Mobilmenü schließt per Escape und Schaltfläche, gibt den Inhalt wieder frei und stellt den Fokus zurück.
 
 Die neuen Statuswerte sind Lernhilfen; sie sind keine Vorhersage einer Klausurnote. Es wurden keine zusätzlichen biologischen Inhalte oder Messwerte erfunden.
+
+## Version 1.3 · botanische UI, 20.10.2026
+
+- 23 Funktionstests weiterhin erfolgreich. Alle bisherigen Aufgabenformen, sieben Basismodule, vier zusätzliche Module, Lernplan, Notizen, Operatoren, Import/Export und Klausurabläufe im Browser geprüft.
+- Botanische SVG-Assets und responsives Naturdesign lokal geladen, ohne Foto- oder Font-Dienst.
+- Flussvergleich: Ausgangszustand bleibt beim Verstellen unverändert; aktuelle Illustration und Beschriftung reagieren auf die Regler. Ansichtsschalter, Zurücksetzen und bestehende qualitative Bewertung funktionieren.
+- Illustrierte Systemebenen lassen sich aufklappen. Der direkte Lernschritt „Üben“ startet Aufgaben des richtigen Kapitels.
+- Eigene UI-Prüfung bei 350, 390, 768 und 1440 Pixeln: keine horizontalen Überläufe in Übersicht, Systemebenen, Flusslabor, Übungen und Karten; keine Überlagerung von Szenen und Reglern; eindeutige SVG-IDs und keine JavaScript-Laufzeitfehler.
+- Desktop- und Mobilansichten von Übersicht, Kapitel und Labor visuell gesichtet. Lernstand und Trainingsspeicherung im bestehenden separaten Browser-Testprofil geprüft.

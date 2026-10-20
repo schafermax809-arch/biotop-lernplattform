@@ -198,14 +198,22 @@ const base = process.env.TEST_URL || "http://127.0.0.1:4173";
           return {
             overlaps,
             inside: rects.every(
-              (b) => b.x >= r.x && b.x + b.w <= r.right && b.h >= 44,
+              // Translation animations can report 43.99997 for a 44px box.
+              (b) =>
+                b.x >= r.x &&
+                b.x + b.w <= r.right &&
+                Math.round(b.h * 100) / 100 >= 44,
             ),
             width: r.width,
+            rects,
           };
         });
       let geometry = await inspect();
       assert.deepEqual(geometry.overlaps, [], width + " overlapping nodes");
-      assert.ok(geometry.inside, width + " node boundaries");
+      assert.ok(
+        geometry.inside,
+        width + " node boundaries " + JSON.stringify(geometry),
+      );
       for (const [a, b] of [
         [0, 1],
         [1, 2],

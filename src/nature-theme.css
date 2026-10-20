@@ -1,0 +1,770 @@
+/* Botanical field-guide theme. All scenery is native, scalable illustration. */
+:root {
+  --bg: #0e1712;
+  --panel: #15231b;
+  --panel2: #1c2d22;
+  --line: #304336;
+  --text: #edf1e8;
+  --muted: #abb8a9;
+  --accent: #c0d49a;
+  --accent2: #8ca76a;
+  --radius: 17px;
+}
+body {
+  background:
+    radial-gradient(ellipse at 80% 0%, #18271c 0, transparent 50%), var(--bg);
+}
+.sidebar {
+  background: #0f1c14;
+  border-right-color: #2a3a2c;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 210px;
+  height: 260px;
+  background: url("../assets/botanical-sprig.svg") center/contain no-repeat;
+  transform: rotate(180deg);
+  opacity: 0.24;
+  pointer-events: none;
+}
+.sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -1.3px;
+}
+.brand small {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.brand img {
+  border-radius: 0;
+  width: 34px;
+  height: 34px;
+}
+.nav-btn {
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.nav-btn.active {
+  background: linear-gradient(100deg, #34492e, #223627);
+  color: #dfebc3;
+  box-shadow: inset 3px 0 #bdd4a0;
+}
+.nav-tools summary {
+  line-height: 1.55;
+}
+.sidebar-foot {
+  border-top-color: #3c4c36;
+}
+.main {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 75px;
+  right: -45px;
+  width: 320px;
+  height: 360px;
+  background: url("../assets/botanical-sprig.svg") center/contain no-repeat;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+.topbar {
+  border-bottom-color: #2b3c2d;
+  background: #0e1712a6;
+  height: 76px;
+}
+.content {
+  max-width: 1480px;
+  padding-top: 36px;
+}
+.page-head {
+  margin-bottom: 24px;
+}
+.page-head h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  line-height: 1.16;
+  font-weight: 500;
+  letter-spacing: -0.9px;
+  text-wrap: balance;
+}
+.page-head p {
+  max-width: 730px;
+  font-size: 14px;
+}
+.page-head h1 + p {
+  margin-top: 12px !important;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #b1c39f;
+}
+.hero {
+  background: linear-gradient(120deg, #263a28, #1b2b20);
+  border-color: #43553b;
+}
+.study-today {
+  position: relative;
+}
+.study-today::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 220px;
+  background: url("../assets/botanical-sprig.svg") right center/contain
+    no-repeat;
+  opacity: 0.28;
+  pointer-events: none;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+.study-today h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 32px;
+  max-width: 850px;
+}
+.study-today p {
+  max-width: 750px;
+}
+.panel,
+.aside-panel,
+.topic-card,
+.module-card {
+  background: linear-gradient(145deg, #1a2a20, #132119);
+  border-color: #344737;
+  box-shadow: 0 8px 25px #00000009;
+}
+.aside-panel,
+.topic-card,
+.module-card {
+  border-radius: 15px;
+}
+.topic-card:hover,
+.module-card:hover {
+  background: linear-gradient(145deg, #253b29, #1b2d21);
+  border-color: #8ca76a;
+}
+.topic-symbol {
+  background: #2b412b;
+  color: #c0d49a;
+  border: 1px solid #4d6540;
+  border-radius: 11px;
+}
+.button {
+  border-radius: 24px;
+  padding-left: 22px;
+  padding-right: 22px;
+  min-height: 44px;
+}
+.button.secondary {
+  border-radius: 10px;
+  background: #17251bd9;
+  border-color: #3b4e3d;
+}
+.button:hover {
+  box-shadow: 0 3px 15px #b7d19618;
+}
+.badge {
+  border-radius: 20px;
+  background: #3b512d;
+  color: #e0ebcb;
+}
+.badge.neutral {
+  background: #23372a;
+  color: #bdcbb7;
+}
+.progress {
+  background: #354538;
+}
+.progress i {
+  background: linear-gradient(90deg, #749c71, #c0d49a);
+}
+.daily-actions .aside-panel {
+  padding: 22px;
+}
+.daily-actions .aside-panel h3 {
+  font-size: 17px;
+}
+.daily-actions .aside-panel p {
+  font-size: 13px;
+}
+.river-footer {
+  height: 95px;
+  margin: 36px 0 -6px;
+  background: url("../assets/river-ribbon.svg") bottom center/100% 100%
+    no-repeat;
+  opacity: 0.78;
+  pointer-events: none;
+}
+.footer-note {
+  padding: 12px 0 0;
+  margin-top: 0;
+  border-top: 1px solid #334531;
+  font-size: 11px;
+}
+.learning-path {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 2px 0 28px;
+  padding: 12px 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+.learning-path a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  text-decoration: none;
+  min-width: 0;
+}
+.learning-path a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #45543f;
+  width: calc(100% - 52px);
+  left: calc(50% + 26px);
+  top: 18px;
+}
+.learning-path a > span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 1px solid #7b8c72;
+  background: #122017;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 15px;
+}
+.learning-path strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.learning-path a.active {
+  color: #d7e6b8;
+}
+.learning-path a.active > span {
+  background: var(--accent);
+  color: #172215;
+  border-color: var(--accent);
+}
+.learning-path a.active strong {
+  font-weight: 650;
+}
+.learning-path a:hover > span {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px #bfd49a10;
+}
+.levels-map {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.levels-map li {
+  min-width: 0;
+  margin: 0;
+}
+.levels-map li + li::before {
+  display: none;
+}
+.levels-map details {
+  padding: 0;
+  border: 1px solid #3b5540;
+  background: #16291e;
+  overflow: hidden;
+  height: 100%;
+}
+.levels-map details[open] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.levels-map summary {
+  display: block;
+  padding: 0;
+  font-size: 13px;
+}
+.levels-map summary::before {
+  display: none;
+}
+.levels-map summary svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.levels-map summary span {
+  display: block;
+  padding: 12px 9px;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+}
+.levels-map summary span::after {
+  content: " +";
+  color: var(--accent);
+}
+.levels-map details[open] summary span::after {
+  content: " −";
+}
+.levels-map details p {
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 0 10px 10px;
+}
+.levels-reading > article > .panel:first-child {
+  padding: 22px;
+}
+.reading-text h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+.reading-text p {
+  line-height: 1.85;
+}
+.question .panel {
+  border-radius: 18px;
+}
+.answer-option {
+  border-color: #3a513d;
+  background: #14251a;
+  border-radius: 11px;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.answer-option:has(input:checked) {
+  border-color: #bdd4a0;
+  background: #2c432b;
+}
+.feedback {
+  background: #223a26;
+  border-color: #6f8b54;
+  border-radius: 13px;
+}
+.feedback.wrong {
+  background: #34291f;
+  border-color: #8a6753;
+}
+.question-actions {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.card-face {
+  background: linear-gradient(140deg, #2b422d, #15281d);
+  border-color: #547049;
+}
+.card-face h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+/* River laboratory: the comparison is the central interactive illustration. */
+.nature-lab {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.lab-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.view-switch {
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #3b4b36;
+  border-radius: 28px;
+  background: #142219;
+}
+.view-switch button {
+  min-height: 40px;
+  padding: 9px 25px;
+  border-radius: 24px;
+  font-size: 13px;
+  color: #bbcab5;
+}
+.view-switch button.selected {
+  background: #bdd09b;
+  color: #1a2719;
+  font-weight: 600;
+}
+.model-note {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+  max-width: 310px;
+}
+.model-note summary {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 9px;
+}
+.model-note p {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  background: #16261c;
+  padding: 14px;
+  border-radius: 10px;
+}
+.nature-sandbox {
+  grid-template-columns: minmax(0, 1fr) 254px;
+  gap: 20px;
+  align-items: start;
+}
+.scene-workspace {
+  min-width: 0;
+}
+.river-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.river-comparison[data-mode="explore"] {
+  grid-template-columns: 1fr;
+}
+.river-figure {
+  margin: 0;
+  border: 1px solid #43573b;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #1c3328;
+  min-width: 0;
+}
+.river-figure[hidden] {
+  display: none;
+}
+.river-figure figcaption {
+  padding: 17px 18px;
+  min-height: 91px;
+  background: linear-gradient(120deg, #233b2b, #17271e);
+}
+.river-figure figcaption strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: #f0f2df;
+}
+.river-figure figcaption span {
+  display: block;
+  font-size: 11px;
+  color: #bfcdb2;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+.river-scene-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.river-comparison[data-mode="explore"] .river-scene-svg {
+  max-height: 430px;
+}
+.nature-sandbox .sandbox-controls {
+  display: block;
+  border: 1px solid #3b4e37;
+  border-radius: 15px;
+  padding: 22px 18px;
+  background: linear-gradient(140deg, #203124, #14231a);
+}
+.control-heading h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 4px 0 10px;
+}
+.nature-sandbox .sandbox-controls .field {
+  margin: 18px 0 0;
+  border: 1px solid #3a4f35;
+  background: #ffffff04;
+  border-radius: 11px;
+  padding: 14px 12px 9px;
+  gap: 10px;
+}
+.slider-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 12px;
+  color: #e6ecdf;
+}
+.slider-heading output {
+  font-size: 11px;
+  color: var(--accent);
+}
+.slider-ends {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #a9baa3;
+  font-size: 10px;
+}
+.nature-sandbox input[type="range"] {
+  height: 26px;
+}
+.nature-sandbox .sandbox-controls > button {
+  width: 100%;
+  margin-top: 18px;
+}
+.nature-sandbox .effect-grid {
+  margin-top: 14px;
+  gap: 10px;
+}
+.nature-sandbox .effect-card {
+  background: linear-gradient(140deg, #203425, #15271b);
+  border-radius: 12px;
+  padding: 15px;
+}
+.effect-card strong {
+  font-size: 14px;
+}
+.effect-card p {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.prediction-panel {
+  margin-top: 22px;
+  border: 1px solid #3b5138;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #203124, #142219);
+  padding: 23px 25px;
+}
+.prediction-heading h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.prediction-panel .filters {
+  margin-top: 20px;
+}
+.prediction-panel select {
+  background: #17281d;
+  border-color: #506346;
+}
+.prediction-panel .lab-feedback:empty {
+  min-height: 0;
+  margin: 0;
+}
+.nature-lab .lab-feedback {
+  margin-top: 18px;
+}
+@media (min-width: 1500px) {
+  .main:has(.nature-lab) .content {
+    max-width: 1650px;
+  }
+}
+@media (max-width: 1200px) {
+  .nature-sandbox {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 14px;
+  }
+  .nature-sandbox .sandbox-controls {
+    padding: 18px 12px;
+  }
+  .river-figure figcaption {
+    padding: 14px;
+  }
+  .river-figure figcaption strong {
+    font-size: 21px;
+  }
+  .levels-map {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1050px) {
+  .nature-sandbox {
+    grid-template-columns: 1fr;
+  }
+  .nature-sandbox .sandbox-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 18px;
+  }
+  .control-heading {
+    grid-column: 1/-1;
+  }
+  .control-heading p {
+    margin-bottom: 0;
+  }
+  .nature-sandbox .sandbox-controls .field {
+    margin: 0;
+  }
+  .nature-sandbox .sandbox-controls > button {
+    width: auto;
+    justify-self: start;
+    margin: 0;
+  }
+}
+@media (max-width: 680px) {
+  .topbar {
+    height: 65px;
+    background: #0e1712;
+  }
+  .content {
+    padding-top: 26px;
+  }
+  .main::before {
+    top: 72px;
+    right: -60px;
+    width: 210px;
+    height: 230px;
+    opacity: 0.24;
+  }
+  .page-head h1 {
+    font-size: 32px;
+  }
+  .page-head p {
+    font-size: 13px;
+  }
+  .study-today h2 {
+    font-size: 27px;
+  }
+  .study-today::after {
+    width: 110px;
+    opacity: 0.13;
+  }
+  .daily-actions .aside-panel {
+    padding: 18px;
+  }
+  .river-footer {
+    height: 65px;
+    margin-top: 30px;
+    background-size: auto 100%;
+  }
+  .learning-path {
+    margin-bottom: 22px;
+    gap: 2px;
+    padding-top: 3px;
+    padding-bottom: 17px;
+  }
+  .learning-path a {
+    gap: 8px;
+  }
+  .learning-path strong {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .learning-path a > span {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+  .learning-path a:not(:last-child)::after {
+    width: calc(100% - 40px);
+    left: calc(50% + 20px);
+    top: 15px;
+  }
+  .levels-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .levels-map li:last-child {
+    grid-column: 1/-1;
+  }
+  .levels-map li:last-child summary {
+    display: flex;
+    align-items: center;
+  }
+  .levels-map li:last-child summary svg {
+    width: 42%;
+  }
+  .levels-reading > article > .panel:first-child {
+    padding: 16px;
+  }
+  .reading-text h2 {
+    font-size: 22px;
+  }
+  .lab-toolbar {
+    margin-top: -2px;
+    gap: 8px;
+  }
+  .view-switch button {
+    padding: 9px 21px;
+    min-height: 42px;
+  }
+  .model-note {
+    max-width: 100%;
+  }
+  .model-note summary {
+    padding-left: 2px;
+  }
+  .river-comparison {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .river-figure figcaption {
+    min-height: 0;
+    padding: 15px 17px;
+  }
+  .river-figure figcaption strong {
+    font-size: 23px;
+  }
+  .river-figure figcaption span {
+    font-size: 12px;
+  }
+  .nature-sandbox .sandbox-controls {
+    gap: 10px;
+    padding: 16px;
+  }
+  .nature-sandbox .sandbox-controls .field {
+    padding: 12px 10px 8px;
+  }
+  .slider-heading {
+    font-size: 12px;
+  }
+  .nature-sandbox .effect-grid {
+    grid-template-columns: 1fr;
+  }
+  .nature-sandbox .effect-card {
+    padding: 15px 17px;
+  }
+  .prediction-panel {
+    padding: 20px 17px;
+  }
+  .prediction-panel .field {
+    min-width: 0;
+    width: 100%;
+  }
+  .prediction-panel #sandbox-check {
+    width: 100%;
+  }
+  .nature-lab .lab-feedback {
+    font-size: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .answer-option {
+    transition: none;
+  }
+}
