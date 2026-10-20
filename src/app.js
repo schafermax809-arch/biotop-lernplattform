@@ -9,7 +9,7 @@ import {
   balancedExam,
   importState,
 } from "./engine.js";
-import { labList as baseLabList, renderLab, riverArt } from "./labs.js";
+import { labList as baseLabList, renderLab } from "./labs.js";
 import { advancedLabList, renderAdvancedLab } from "./advanced-labs.js";
 import {
   rubricHTML,
@@ -23,6 +23,11 @@ import {
   planSummary,
 } from "./learning-tools.js";
 import { countCriteria } from "./tools-engine.js";
+import {
+  dailyQuestions,
+  reviewStatus,
+  restorePractice,
+} from "./study-engine.js";
 const labList = [...baseLabList, ...advancedLabList];
 let operatorData;
 function toolContext() {
@@ -126,6 +131,7 @@ function toast(s) {
   toastHandle = setTimeout(() => x.classList.remove("visible"), 3200);
 }
 function save() {
+  state.activePractice = run && !run.finished ? run : null;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch {
@@ -155,17 +161,33 @@ function navigate(route) {
 function head(eyebrow, title, desc, extra = "") {
   return `<div class="page-head"><div><div class="eyebrow">${eyebrow}</div><h1>${title}</h1>${desc ? `<p class="subtle" style="margin:8px 0 0">${desc}</p>` : ""}</div>${extra}</div>`;
 }
+function setMenu(open) {
+  const sidebar = document.querySelector("#sidebar");
+  sidebar?.classList.toggle("open", open);
+  document.querySelector("#menu")?.setAttribute("aria-expanded", String(open));
+  document.querySelector("#menu-backdrop").hidden = !open;
+  document.querySelector("main").inert = open;
+  document.body.classList.toggle("menu-open", open);
+  (open
+    ? document.querySelector("#menu-close")
+    : document.querySelector("#menu")
+  )?.focus();
+}
 function shell(body, active) {
-  app.innerHTML = `<div class="layout ${focus ? "focus" : ""}"><aside class="sidebar" id="sidebar"><a href="#dashboard" class="brand"><img src="assets/mark.svg" alt=""> <div>biotop<small>DEIN LERNRAUM</small></div></a><div class="nav-label">Dein Studium der Natur</div><nav aria-label="Hauptnavigation">${nav.map(([id, ic, label], i) => `${id === "plan" ? '<div class="nav-space"></div><div class="nav-label">Dein Werkzeugkasten</div>' : ""}<a class="nav-btn ${active === id ? "active" : ""}" href="#${id}" ${active === id ? 'aria-current="page"' : ""}>${icon(ic)}${label}</a>`).join("")}</nav><div class="sidebar-foot"><span class="status-dot"></span>Ökologie · Oberstufe<br><span class="small">Dein Fortschritt bleibt bei dir.</span></div></aside><main class="main"><header class="topbar"><button class="icon-btn mobile-menu" id="menu" aria-label="Navigation öffnen">${icon("menu")}</button><div class="breadcrumb">Biologie <span>/ ${e(nav.find((x) => x[0] === active)?.[2] || "Lernraum")}</span></div><div class="top-actions"><button class="search-trigger" id="search-global">${icon("search")}<span class="search-label">Fachbegriff suchen</span><span class="key">/</span></button><button class="icon-btn" id="focus" aria-label="${focus ? "Fokusmodus beenden" : "Fokusmodus aktivieren"}" title="Fokusmodus · F" aria-pressed="${focus}">${icon("focus")}</button></div></header><div class="content" id="content">${!storageOK ? '<div class="callout">Lokales Speichern ist derzeit nicht möglich. Sichere deinen Fortschritt regelmäßig über Einstellungen → Export.</div>' : ""}${body}<div class="footer-note">Biotop · Auf Basis deiner Bio-Mappe und gekennzeichneter Ergänzungen. Alle Seitenzahlen beziehen sich auf die PDF-Zählung.</div></div></main></div>`;
-  document.querySelector("#menu").onclick = () =>
-    document.querySelector("#sidebar").classList.toggle("open");
-  document
-    .querySelectorAll("#sidebar a")
-    .forEach((a) =>
-      a.addEventListener("click", () =>
-        document.querySelector("#sidebar").classList.remove("open"),
-      ),
-    );
+  document.body.classList.remove("menu-open");
+  const navLink = ([id, ic, label]) =>
+    `<a class="nav-btn ${active === id ? "active" : ""}" href="#${id}" ${active === id ? 'aria-current="page"' : ""}>${icon(ic)}${label}</a>`;
+  app.innerHTML = `<a class="skip-link" href="#main-content">Zum Inhalt springen</a><div class="layout ${focus ? "focus" : ""}"><aside class="sidebar" id="sidebar" aria-label="Seitennavigation"><button class="icon-btn mobile-close" id="menu-close" aria-label="Navigation schließen">×</button><a href="#dashboard" class="brand"><img src="assets/mark.svg" alt=""><div>biotop<small>DEIN LERNRAUM</small></div></a><nav aria-label="Hauptnavigation">${nav.slice(0, 6).map(navLink).join("")}<details class="nav-tools" ${nav.slice(6).some((x) => x[0] === active) ? "open" : ""}><summary>Werkzeuge & Fortschritt</summary>${nav.slice(6).map(navLink).join("")}</details></nav><div class="sidebar-foot"><span class="status-dot"></span>Ökologie · Oberstufe<br><span class="small">Dein Fortschritt bleibt bei dir.</span></div></aside><button id="menu-backdrop" class="menu-backdrop" aria-label="Navigation schließen" tabindex="-1" hidden></button><main class="main" id="main-content" tabindex="-1"><header class="topbar"><button class="icon-btn mobile-menu" id="menu" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="sidebar">${icon("menu")}</button><div class="breadcrumb">Biologie <span>/ ${e(nav.find((x) => x[0] === active)?.[2] || "Lernraum")}</span></div><div class="top-actions"><button class="search-trigger" id="search-global" aria-label="Lerninhalte durchsuchen">${icon("search")}<span class="search-label">Lerninhalte suchen</span><span class="key">/</span></button><button class="icon-btn" id="focus" aria-label="${focus ? "Fokusmodus beenden" : "Fokusmodus aktivieren"}" title="Fokusmodus · F" aria-pressed="${focus}">${icon("focus")}</button></div></header><div class="content" id="content">${!storageOK ? '<div class="callout">Lokales Speichern ist derzeit nicht möglich. Sichere deinen Fortschritt regelmäßig über Einstellungen → Export.</div>' : ""}${body}<div class="footer-note">Biotop · Ökologie verstehen und anwenden. <a href="#settings">Quellen & Datensicherung</a></div></div></main></div>`;
+  document.querySelector("#menu").onclick = () => setMenu(true);
+  document.querySelector("#menu-close").onclick = document.querySelector(
+    "#menu-backdrop",
+  ).onclick = () => setMenu(false);
+  document.querySelectorAll("#sidebar a").forEach((a) =>
+    a.addEventListener("click", () => {
+      if (document.querySelector("#sidebar").classList.contains("open"))
+        setMenu(false);
+    }),
+  );
   document.querySelector("#focus").onclick = () => {
     focus = !focus;
     document.querySelector(".layout").classList.toggle("focus", focus);
@@ -178,6 +200,10 @@ function shell(body, active) {
       );
   };
   document.querySelector("#search-global").onclick = () => navigate("glossary");
+  document.querySelector(".skip-link").onclick = (ev) => {
+    ev.preventDefault();
+    document.querySelector("#main-content").focus();
+  };
 }
 function sourceLinks(topic) {
   return `<ul class="source-list">${topic.sources.map((s) => `<li><span class="badge ${s.kind === "external" ? "external" : "neutral"}">${s.kind === "external" ? "Ergänzung" : "Deine Mappe"}</span><br>${s.kind === "mappe" ? `<span>${e(s.label)}</span><div>${(s.pages || []).map((p) => `<span style="display:inline-block;margin-right:9px">Mappe · PDF S. ${p}</span>`).join("")}</div>` : `<a href="${e(s.url)}" target="_blank" rel="noopener">${e(s.label)} ↗</a>`}</li>`).join("")}</ul>`;
@@ -213,33 +239,32 @@ function recommendation() {
 function dashboard() {
   const n = totals(),
     rec = recommendation(),
-    last = tMap.get(state.lastTopic),
-    due = topics
-      .flatMap((t) => t.terms.map((_, i) => `${t.id}-${i}`))
-      .filter(
-        (id) => !state.cards[id] || state.cards[id].due <= Date.now(),
-      ).length;
-  const weak = topics.filter((t) =>
-    t.questions.some(
-      (q) => state.answers[q.id] && !state.answers[q.id].lastCorrect,
-    ),
-  );
+    last = tMap.get(state.lastTopic);
+  const cardIds = topics.flatMap((t) => t.terms.map((_, i) => `${t.id}-${i}`));
+  const due = cardIds.filter(
+    (id) => state.cards[id] && state.cards[id].due <= Date.now(),
+  ).length;
+  const fresh = cardIds.filter((id) => !state.cards[id]).length;
+  const statuses = questions.map((q) => reviewStatus(state.answers[q.id]));
+  const errors = statuses.filter((x) => x === "error").length;
+  const delayed = statuses.filter((x) => x === "due").length;
+  const secure = statuses.filter((x) => x === "secure").length;
+  const lab = labList.find((l) => l.topic === rec.id);
   shell(
-    `${head("DEIN ÖKOLOGIE-CAMPUS", "Kleine Schritte. Große Zusammenhänge.", "Verstehen, verknüpfen, sicher in die Klausur gehen.")}<section class="hero"><div class="hero-copy"><span class="badge">Dein nächster Schritt</span><h2>${e(rec.title)}</h2><p>${n.attempts ? "Hier kannst du deinen nächsten Lernfortschritt machen." : "Starte mit den Grundlagen und entdecke, wie in einem Ökosystem alles zusammenwirkt."}</p><a href="#learn/${rec.id}" class="button">Jetzt lernen ${icon("arrow")}</a></div><div class="hero-art">${riverArt()}</div></section><div class="stats"><div class="stat"><div class="stat-label">Gesamtfortschritt ${icon("chart")}</div><div class="stat-value">${n.percent}<small> %</small></div><div class="stat-note">${n.mastered} von ${questions.length} Aufgaben zuletzt richtig</div></div><div class="stat"><div class="stat-label">Richtig beantwortet ${icon("check")}</div><div class="stat-value">${n.correct}</div><div class="stat-note">${n.attempts} Antworten insgesamt</div></div><div class="stat"><div class="stat-label">Noch einmal üben ${icon("cycle")}</div><div class="stat-value">${Object.values(state.answers).filter((x) => !x.lastCorrect).length}</div><div class="stat-note">${n.wrong} falsche Antworten insgesamt</div></div><div class="stat"><div class="stat-label">Karten zum Wiederholen ${icon("cards")}</div><div class="stat-value">${due}</div><div class="stat-note">Heute fällig oder noch ungelernt</div></div></div><div class="dashboard-grid"><section><div class="section-title"><h2>Deine Lernbereiche</h2><span class="small subtle">10 Themen · ${questions.length} Aufgaben</span></div><div class="topics">${topics.map(topicCard).join("")}</div></section><aside class="dashboard-aside">${planSummary(state)}<div class="aside-panel"><div class="eyebrow">Wissen anwenden</div><h3 style="margin-top:10px">Bereit für den Realitätscheck?</h3><p>Zehn zufällige Fragen zeigen dir, was schon sitzt.</p><button class="button" id="quick-test">Schnelltest starten ${icon("arrow")}</button><a href="#exam" class="button secondary">Klausur simulieren</a>${state.activeExam && !state.activeExam.submitted ? '<a href="#exam/run" class="button secondary">Laufende Klausur fortsetzen</a>' : ""}</div><div class="aside-panel"><h3>Dein Lernkompass</h3>${
-      weak.length
-        ? weak
-            .slice(0, 3)
-            .map(
-              (t) =>
-                `<p><a href="#learn/${t.id}">${e(t.title)}</a><br>${topicStats(state, t).percent} % zuletzt richtig</p>`,
-            )
-            .join("")
-        : "<p>Deine persönlichen Schwächen werden sichtbar, sobald du Aufgaben bearbeitest.</p>"
-    }<button id="error-start" class="text-btn">Fehler gezielt wiederholen →</button><div class="divider"></div><h3>Zuletzt geöffnet</h3>${last ? `<a class="small" href="#learn/${last.id}">${e(last.title)} →</a>` : "<p>Dein erstes Kapitel wartet auf dich.</p>"}</div><div class="aside-panel"><h3>Deine Quellen, griffbereit.</h3><p>Originalmaterial und fachliche Ergänzungen sind in jedem Kapitel ausgewiesen.</p><p class="small subtle">Die ursprüngliche Mappe wird nicht online bereitgestellt.</p></div></aside></div>`,
+    `${head("DEIN ÖKOLOGIE-CAMPUS", "Dein nächster Lernschritt.", "Kurz wiederholen, Zusammenhänge verstehen und gezielt üben.")}
+    <section class="hero study-today"><div class="hero-copy"><span class="badge">${run && !run.finished ? "Dein Training ist gesichert" : "Dein Tagestraining"}</span><h2>${run && !run.finished ? "Mach dort weiter, wo du warst." : "Acht Aufgaben. Gezielt ausgewählt."}</h2><p>${run && !run.finished ? `Aufgabe ${run.index + 1} von ${run.qids.length} · ${e(run.label)}` : n.attempts ? "Frühere Fehler, länger nicht geübter Stoff und neue Aufgaben – mit einer Frage zum Erklären oder Auswerten." : "Finde heraus, was du schon weißt. Du kannst zuerst auch das empfohlene Kapitel öffnen; die Lösungen werden im Training erklärt."}</p>${run && !run.finished ? '<a class="button" href="#practice/run">Training fortsetzen →</a>' : '<button class="button" id="daily-start">Tagestraining starten →</button>'}<span class="small subtle session-note">Ohne Zeitdruck · automatisch gespeichert</span></div></section>
+    <div class="daily-actions"><a href="#cards" class="aside-panel"><h3>${due ? `${due} ${due === 1 ? "Karte ist" : "Karten sind"} fällig` : "Begriffe wiederholen"}</h3><p>${due ? "Bekannte Karten erneut aus dem Gedächtnis erklären." : "Heute sind keine bereits geübten Karten fällig."}${fresh ? ` ${fresh} neue Karten stehen bereit.` : ""}</p><span class="small">Karteikarten öffnen →</span></a><a href="#learn/${rec.id}" class="aside-panel"><h3>${e(rec.title)}</h3><p>${last?.id === rec.id ? "Dein zuletzt geöffnetes Kapitel. Lies gezielt die Stellen nach, bei denen du unsicher bist." : "Empfohlen anhand deiner bisherigen Aufgaben."}</p><span class="small">Kapitel verstehen →</span></a>${lab ? `<a href="#labs/${lab.id}" class="aside-panel"><h3>${e(lab.title)}</h3><p>Wende den Zusammenhang im passenden interaktiven Modul an.</p><span class="small">Zusammenhänge ausprobieren →</span></a>` : ""}</div>
+    ${planSummary(state)}
+    ${state.activeExam && !state.activeExam.submitted ? '<div class="callout"><a href="#exam/run">Laufende Klausur fortsetzen →</a> · Die Bearbeitungszeit läuft weiter.</div>' : ""}
+    <details class="progress-overview"><summary>Dein Lernstand · ${n.mastered} / ${questions.length} Aufgaben zuletzt richtig</summary><div class="stats"><div class="stat"><div class="stat-label">Noch nicht bearbeitet</div><div class="stat-value">${statuses.filter((x) => x === "new").length}</div></div><div class="stat"><div class="stat-label">Zuletzt nicht ganz richtig</div><div class="stat-value">${errors}</div></div><div class="stat"><div class="stat-label">Wiederholung nach 7 Tagen</div><div class="stat-value">${delayed}</div></div><div class="stat"><div class="stat-label">Mit Abstand richtig</div><div class="stat-value">${secure}</div></div></div><p class="small subtle">${statuses.filter((x) => x === "once").length} Aufgaben sind zuletzt richtig, aber noch ohne bestätigten zeitlichen Abstand. „Mit Abstand richtig“: mindestens zweimal vollständig richtig, mit mindestens 24 Stunden Abstand zwischen den gewerteten Erfolgen, zuletzt vor weniger als 7 Tagen. Offene Aufgaben beruhen auf deiner Selbstbewertung. Das ist eine Lernhilfe, keine Notenprognose.</p><a class="small" href="#stats">Lernstatistik öffnen →</a></details>
+    <div class="section-title"><h2>Deine Lernbereiche</h2><span class="small subtle">10 Themen · ${questions.length} Aufgaben</span></div><div class="topics">${topics.map(topicCard).join("")}</div>`,
     "dashboard",
   );
-  document.querySelector("#quick-test").onclick = quickTest;
-  document.querySelector("#error-start").onclick = () => startSpecial("errors");
+  document
+    .querySelector("#daily-start")
+    ?.addEventListener("click", () =>
+      startPractice(dailyQuestions(questions, state), "Dein Tagestraining"),
+    );
 }
 function learn(id) {
   if (!id) {
@@ -270,7 +295,7 @@ function learn(id) {
   save();
   const lab = labList.find((x) => x.topic === id);
   shell(
-    `${head("KAPITEL " + String(topics.indexOf(t) + 1).padStart(2, "0"), e(t.title), e(t.subtitle), `<button class="button" id="train-topic">Thema trainieren ${icon("arrow")}</button>`)}<div class="reading-grid"><article class="reading-text">${t.sections
+    `${head("KAPITEL " + String(topics.indexOf(t) + 1).padStart(2, "0"), e(t.title), e(t.subtitle), `<button class="button" id="train-topic">Thema trainieren ${icon("arrow")}</button>`)}<div class="reading-grid"><article class="reading-text">${id === "levels" ? `<section class="panel"><h2>Vom Lebewesen zur Biosphäre</h2><p class="small subtle">Öffne eine Ebene für ihre Definition. Jede größere Ebene erweitert den Blick.</p><ol class="levels-map">${t.terms.map((x) => `<li><details><summary>${e(x.term)}</summary><p>${e(x.definition)}</p></details></li>`).join("")}</ol></section>` : ""}${t.sections
       .map(
         (s) =>
           `<section class="panel"><h2>${e(s.heading)}</h2><p data-note-section="${t.sections.indexOf(s)}">${markedText(
@@ -283,7 +308,7 @@ function learn(id) {
       )
       .join(
         "",
-      )}<div class="callout"><div class="eyebrow" style="color:var(--accent);margin-bottom:7px">Merke dir</div>${e(t.mnemonic)}</div><div class="panel"><h2>Die Begriffe dazu</h2>${t.terms.map((x) => `<div class="definition"><strong>${e(x.term)}</strong><p>${e(x.definition)}</p></div>`).join("")}</div><div class="panel"><h2>Typische Klausurfragen</h2>${t.questions
+      )}<div class="callout"><div class="eyebrow" style="color:var(--accent);margin-bottom:7px">Merke dir</div>${e(t.mnemonic)}</div>${id !== "levels" ? `<div class="panel"><h2>Die Begriffe dazu</h2>${t.terms.map((x) => `<div class="definition"><strong>${e(x.term)}</strong><p>${e(x.definition)}</p></div>`).join("")}</div>` : ""}<div class="panel"><h2>Typische Klausurfragen</h2>${t.questions
       .filter((q) => ["open", "diagram"].includes(q.type))
       .slice(0, 3)
       .map((q) => `<p>${e(q.prompt)}</p>`)
@@ -340,7 +365,7 @@ function labs(id) {
 }
 function practice() {
   shell(
-    `${head("ÜBEN OHNE ZEITDRUCK", "Aus Wissen wird Können.", "Wähle dein Thema, dein Niveau und die passende Aufgabenform.")}<section class="panel"><div class="filters"><label class="field">Thema<select id="practice-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}">${e(t.title)}</option>`).join("")}</select></label><label class="field">Schwierigkeit<select id="practice-level"><option value="">Alle Stufen</option><option value="leicht">Leicht · Grundlagen</option><option value="mittel">Mittel · Zusammenhänge</option><option value="schwer">Schwer · Transfer</option></select></label><label class="field">Aufgabenform<select id="practice-type"><option value="">Alle Formen</option>${Object.entries(
+    `${run && !run.finished ? `<div class="callout"><strong>${e(run.label)}</strong> · Aufgabe ${run.index + 1} / ${run.qids.length}<br><a href="#practice/run">Gesichertes Training fortsetzen →</a></div>` : ""}${head("ÜBEN OHNE ZEITDRUCK", "Aus Wissen wird Können.", "Wähle dein Thema, dein Niveau und die passende Aufgabenform.")}<section class="panel"><div class="filters"><label class="field">Thema<select id="practice-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}">${e(t.title)}</option>`).join("")}</select></label><label class="field">Schwierigkeit<select id="practice-level"><option value="">Alle Stufen</option><option value="leicht">Leicht · Grundlagen</option><option value="mittel">Mittel · Zusammenhänge</option><option value="schwer">Schwer · Transfer</option></select></label><label class="field">Aufgabenform<select id="practice-type"><option value="">Alle Formen</option>${Object.entries(
       typeNames,
     )
       .map(([a, b]) => `<option value="${a}">${b}</option>`)
@@ -404,6 +429,17 @@ function startSpecial(mode) {
 }
 function startPractice(pool, label) {
   if (!pool.length) return;
+  if (run && !run.finished) {
+    confirmDialog(
+      "Gesichertes Training ersetzen?",
+      "Deine bereits bewerteten Antworten bleiben erhalten. Der offene Trainingsablauf wird durch die neue Auswahl ersetzt.",
+      () => beginPractice(pool, label),
+    );
+    return;
+  }
+  beginPractice(pool, label);
+}
+function beginPractice(pool, label) {
   run = {
     qids: pool.map((x) => x.id),
     index: 0,
@@ -415,6 +451,7 @@ function startPractice(pool, label) {
     label,
     finished: false,
   };
+  save();
   if (location.hash === "#practice/run") render();
   else navigate("practice/run");
 }
@@ -453,7 +490,7 @@ function bindQuestion(q, session, onReorder = () => {}, locked = false) {
     if (q.type === "tf")
       session.values[q.id + "-reason"] =
         document.querySelector("#tf-reason")?.value || "";
-    if (session === state.activeExam) save();
+    if (session === state.activeExam || session === run) save();
   };
   document
     .querySelectorAll("[name=answer], [data-pair], #answer-text, #tf-reason")
@@ -468,7 +505,7 @@ function bindQuestion(q, session, onReorder = () => {}, locked = false) {
       const [x] = order.splice(from, 1);
       order.splice(to, 0, x);
       session.values[q.id] = order;
-      if (session === state.activeExam) save();
+      if (session === state.activeExam || session === run) save();
       onReorder();
     };
     document
@@ -558,6 +595,7 @@ function practiceRun() {
     `${head("DEIN TRAINING", e(run.label), `Aufgabe ${run.index + 1} von ${run.qids.length}`, `<button class="button secondary" id="end-run">Training beenden</button>`)}<div class="question"><div class="progress" style="margin-bottom:25px"><i style="width:${(run.index / run.qids.length) * 100}%"></i></div><div class="panel">${questionHTML(q, run, false, !!revealed)}${fb}<div class="question-actions">${bookmarkButton(q)}${!revealed ? '<button id="check-answer" class="button">Antwort prüfen</button>' : `<span class="small subtle">${grade.score === undefined ? "Noch nicht bewertet" : `${grade.score} / ${q.points} Punkte`}</span><button id="next-question" class="button" ${grade.score === undefined ? "disabled" : ""}>${run.index === run.qids.length - 1 ? "Training auswerten" : "Nächste Aufgabe"} ${icon("arrow")}</button>`}</div></div></div>`,
     "practice",
   );
+  save();
   bindBookmark(q);
   bindQuestion(q, run, practiceRun, !!revealed);
   document.querySelector("#end-run").onclick = () =>
@@ -585,7 +623,10 @@ function practiceRun() {
         save();
         sound(correct);
       }
+      save();
       practiceRun();
+      document.querySelector(".feedback")?.setAttribute("tabindex", "-1");
+      document.querySelector(".feedback")?.focus();
     };
   else {
     document.querySelector("#next-question").onclick = () => {
@@ -601,6 +642,7 @@ function practiceRun() {
         document.querySelector(`[data-rubric="practice-${q.id}"]`),
         q.rubric,
         run.criteria[q.id],
+        save,
       );
       document.querySelector("#save-self").onclick = () => {
         const score = countCriteria(run.criteria[q.id]);
@@ -625,6 +667,7 @@ function finishPractice() {
     save();
   }
   run.finished = true;
+  save();
   practiceResult();
 }
 function practiceResult() {
@@ -896,11 +939,23 @@ function prepareCards(topic = cardFilter, mode = cardMode) {
       t.terms.map((term, i) => ({ ...term, id: `${t.id}-${i}`, topic: t.id })),
     )
     .filter((c) =>
-      mode === "all" || mode === "hard"
-        ? mode === "all" || ["no", "unsure"].includes(state.cards[c.id]?.rating)
-        : !state.cards[c.id] || state.cards[c.id].due <= Date.now(),
+      mode === "all"
+        ? true
+        : mode === "hard"
+          ? ["no", "unsure"].includes(state.cards[c.id]?.rating)
+          : mode === "new"
+            ? !state.cards[c.id]
+            : mode === "review"
+              ? state.cards[c.id]?.due <= Date.now()
+              : !state.cards[c.id] || state.cards[c.id].due <= Date.now(),
     );
-  cards = shuffle(cards);
+  cards =
+    mode === "due"
+      ? [
+          ...shuffle(cards.filter((c) => state.cards[c.id])),
+          ...shuffle(cards.filter((c) => !state.cards[c.id])),
+        ]
+      : shuffle(cards);
   cardIndex = 0;
   cardFlipped = false;
 }
@@ -914,7 +969,7 @@ function cardPage(topicParam) {
     ).length,
     total = topics.reduce((s, t) => s + t.terms.length, 0);
   shell(
-    `${head("AKTIV WIEDERHOLEN", "Ein Begriff. Ein klarer Gedanke.", `${known} / ${total} Karten zuletzt sicher · Wiederholungen nach 1, 3, 7, 14, 30 und 60 Tagen.`)}<div class="filters"><label class="field">Thema<select id="card-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}" ${cardFilter === t.id ? "selected" : ""}>${e(t.title)}</option>`).join("")}</select></label><label class="field">Auswahl<select id="card-mode"><option value="due" ${cardMode === "due" ? "selected" : ""}>Heute fällig & neu</option><option value="hard" ${cardMode === "hard" ? "selected" : ""}>Unsicher & kann ich nicht</option><option value="all" ${cardMode === "all" ? "selected" : ""}>Alle Karten</option></select></label></div>${c ? `<div class="row between"><span class="badge">${e(tMap.get(c.topic).title)}</span><span class="small subtle">${cardIndex + 1} / ${cards.length}</span></div><div class="flip-container" id="flip-card" tabindex="0" role="button" aria-label="Karte umdrehen: ${e(c.term)}" aria-pressed="${cardFlipped}"><div class="flip-card ${cardFlipped ? "flipped" : ""}"><div class="card-face" ${cardFlipped ? 'aria-hidden="true"' : ""}><div class="eyebrow">Erkläre den Begriff</div><h2>${e(c.term)}</h2><span class="small subtle">Klicken oder Leertaste zum Umdrehen</span></div><div class="card-face card-back" ${!cardFlipped ? 'aria-hidden="true"' : ""}><span class="eyebrow">${e(c.term)}</span><p>${e(c.definition)}</p></div></div></div><div class="card-actions"><button class="button secondary" data-rating="no" ${cardFlipped ? "" : "disabled"}>1 · Kann ich nicht</button><button class="button secondary" data-rating="unsure" ${cardFlipped ? "" : "disabled"}>2 · Unsicher</button><button class="button" data-rating="know" ${cardFlipped ? "" : "disabled"}>3 · Kann ich</button></div><p class="center small subtle" style="margin-top:20px">„Kann ich nicht“ bleibt sofort fällig. „Unsicher“ wird morgen wiederholt.</p><details><summary>Quellen dieser Karte</summary>${sourceLinks(tMap.get(c.topic))}</details>` : `<div class="panel center"><h2>Für diese Auswahl ist alles erledigt.</h2><p class="subtle">Wähle „Alle Karten“, um unabhängig vom Fälligkeitsdatum zu lernen.</p><button class="button" id="cards-all">Alle Karten ansehen</button></div>`}`,
+    `${head("AKTIV WIEDERHOLEN", "Ein Begriff. Ein klarer Gedanke.", `${known} / ${total} Karten zuletzt sicher · Wiederholungen nach 1, 3, 7, 14, 30 und 60 Tagen.`)}<div class="filters"><label class="field">Thema<select id="card-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}" ${cardFilter === t.id ? "selected" : ""}>${e(t.title)}</option>`).join("")}</select></label><label class="field">Auswahl<select id="card-mode"><option value="due" ${cardMode === "due" ? "selected" : ""}>Fällige zuerst, danach neue</option><option value="review" ${cardMode === "review" ? "selected" : ""}>Nur fällige Wiederholungen</option><option value="new" ${cardMode === "new" ? "selected" : ""}>Nur neue Karten</option><option value="hard" ${cardMode === "hard" ? "selected" : ""}>Unsicher & kann ich nicht</option><option value="all" ${cardMode === "all" ? "selected" : ""}>Alle Karten</option></select></label></div>${c ? `<div class="row between"><span class="badge">${e(tMap.get(c.topic).title)}</span><span class="small subtle">${state.cards[c.id] ? "Wiederholung" : "Neue Karte"} · ${cardIndex + 1} / ${cards.length}</span></div><div class="flip-container" id="flip-card" tabindex="0" role="button" aria-label="Karte umdrehen: ${e(c.term)}" aria-pressed="${cardFlipped}"><div class="flip-card ${cardFlipped ? "flipped" : ""}"><div class="card-face" ${cardFlipped ? 'aria-hidden="true"' : ""}><div class="eyebrow">Erkläre den Begriff</div><h2>${e(c.term)}</h2><span class="small subtle">Klicken oder Leertaste zum Umdrehen</span></div><div class="card-face card-back" ${!cardFlipped ? 'aria-hidden="true"' : ""}><span class="eyebrow">${e(c.term)}</span><p>${e(c.definition)}</p></div></div></div><div class="card-actions"><button class="button secondary" data-rating="no" ${cardFlipped ? "" : "disabled"}>1 · Kann ich nicht</button><button class="button secondary" data-rating="unsure" ${cardFlipped ? "" : "disabled"}>2 · Unsicher</button><button class="button" data-rating="know" ${cardFlipped ? "" : "disabled"}>3 · Kann ich</button></div><p class="center small subtle" style="margin-top:20px">„Kann ich nicht“ bleibt sofort fällig. „Unsicher“ wird morgen wiederholt.</p><details><summary>Quellen dieser Karte</summary>${sourceLinks(tMap.get(c.topic))}</details>` : `<div class="panel center"><h2>Für diese Auswahl ist alles erledigt.</h2><p class="subtle">Wähle „Alle Karten“, um unabhängig vom Fälligkeitsdatum zu lernen.</p><button class="button" id="cards-all">Alle Karten ansehen</button></div>`}`,
     "cards",
   );
   document.querySelector("#card-topic").onchange = (ev) => {
@@ -961,7 +1016,7 @@ function glossary() {
     .flatMap((t) => t.terms.map((x) => ({ ...x, topic: t.id })))
     .sort((a, b) => a.term.localeCompare(b.term, "de"));
   shell(
-    `${head("DEIN NACHSCHLAGEWERK", "Begriffe, die sitzen.", "Alphabetisch sortiert und direkt mit den Lernkapiteln verbunden.")}<div class="filters"><label class="field">Fachbegriff oder Definition<input type="search" id="glossary-search" placeholder="z. B. ökologische Nische …"></label><label class="field">Thema<select id="glossary-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}">${e(t.title)}</option>`).join("")}</select></label></div><p id="glossary-count" class="small subtle"></p><div id="glossary-list" class="glossary"></div>`,
+    `${head("DEIN NACHSCHLAGEWERK", "Finde deinen Zusammenhang.", "Begriffe, Kapitel, Aufgaben und eigene Notizen durchsuchen.")}<div class="filters"><label class="field">Suchbegriff<input type="search" id="glossary-search" placeholder="z. B. ökologische Nische …"></label><label class="field">Thema<select id="glossary-topic"><option value="">Alle Themen</option>${topics.map((t) => `<option value="${t.id}">${e(t.title)}</option>`).join("")}</select></label></div><p id="glossary-count" class="small subtle"></p><div id="glossary-list" class="glossary"></div>`,
     "glossary",
   );
   const update = () => {
@@ -974,8 +1029,36 @@ function glossary() {
           (!t || x.topic === t) &&
           (x.term + " " + x.definition).toLocaleLowerCase("de").includes(s),
       );
+    const chapterHits = s.trim()
+      ? topics.filter(
+          (x) =>
+            (!t || x.id === t) &&
+            JSON.stringify([x.title, x.sections])
+              .toLocaleLowerCase("de")
+              .includes(s),
+        )
+      : [];
+    const taskHits = s.trim()
+      ? questions.filter(
+          (x) =>
+            (!t || x.topic === t) &&
+            x.prompt.toLocaleLowerCase("de").includes(s),
+        )
+      : [];
+    const noteHits = s.trim()
+      ? topics.filter(
+          (x) =>
+            (!t || x.id === t) &&
+            JSON.stringify([
+              state.notebook[x.id]?.text || "",
+              ...(state.notebook[x.id]?.highlights || []).map((h) => h.quote),
+            ])
+              .toLocaleLowerCase("de")
+              .includes(s),
+        )
+      : [];
     document.querySelector("#glossary-count").textContent =
-      filtered.length + " Einträge";
+      `${filtered.length} Begriffe · ${chapterHits.length} Kapitel · ${taskHits.length} Aufgaben · ${noteHits.length} Kapitelnotizen`;
     document.querySelector("#glossary-list").innerHTML = filtered.length
       ? filtered
           .map(
@@ -984,6 +1067,44 @@ function glossary() {
           )
           .join("")
       : '<div class="empty">Kein passender Begriff gefunden.</div>';
+    if (chapterHits.length || taskHits.length || noteHits.length) {
+      document.querySelector("#glossary-list .empty")?.remove();
+      document.querySelector("#glossary-list").insertAdjacentHTML(
+        "beforeend",
+        chapterHits
+          .map(
+            (x) =>
+              `<article><span class="badge neutral">Kapitel</span><h3>${e(x.title)}</h3><a href="#learn/${x.id}">Kapitel öffnen →</a></article>`,
+          )
+          .join("") +
+          taskHits
+            .slice(0, 15)
+            .map(
+              (x) =>
+                `<article><span class="badge neutral">Aufgabe</span><h3>${e(x.prompt)}</h3><button class="button secondary compact" data-search-task="${x.id}">Aufgabe üben →</button></article>`,
+            )
+            .join("") +
+          noteHits
+            .map(
+              (x) =>
+                `<article><span class="badge neutral">Eigene Notizen</span><h3>${e(x.title)}</h3><a href="#learn/${x.id}">Notiz im Kapitel öffnen →</a></article>`,
+            )
+            .join("") +
+          (taskHits.length > 15
+            ? '<p class="small subtle">Die ersten 15 Aufgaben werden angezeigt. Grenze die Suche mit einem Thema oder einem genaueren Begriff ein.</p>'
+            : ""),
+      );
+      document
+        .querySelectorAll("[data-search-task]")
+        .forEach(
+          (b) =>
+            (b.onclick = () =>
+              startPractice(
+                [qMap.get(b.dataset.searchTask)],
+                "Aufgabe aus der Suche",
+              )),
+        );
+    }
   };
   document.querySelector("#glossary-search").oninput = update;
   document.querySelector("#glossary-topic").onchange = update;
@@ -1030,7 +1151,7 @@ function parseGradeKey(text) {
 }
 function settings() {
   shell(
-    `${head("DEIN WERKZEUGKASTEN", "So lernst du am liebsten.", "Einstellungen und Sicherung deines persönlichen Lernfortschritts.")}<div class="settings-grid"><section class="panel"><h2>Fortschritt sichern</h2><p class="subtle small">Deine Daten werden in diesem Browser gespeichert. Ein Wechsel von Browser, Adresse oder Gerät übernimmt sie nicht automatisch. Exportiere sie dafür als JSON.</p><div class="row"><button class="button" id="export">${icon("download")} JSON exportieren</button><button class="button secondary" id="import">JSON importieren</button><input type="file" id="import-file" accept="application/json,.json" hidden></div><p id="import-message" class="small" role="status"></p><div class="divider"></div><button class="button danger" id="reset">Gesamten Lernfortschritt zurücksetzen</button></section><section class="panel"><h2>Ton & Fokus</h2><label class="read-check"><input type="checkbox" id="sound" ${state.settings.sound ? "checked" : ""}> Kurzer Ton bei richtigen und falschen Antworten</label><p class="subtle small">Standardmäßig ausgeschaltet.</p><div class="divider"></div><h3>Tastaturkürzel</h3><p class="small subtle">/ · Glossar durchsuchen<br>F · Fokusmodus umschalten<br>Leertaste · Karteikarte umdrehen<br>1 / 2 / 3 · Karte nach dem Umdrehen bewerten<br>Esc · Navigation schließen</p></section><section class="panel"><h2>Dein schulischer Bewertungsschlüssel</h2><p class="subtle small">Trage 16 untere Prozentgrenzen ein, beginnend bei 15 Notenpunkten und endend bei 0 Notenpunkten. Die Werte müssen streng absteigen; der letzte Wert ist 0. Verwende den von deiner Lehrkraft vorgegebenen Schlüssel.</p><label class="field">Grenzen für 15, 14, …, 0 Notenpunkte<textarea id="grade-key" placeholder="16 Prozentgrenzen, durch Semikolon getrennt">${e(state.settings.gradeKey || "")}</textarea></label><p class="small subtle">Leer lassen: nur Punkte und Prozentwerte anzeigen.</p><button class="button secondary" id="save-grade">Schlüssel speichern</button><p id="grade-message" class="small" role="status"></p></section><section class="panel"><h2>Material & Transparenz</h2><p class="subtle small">Die Bio-Mappe ist die Hauptquelle. Ergänzungen stammen aus verlinkten Bildungs- und Fachquellen. Das Ecosphere-Kapitel nutzt ein allgemeines Modell, da das konkrete Unterrichtsgefäß nicht dokumentiert ist. Symbiose wird mit den unterschiedlichen Begriffskonventionen erklärt.</p><p class="small subtle">Die ursprüngliche Mappe wird nicht online bereitgestellt. Seitenangaben dienen als Verweis auf dein eigenes Exemplar.</p><div class="divider"></div><p class="small subtle">Kein Konto, keine API, keine Analyse-Dienste. Fortschrittsdaten werden durch die Plattform nicht an einen Server geschickt.</p></section></div>`,
+    `${head("DEIN WERKZEUGKASTEN", "So lernst du am liebsten.", "Einstellungen und Sicherung deines persönlichen Lernfortschritts.")}<div class="settings-grid"><section class="panel"><h2>Fortschritt sichern</h2><p class="subtle small">Deine Daten werden in diesem Browser gespeichert. Ein Wechsel von Browser, Adresse oder Gerät übernimmt sie nicht automatisch. Exportiere sie dafür als JSON.</p><div class="row"><button class="button" id="export">${icon("download")} JSON exportieren</button><button class="button secondary" id="import">JSON importieren</button><input type="file" id="import-file" accept="application/json,.json" hidden></div><p id="import-message" class="small" role="status"></p><div class="divider"></div><button class="button danger" id="reset">Gesamten Lernfortschritt zurücksetzen</button></section><section class="panel"><h2>Ton & Fokus</h2><label class="read-check"><input type="checkbox" id="sound" ${state.settings.sound ? "checked" : ""}> Kurzer Ton bei richtigen und falschen Antworten</label><p class="subtle small">Standardmäßig ausgeschaltet.</p><div class="divider"></div><h3>Tastaturkürzel</h3><p class="small subtle">/ · Lerninhalte durchsuchen<br>F · Fokusmodus umschalten<br>Leertaste · Karteikarte umdrehen<br>1 / 2 / 3 · Karte nach dem Umdrehen bewerten<br>Esc · Navigation schließen</p></section><section class="panel"><h2>Dein schulischer Bewertungsschlüssel</h2><p class="subtle small">Trage 16 untere Prozentgrenzen ein, beginnend bei 15 Notenpunkten und endend bei 0 Notenpunkten. Die Werte müssen streng absteigen; der letzte Wert ist 0. Verwende den von deiner Lehrkraft vorgegebenen Schlüssel.</p><label class="field">Grenzen für 15, 14, …, 0 Notenpunkte<textarea id="grade-key" placeholder="16 Prozentgrenzen, durch Semikolon getrennt">${e(state.settings.gradeKey || "")}</textarea></label><p class="small subtle">Leer lassen: nur Punkte und Prozentwerte anzeigen.</p><button class="button secondary" id="save-grade">Schlüssel speichern</button><p id="grade-message" class="small" role="status"></p></section><section class="panel"><h2>Material & Transparenz</h2><p class="subtle small">Die Bio-Mappe ist die Hauptquelle. Ergänzungen stammen aus verlinkten Bildungs- und Fachquellen. Das Ecosphere-Kapitel nutzt ein allgemeines Modell, da das konkrete Unterrichtsgefäß nicht dokumentiert ist. Symbiose wird mit den unterschiedlichen Begriffskonventionen erklärt.</p><p class="small subtle">Die Mappe wird nicht online bereitgestellt. Seitenangaben verweisen auf dein eigenes Exemplar.</p><div class="divider"></div><p class="small subtle">Kein Konto, keine API, keine Analyse-Dienste. Fortschrittsdaten werden durch die Plattform nicht an einen Server geschickt.</p></section></div>`,
     "settings",
   );
   document.querySelector("#sound").onchange = (ev) => {
@@ -1062,11 +1183,11 @@ function settings() {
         next.settings.gradeKey = raw.settings.gradeKey;
       confirmDialog(
         "Fortschritt importieren?",
-        `${Object.keys(next.answers).length} Aufgaben, ${Object.keys(next.cards).length} Karten und ${Object.keys(next.notebook).length} Kapitelnotizen wurden erkannt. Der bisherige Lernstand wird ersetzt. Eine laufende Klausur wird nicht importiert.`,
+        `${Object.keys(next.answers).length} Aufgaben, ${Object.keys(next.cards).length} Karten und ${Object.keys(next.notebook).length} Kapitelnotizen wurden erkannt. Der bisherige Lernstand wird ersetzt. Laufende Klausuren und Trainings werden nicht importiert.`,
         () => {
           state = next;
-          save();
           run = null;
+          save();
           cards = [];
           cardIndex = 0;
           settings();
@@ -1083,11 +1204,11 @@ function settings() {
   document.querySelector("#reset").onclick = () =>
     confirmDialog(
       "Lernfortschritt vollständig löschen?",
-      "Antworten, Kartenbewertungen, Lesezeichen, Sitzungen, Lernplan, Notizen, Markierungen, Operatoren-Ergebnisse und eine laufende Klausur werden gelöscht. Exportiere sie vorher, wenn du sie aufbewahren möchtest.",
+      "Antworten, Kartenbewertungen, Lesezeichen, Sitzungen, Lernplan, Notizen, Markierungen, Operatoren-Ergebnisse und laufende Trainings und Klausuren werden gelöscht. Exportiere sie vorher, wenn du sie aufbewahren möchtest.",
       () => {
         state = freshState();
-        save();
         run = null;
+        save();
         cards = [];
         cardIndex = 0;
         settings();
@@ -1108,6 +1229,10 @@ function settings() {
       : "Bewertungsschlüssel entfernt. Ergebnisse werden ohne Notenpunkte angezeigt.";
   };
 }
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 680 && document.querySelector("#sidebar.open"))
+    setMenu(false);
+});
 function render() {
   labCleanup();
   labCleanup = () => {};
@@ -1141,13 +1266,40 @@ function render() {
 window.addEventListener("hashchange", () => {
   render();
   window.scrollTo(0, 0);
+  if (location.hash !== "#glossary") {
+    const heading = document.querySelector("h1");
+    heading?.setAttribute("tabindex", "-1");
+    heading?.focus({ preventScroll: true });
+  }
 });
 window.addEventListener("keydown", (ev) => {
   const editing =
     ["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName) ||
     document.activeElement?.isContentEditable;
-  if (ev.key === "Escape")
-    document.querySelector("#sidebar")?.classList.remove("open");
+  if (document.querySelector("#sidebar.open")) {
+    if (ev.key === "Escape") {
+      ev.preventDefault();
+      setMenu(false);
+      return;
+    }
+    if (ev.key === "Tab") {
+      const items = [
+        ...document.querySelectorAll(
+          "#sidebar a, #sidebar button, #sidebar summary",
+        ),
+      ].filter((x) => x.getClientRects().length);
+      const first = items[0],
+        last = items.at(-1);
+      if (ev.shiftKey && document.activeElement === first) {
+        ev.preventDefault();
+        last.focus();
+      } else if (!ev.shiftKey && document.activeElement === last) {
+        ev.preventDefault();
+        first.focus();
+      }
+    }
+    return;
+  }
   if (
     editing ||
     ev.ctrlKey ||
@@ -1191,6 +1343,7 @@ try {
     const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
     if (raw) {
       state = importState(raw, topics);
+      run = restorePractice(raw.activePractice, questions);
       if (raw.settings?.gradeKey && parseGradeKey(raw.settings.gradeKey))
         state.settings.gradeKey = raw.settings.gradeKey;
       const s = raw.activeExam;

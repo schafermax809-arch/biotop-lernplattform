@@ -97,6 +97,8 @@ const shots = process.env.QA_DIR;
       await go("practice");
       await page.selectOption("#practice-type", type);
       await page.click("#practice-start");
+      if (await page.locator("#dialog-ok").isVisible())
+        await page.click("#dialog-ok");
       await page.waitForSelector(".question h2");
       const q = await current();
       await solve(q);
@@ -113,6 +115,8 @@ const shots = process.env.QA_DIR;
     await go("practice");
     await page.selectOption("#practice-type", "single");
     await page.click("#practice-start");
+    if (await page.locator("#dialog-ok").isVisible())
+      await page.click("#dialog-ok");
     let q = await current();
     await page.click("#bookmark");
     await solve(q, false);
@@ -122,6 +126,8 @@ const shots = process.env.QA_DIR;
     await page.waitForSelector(".page-head");
     await go("practice");
     await page.click("#error-start");
+    if (await page.locator("#dialog-ok").isVisible())
+      await page.click("#dialog-ok");
     assert.ok((await current()).id);
     await page.click("#end-run");
     await page.click("#dialog-ok");

@@ -17,6 +17,15 @@ Voraussetzung: Node.js ab Version 20. Auf diesem Rechner ist der gebündelte Cod
 
 Eine weitere Möglichkeit ist die VS-Code-Erweiterung **Live Server**: `index.html` per „Open with Live Server“ öffnen. Der direkte Doppelklick auf `index.html` reicht wegen der JavaScript-Module und JSON-Lerninhalte nicht aus.
 
+## Gezielte Lernverbesserungen (Version 1.2)
+
+- Kompakte Startseite mit Tagestraining: acht Aufgaben, bevorzugt frühere Fehler und nach mindestens sieben Tagen wieder fällige Aufgaben, über Themen verteilt und mit einer Transferaufgabe. Höchstens drei frühere Fehler werden bevorzugt eingeplant; bei einem ausschließlich aus Fehlern bestehenden Restpool werden weitere Fehler ergänzt. Kein geschätzter Pflicht-Timer.
+- Normale Trainings werden im aktuellen Browser automatisch mit Entwürfen, Antwortreihenfolge, Position, Rückmeldungen und Kriterienhäkchen gesichert. Beim Neuladen wird nichts doppelt bewertet. Ein neues Training ersetzt ein offenes erst nach Bestätigung. Fertige Trainings werden nicht wieder aufgenommen.
+- Lernstand unterscheidet offene Aufgaben, letzte Fehler, Wiederholungsbedarf nach sieben Tagen und zeitlich verteilte Erfolge. „Mit Abstand richtig“ setzt mindestens zwei volle Erfolge mit wenigstens 24 Stunden Abstand zwischen den gewerteten Erfolgen voraus; ein Fehler setzt diese Folge zurück. Die letzte Antwort muss weniger als sieben Tage alt sein. Bestehende Daten werden übernommen; alte einzelne Erfolge gelten zunächst als einmal richtig.
+- Fällige und neue Karteikarten werden auf der Startseite getrennt gezählt. Die Standardauswahl zeigt fällige Karten vor neuen; beide Gruppen lassen sich auch einzeln filtern.
+- Kürzere Navigation mit aufklappbaren Werkzeugen, bedienbarem Mobilmenü und Sprung zum Inhalt. Die Suche findet Begriffe, Kapitel, Aufgaben und eigene Notizen; Aufgaben können direkt gestartet werden.
+- Aufklappbare Übersicht der fünf Systemebenen. Nahrungsnetz mit kollisionsfreier mobiler Anordnung, mindestens 44 Pixel hohen Knoten und Pfeilen, die sich an die tatsächlichen Positionen anpassen.
+
 ## Enthalten
 
 - Zehn Lernkapitel mit Erklärungen, Definitionen, Merksätzen, Quellen und Verständnischecks.
@@ -73,7 +82,7 @@ Ein schulischer Notenschlüssel ist nicht bekannt und wurde nicht erfunden. Unte
 
 Fortschritt liegt im `localStorage` deines Browsers unter `biotop-progress-v1`. Eine andere Adresse, ein anderer Port oder Browser hat einen eigenen Speicher. Auch ein späterer Umzug zu GitHub Pages übernimmt die Daten deshalb nicht automatisch.
 
-Vor einem Wechsel unter **Einstellungen → JSON exportieren** sichern und am neuen Ort wieder importieren. Der Import zeigt vor dem Ersetzen die erkannten Daten und erfordert Bestätigung. Er übernimmt Antworten, Karten, Lesezeichen, gelesene Kapitel, Statistiken, Einstellungen, Lernplan, Notizen, Markierungen, Operatoren-Bewertungen und gespeicherte Laborschritte; eine laufende Klausur wird bewusst nicht importiert. Das Zurücksetzen erfordert ebenfalls eine Bestätigung. Sitzungsstatistiken speichern die letzten 100 Sitzungen.
+Vor einem Wechsel unter **Einstellungen → JSON exportieren** sichern und am neuen Ort wieder importieren. Der Import zeigt vor dem Ersetzen die erkannten Daten und erfordert Bestätigung. Er übernimmt Antworten, Karten, Lesezeichen, gelesene Kapitel, Statistiken, Einstellungen, Lernplan, Notizen, Markierungen, Operatoren-Bewertungen und gespeicherte Laborschritte; laufende Trainings und Klausuren werden bewusst nicht importiert. Das Zurücksetzen erfordert ebenfalls eine Bestätigung. Sitzungsstatistiken speichern die letzten 100 Sitzungen.
 
 ## Dateien
 
@@ -97,9 +106,9 @@ tests/               Fachliche Daten- und Funktionstests
 
 ## Prüfen
 
-`npm test` oder `node --test tests/engine.test.mjs tests/tools.test.mjs` prüft den gesamten Fragenkatalog, Musterantworten, Fehlerzähler, Wiederholungsintervalle, ausgeglichene Klausurzusammenstellung und JSON-Rundreise sowie die neuen Lernwerkzeuge und qualitativen Modelle. 20 Tests, keine Zusatzpakete erforderlich.
+`npm test` oder `node --test tests/engine.test.mjs tests/tools.test.mjs tests/study.test.mjs` prüft den gesamten Fragenkatalog, Musterantworten, Fehlerzähler, Wiederholungsintervalle, ausgeglichene Klausurzusammenstellung und JSON-Rundreise sowie die neuen Lernwerkzeuge und qualitativen Modelle. 23 Tests, keine Zusatzpakete erforderlich.
 
-Für die optionalen Browsertests: Playwright verfügbar machen, den lokalen Server starten und `node tests/browser.cjs` sowie `node tests/features-browser.cjs` ausführen. Unter Windows mit installiertem Edge in PowerShell zuerst `$env:BROWSER_CHANNEL='msedge'` setzen. Falls Playwright außerhalb des Projekts installiert ist, kann `PLAYWRIGHT_MODULE` auf den Modulordner zeigen. `QA_DIR` aktiviert Screenshots. Details der durchgeführten Prüfung stehen in `TESTBERICHT.md`.
+Für die optionalen Browsertests: Playwright verfügbar machen, den lokalen Server starten und `node tests/browser.cjs` , `node tests/features-browser.cjs` und `node tests/study-browser.cjs` ausführen. Unter Windows mit installiertem Edge in PowerShell zuerst `$env:BROWSER_CHANNEL='msedge'` setzen. Falls Playwright außerhalb des Projekts installiert ist, kann `PLAYWRIGHT_MODULE` auf den Modulordner zeigen. `QA_DIR` aktiviert Screenshots. Details der durchgeführten Prüfung stehen in `TESTBERICHT.md`.
 
 ## Veröffentlichung auf GitHub Pages
 

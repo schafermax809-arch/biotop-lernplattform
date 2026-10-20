@@ -11,6 +11,7 @@ export function freshState() {
     lastTopic: null,
     settings: { sound: false },
     activeExam: null,
+    activePractice: null,
     planner: null,
     notebook: {},
     operators: { answers: {}, checks: {}, scores: {}, selected: "nennen" },
@@ -58,13 +59,28 @@ export function validate(q, value) {
 export function recordAnswer(state, q, score) {
   const prev = state.answers[q.id] || { attempts: 0, correct: 0 };
   const points = Math.max(0, Math.min(q.points, Number(score) || 0));
+  const now = Date.now();
+  const successDays =
+    points !== q.points
+      ? 0
+      : !prev.lastCorrect
+        ? 1
+        : Math.max(1, prev.successDays || 1) +
+          (now - (prev.lastSuccessAt || prev.at || now) >= 86400000 ? 1 : 0);
   state.answers[q.id] = {
     attempts: prev.attempts + 1,
     correct: prev.correct + (points === q.points ? 1 : 0),
     lastCorrect: points === q.points,
     score: points,
     max: q.points,
-    at: Date.now(),
+    at: now,
+    successDays,
+    lastSuccessAt:
+      points !== q.points
+        ? null
+        : successDays > (prev.successDays || 0)
+          ? now
+          : prev.lastSuccessAt || prev.at || now,
   };
   state.lastTopic = q.topic;
   return points;
@@ -149,6 +165,11 @@ export function importState(value, topics) {
         score: Math.max(0, Math.min(q.points, Number(a.score) || 0)),
         max: q.points,
         at: Number(a.at) || Date.now(),
+        successDays:
+          a.lastCorrect === true
+            ? Math.max(1, Math.min(100, Math.floor(Number(a.successDays) || 1)))
+            : 0,
+        lastSuccessAt: Number(a.lastSuccessAt) || Number(a.at) || Date.now(),
       };
     }
   }

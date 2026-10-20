@@ -64,3 +64,14 @@ Dies ist eine technische und inhaltliche Projektprüfung. Offene Schülerantwort
 ## GitHub-Veröffentlichung
 
 Die PDF ist auf Wunsch nicht enthalten. Die direkten PDF-Links wurden entfernt; Quellen- und Seitenangaben bleiben zur Orientierung erhalten.
+
+## Version 1.2 · gezielte Lernverbesserungen, 20.10.2026
+
+- 23 Node-Tests: bestehende Daten und Antworten, Tagesauswahl über Themen mit Fehlern/verzögerten Wiederholungen/Transfer, 24-Stunden-Abstand, Fehler-Reset, JSON-Kompatibilität und Prüfung gespeicherter Trainings.
+- Browser-Regressionsprüfung aller acht Aufgabenformen, sieben Basismodule, Klausurablauf und Wiederherstellung, Karteikarten, Suche, Import/Export sowie aller acht zuvor ergänzten Funktionen bestanden.
+- Zusätzliche Browserprüfung: Tagestraining, Ersatz abbrechen/bestätigen, Entwürfe nach Neuladen, gespeicherte Reihenfolge, unbewertete Kriterienhäkchen, bewertete Antworten ohne doppelte Verbuchung und sauberes Trainingsende.
+- Suche in eigenen Notizen und Aufgaben mit direktem Aufgabenstart geprüft. Begriffsebenen im Kapitel vorhanden.
+- Nahrungsnetz bei 350, 390, 768 und 1440 Pixeln: keine Knotenüberlappungen oder abgeschnittenen Knoten, mindestens 44 Pixel hohe Ziele, alle fünf Verbindungen korrekt prüfbar, Pfeilkoordinaten nach Größenänderung gültig.
+- Übersicht, Übungen, Systemebenen, Suche, Operatoren, Fehlerjagd, Nischen-Arena und Einstellungen ohne horizontalen Überlauf bei diesen Breiten. Mobilmenü schließt per Escape und Schaltfläche, gibt den Inhalt wieder frei und stellt den Fokus zurück.
+
+Die neuen Statuswerte sind Lernhilfen; sie sind keine Vorhersage einer Klausurnote. Es wurden keine zusätzlichen biologischen Inhalte oder Messwerte erfunden.

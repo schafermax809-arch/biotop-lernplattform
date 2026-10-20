@@ -280,23 +280,72 @@ export function renderLab(id, host, { e, toast }) {
       selected = null;
       draw();
     };
-    const draw = () => {
-      host.innerHTML = `<p>Ziehe von der <strong>Nahrung zum Fresser</strong>. Alternativ: zwei Organismen nacheinander anklicken. Ergänze die drei auf S. 13 genannten Nahrungsquellen des Zilpzalps.</p><div class="web-board"><svg viewBox="0 0 1000 310" preserveAspectRatio="none"><defs><marker id="web-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#bdd4a0"/></marker></defs>${edges
+    let observer;
+    const layout = () => {
+      const board = host.querySelector(".web-board");
+      if (!board) return;
+      const width = board.clientWidth,
+        narrow = width < 500;
+      const mobile = [
+        [25, 50],
+        [75, 50],
+        [75, 155],
+        [75, 260],
+        [25, 155],
+        [25, 260],
+      ];
+      host.querySelectorAll("[data-node]").forEach((b, n) => {
+        const position = narrow ? mobile[n] : nodes[n].slice(1);
+        b.style.left = position[0] + "%";
+        b.style.top = position[1] + "px";
+        b.style.width = narrow ? "43%" : "auto";
+        b.style.maxWidth = narrow ? "none" : "145px";
+      });
+      const svg = board.querySelector("svg");
+      svg.setAttribute("viewBox", `0 0 ${width} ${board.clientHeight}`);
+      const buttons = [...board.querySelectorAll("[data-node]")];
+      const box = (b) => ({
+        x: b.offsetLeft,
+        y: b.offsetTop,
+        w: b.offsetWidth,
+        h: b.offsetHeight,
+      });
+      svg.querySelector("g").innerHTML = edges
         .map(([a, b]) => {
-          const x = nodes[a],
-            y = nodes[b];
-          const dx = y[1] - x[1],
-            dy = (y[2] - x[2]) / 10,
-            l = Math.hypot(dx, dy);
-          return `<line x1="${x[1] * 10 + (dx / l) * 45}" y1="${x[2] + (dy / l) * 25}" x2="${y[1] * 10 - (dx / l) * 55}" y2="${y[2] - (dy / l) * 25}" stroke="#bdd4a0" stroke-width="2" marker-end="url(#web-arrow)"/>`;
+          const x = box(buttons[a]),
+            y = box(buttons[b]),
+            dx = y.x - x.x,
+            dy = y.y - x.y;
+          const trim = (r) =>
+            1 /
+            Math.max(
+              Math.abs(dx) / (r.w / 2 + 7),
+              Math.abs(dy) / (r.h / 2 + 7),
+            );
+          const from = trim(x),
+            to = trim(y);
+          return `<line x1="${x.x + dx * from}" y1="${x.y + dy * from}" x2="${y.x - dx * to}" y2="${y.y - dy * to}" stroke="#bdd4a0" stroke-width="2" marker-end="url(#web-arrow)"/>`;
         })
-        .join(
-          "",
-        )}</svg>${nodes.map(([label, x, y], n) => `<button draggable="true" data-node="${n}" class="web-node ${selected === n ? "selected" : ""}" style="left:${x}%;top:${y}px" aria-pressed="${selected === n}">${label}</button>`).join("")}</div>${edges.map(([a, b], i) => `<div class="connection"><span>${nodes[a][0]} → ${nodes[b][0]}</span><button data-remove="${i}" aria-label="Verbindung entfernen">Entfernen</button></div>`).join("")}<div class="row" style="margin-top:18px"><button id="web-check" class="button">Netz überprüfen</button><button id="web-clear" class="button secondary">Neu aufbauen</button></div><div class="lab-feedback" role="status"></div>`;
+        .join("");
+    };
+    const draw = () => {
+      const focused = document.activeElement?.dataset.node;
+      observer?.disconnect();
+      host.innerHTML = `<p>Verbinde zuerst die <strong>Nahrung</strong>, dann den <strong>Fresser</strong>: zwei Elemente nacheinander antippen oder eine Verbindung ziehen. Baue das vereinfachte Netz mit fünf Verbindungen auf. Denke an pflanzliche Nahrung, Pflanzenfresser und Räuber.</p><div class="web-board" aria-label="Nahrung und Fresser verbinden"><svg aria-hidden="true"><defs><marker id="web-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#bdd4a0"/></marker></defs><g></g></svg>${nodes.map(([label], n) => `<button draggable="true" data-node="${n}" class="web-node ${selected === n ? "selected" : ""}" aria-pressed="${selected === n}">${label}</button>`).join("")}</div><p class="small subtle" role="status">${selected === null ? "Wähle eine Nahrungsquelle." : `${nodes[selected][0]} ausgewählt. Wähle jetzt den Fresser oder tippe erneut zum Abwählen.`}</p>${edges.map(([a, b], i) => `<div class="connection"><span>${nodes[a][0]} → ${nodes[b][0]}</span><button data-remove="${i}" aria-label="Verbindung ${nodes[a][0]} zu ${nodes[b][0]} entfernen">Entfernen</button></div>`).join("")}<div class="row" style="margin-top:18px"><button id="web-check" class="button">Netz überprüfen</button><button id="web-clear" class="button secondary">Neu aufbauen</button></div><div class="lab-feedback" role="status"></div>`;
+      layout();
+      observer = new ResizeObserver(layout);
+      observer.observe(host.querySelector(".web-board"));
+      if (focused !== undefined)
+        host
+          .querySelector(`[data-node="${focused}"]`)
+          ?.focus({ preventScroll: true });
       host.querySelectorAll("[data-node]").forEach((b) => {
         const n = Number(b.dataset.node);
         b.onclick = () => {
-          if (selected === null) {
+          if (selected === n) {
+            selected = null;
+            draw();
+          } else if (selected === null) {
             selected = n;
             draw();
           } else add(selected, n);
@@ -335,6 +384,7 @@ export function renderLab(id, host, { e, toast }) {
       };
     };
     draw();
+    cleanup = () => observer?.disconnect();
   } else if (id === "spiral") {
     const stations = [
       [
