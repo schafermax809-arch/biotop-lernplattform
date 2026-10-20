@@ -205,6 +205,8 @@ export function renderAdvancedLab(id, host, { state, save, toast, e }) {
         `<strong>${right ? "Passend hergeleitet." : "Prüfe die Wirkungskette noch einmal."}</strong><p>${directions[effects[target]]}. ${target === "light" ? "Bei gleichzeitig fördernden und begrenzenden Änderungen lässt sich ohne ihre Stärke keine eindeutige Gesamtwirkung ableiten." : target === "solubility" ? "Verglichen wird nur der Temperatureinfluss auf die Löslichkeit. Daraus folgt kein genauer Sauerstoffwert des Gewässers." : "Der Blatt- und Totholzeintrag hängt auch von Jahreszeit, Vegetationstyp und Gewässerkontakt ab."}</p>`;
     };
     update();
+    if (window.matchMedia("(max-width: 680px)").matches)
+      host.querySelector('[data-river-view="explore"]').click();
   } else if (id === "domino") {
     let selected = 1,
       event = "down";

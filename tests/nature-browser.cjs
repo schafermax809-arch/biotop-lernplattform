@@ -116,7 +116,7 @@ const path = require("node:path");
       }
       await go("labs/sandbox");
       const overlap = await page.locator(".nature-sandbox").evaluate((el) => {
-        const a = el.querySelector(".scene-workspace").getBoundingClientRect();
+        const a = el.querySelector(".river-comparison").getBoundingClientRect();
         const b = el.querySelector(".sandbox-controls").getBoundingClientRect();
         return (
           a.x < b.right - 1 &&

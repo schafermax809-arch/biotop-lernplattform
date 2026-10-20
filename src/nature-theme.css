@@ -604,9 +604,23 @@ body {
 }
 @media (max-width: 1050px) {
   .nature-sandbox {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .nature-sandbox .scene-workspace {
+    display: contents;
+  }
+  .nature-sandbox .river-comparison {
+    order: 1;
+    width: 100%;
+  }
+  .nature-sandbox .effect-grid {
+    order: 3;
+    width: 100%;
   }
   .nature-sandbox .sandbox-controls {
+    order: 2;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
